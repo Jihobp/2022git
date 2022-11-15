@@ -1,0 +1,25 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>8.3 책 수정 화면 뷰 작성</title>
+<!-- 8.3. 책 수정 화면 뷰 작성
+수정 뷰 화면은 생성 화면을 복사한다. -->
+</head>
+<body>
+<h1>책 수정</h1>  
+<form method="POST">  
+<p>제목 : <input type="text" name="title" value="${ data.title }" /></p>  
+<p>카테고리 : <input type="text" name="category"  value="${ data.category }" /></p>  
+<p>가격 : <input type="text" name="price"  value="${ data.price }" /></p>  
+<p><input type="submit" value="저장" />  
+	</form>
+	<!-- 뷰는 화면을 담당한다. 웹 어플리케이션에서 화면은 웹 브라우저가 렌더링하므로 브라우저가 읽어서 해석할 수 있는 HTML로 최종 변환될 수 있도록 작성한다.
+		 create.jsp 뷰는 제목, 카테고리, 가격을 입력받을 수 있는 형식(form - 폼)을 가진 HTML이다. -->
+	<!-- 서버를 클릭하고 ctrl + alt + d를 눌러 디버깅 모드로 시작하거나 ctrl + alt + r을 눌러 서버 모드로 시작한다. 
+		 물론 우클릭 후 Debug나 Start를 눌러도 관계없다.
+		 http://localhost:8081/create -->
+</body>
+</html>

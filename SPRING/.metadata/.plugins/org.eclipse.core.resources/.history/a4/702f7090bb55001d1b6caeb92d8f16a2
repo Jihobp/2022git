@@ -1,0 +1,44 @@
+package sample.spring.yse;
+
+import java.util.Map;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+/*6.6. 책 서비스 클래스 생성
+서비스 클래스는 비즈니스 클래스가 위치하는 곳이다. 스프링MVC 구조에서 서비스 클래스는 컨트롤러와 DAO를 연결하는 역할을 한다.
+src/main/java 하위 항목 sample.spring.yse 패키지를 우클릭해서 BookServiceImpl 클래스를 만든다.
+src/main/java/sample/spring/yse/BookServiceImpl.java
+ * 6.7. 책 서비스 인터페이스 생성
+책 서비스 클래스에서 선언한 BookService 인터페이스를 생성한다. 서비스 인터페이스는 직접 탐색기에서 생성하지 않고 클래스에서 생성하는 방법을 취한다.
+서비스 클래스 BookServiceImpl.java 의 BookService 부분에 빨간 줄이 가 있을 것이다. 
+빨간 줄 위에 마우스를 올린다. 
+이후 팝업 메뉴가 나오면 create interface 'BookService' 항목을 클릭한다.
+새 팝업에서 Source folder를 확인하고 Finish 버튼을 누른다. 예제에서는 서비스 클래스와 같은 패키지 안에 둘 것이므로 경로는 수정하지 않는다.
+ * 
+ * 6.8. 책 입력 기능 서비스 클래스 메소드 생성
+BookDao.insert 메소드를 실행시키는 서비스 메소드를 작성한다. 서비스 메소드는 서비스 구현체인 BookServiceImpl 클래스에 작성하면 된다.
+
+src/main/java/sample/spring/yse/BookServiceImpl.java
+*/
+//오버로딩 오버라이딩 https://programmingnote.tistory.com/29 
+//인터페이스 https://interconnection.tistory.com/129
+//인터페이스에 있는 메소드 반드시추가해줌.  /이ㅣㄴ터페이스 메서드를 반드시 구현해야하는 제약이 생긴다. 
+//implements bookService 북서비스를 구현하겠다, 메소드를 구체황.
+//public class BookServiceImpl implements BookService , 2번째 add unimplemented method.
+@Service
+public class BookServiceImpl implements BookService {
+	@Autowired //? 
+	BookDao bookDao;
+	
+	@Override //BookService.java의  String create(Map<String, Object> map);
+	public String create(Map<String, Object> map) {
+		int affectRowCount = this.bookDao.insert(map);
+		if (affectRowCount == 1) {
+			return map.get("book_id").toString();
+		}
+		return null;
+	}
+	
+
+}

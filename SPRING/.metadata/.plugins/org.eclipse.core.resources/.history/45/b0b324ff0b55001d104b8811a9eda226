@@ -1,0 +1,19 @@
+package sample.spring.yse;
+
+import org.springframework.stereotype.Repository;
+
+/*6.4. 책 DAO 클래스 생성
+	매퍼 XML을 실행시키는 DAO(Data Access Object) 클래스를 생성한다. src/main/java 하위 항목 sample.spring.yse 패키지를 우클릭해서 BookDao 클래스를 만들면 된다.
+	클래스 생성 후 아래 코드를 입력한다.
+src/main/java/sample/spring/yse/BookDao.java
+ * */
+@Repository //import
+public class BookDao {
+	@Autowired
+	SqlSessionTemplate sqlSessionTemplate;
+
+}
+
+
+
+ 

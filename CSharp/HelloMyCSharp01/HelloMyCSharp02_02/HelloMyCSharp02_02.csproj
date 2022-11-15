@@ -45,6 +45,7 @@
   <ItemGroup>
     <Compile Include="BKBank.cs" />
     <Compile Include="KBBank.cs" />
+    <Compile Include="KyungBookBank.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

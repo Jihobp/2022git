@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE  mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="book">
+
+<!-- 6.3 책입력 쿼리 작성 -->
+
+<insert id="insert" parameterType="hashMap" useGenerateKeys="true" keyProperty="book_id">
+
+
+</insert>
+
+
+</mapper>
+
+
+<!-- 6. 책 입력 기능 만들기
+6.1. 책 입력 기능 개요
+책 정보를 입력하기 위한 기능을 만든다. 생성 화면 /create 에서 제목, 분류, 가격을 입력하고 저장 버튼을 클릭하면 서버가 해야 하는 일을 정의하는 것이다.
+
+6.2. 책 매퍼 XML 생성
+쿼리를 작성하는 XML파일을 만든다. 마이바티스는 XML에 설정된 쿼리를 읽어서 실행시키게 된다.
+
+책 매퍼 XML 디렉토리를 생성한다.
+src/main/resources/ 우클릭 후 new => folder를 차례로 클릭해서 sqlmap 디렉터리를 생성한다.
+
+책 매퍼 XML 파일을 생성한다.
+src/main/resources/ 아래 sqlmap 디렉터리를 클릭 후 => new => other를 차례로 선택한다.
+파일 이름을 book_SQL.xml 로 입력하고 finish를 눌러 파일을 생성한다.
+생성된 파일 Source탭에서 내용을 아래와 같이 수정한다. src/main/resources/sqlmap/book_SQL.xml
+
+6.3. 책 입력 기능 쿼리 작성
+쿼리를 매퍼 XML에 옮긴다. <mapper namespace="book"> 코드와 </mapper> 사이에 작성하면 된다.
+src/main/resources/sqlmap/book_SQL.xml
+-->

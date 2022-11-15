@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE  mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="book">
+<!-- 6.3 책입력 쿼리 작성 , daoㅇ서 메소ㅡ드실행되고 루트 컨텍스트로 가고 매퍼실행.-->
+<!-- 이렇게 사용하면 SQL안에 특수문자가 들어가도 문자열로 인식하기때문에
+문제를 해결할수있습니다.  -->
+<insert id="insert" parameterType="hashMap" 
+		useGeneratedKeys="true" keyProperty="book_id">		
+	    <![CDATA[
+	    insert into book
+	    (title, category, price) 
+	    values 
+	    (#{title}, #{category}, #{price})
+	    ]]>
+	</insert>
+
+<!-- 7.2 매퍼 xml에 쿼리를 옮긴다. -->
+<select id ="select_detail" parameterType="hashMap" resultType="hashMap">
+<![CDATA[
+	select title, category, price,
+	insert_date
+	from book where book_id=#{bookId}
+]]>
+</select>
+
+<!-- 9.2. 책 수정 기능 쿼리 작성 -->
+<update id="update" parameterType="hashMap">
+<![CDATA[
+update book set
+title = #{title},
+category = #{category},
+price =#{price}
+where book_id = #{bookId}
+]]>
+</update>
+
+<!-- 10.2. 책 삭제 기능 쿼리 작성 -->
+<delete id="delete" parameterType="hashMap">
+<![CDATA[
+delete from book where book_id = #{bookId}]]>
+</delete>
+
+<!-- 11.2. 책 목록 쿼리 작성 -->
+<select id="select_list" parameterType="hashMap" resultType="hashMap">
+<![CDATA[
+select book_id, title, category, price, insert_date 
+from book order by insert_date desc
+]]>
+</select>
+
+<!-- 12.2. 책 검색 쿼리 작성  
+ㄴ> 기존의 책 목록 쿼리 select_list 를 수정해서 검색 기능을 추가한다.-->
+<select id="select_list" parameterType="hashMap" resultType="hashMap">
+	  <![CDATA[
+	    select book_id, title, category, price, insert_date 
+	    from book
+	    where 1 = 1
+	    ]]>
+	    <if test="keyword != null and keyword != ''">
+	      and (title like CONCAT('%',#{keyword},'%') or category like CONCAT('%',#{keyword},'%'))
+	    </if>
+	    order by insert_date desc
+	</select>	
+</mapper>
+<!-- where 1 =1 은 관습적인 구문이다. 1 = 1은 늘 참이기 때문에 검색 조건을 무조건 and로 연결하기 위해 사용한다. -->
+<!-- <if 문은 마이바티스에서 조건을 나타낸다. test는 조건 규칙을 나타내는 항목이다.
+만약 키워드가 있으면 <if> ~ </if> 안의 쿼리문이 데이터베이스 쿼리에 포함된다. 
+이처럼 쿼리의 내용이 파라미터가 아니라 마이바티스의 규칙에 의해서 변경되는 것을 동적쿼리(Dynamic Query)라고 부른다.
+SQL 쿼리 조건에서 포함을 나타내는 구문은 like다.
+
+title like '검색어%' 일 경우는 검색어로 시작한다는 뜻이다.
+title like '%검색어' 일 경우는 검색어로 끝난다는 뜻이다.
+title like '%검색어%'일 경우는 검색어를 포함한다는 뜻이다.
+마이바티스에서는 쿼리 파라미터에 ' 표시를 붙이지 않기 때문에 title like '%#{keyword}%' 형식으로 표기하기는 어렵다. 따라서 마리아디비의 CONCAT 함수를 이용해서 문자열을 이어붙인다.
+만약 keyword 파라미터의 값이 키워드라면 CONCAT('%',#{keyword},'%') 구문은 '%키워드%' 형태로 바뀐다.
+SQL 쿼리 조건에서 or 는 "또는" 을 나타내는 구문이다. A or B일때 A 혹은 B 둘 중 하나만 만족하면 참(true)를 반환한다.
+
+<if>문 안의 내용은 제목이나 분류 안에 키워드가 있을 경우를 조건으로 한다는 뜻이다.
+
+and (title like CONCAT('%',#{keyword},'%') or category like CONCAT('%',#{keyword},'%'))  
+만약 keyword 파라미터의 값이 키워드라면 위 구문은 아래와 같은 뜻이 된다.
+
+and title like '%키워드%' or category like '%키워드%'  
+따라서 제목에 키워드를 포험하거나, 분류에 키워드를 포함하면 참이다.
+
+CDATA를 닫는 항목 ]]>가 orderby 항목 아래에서 위로 변경되었다. CDATA 항목 안에 <if 등의 마이바티스 구문은 RAW 문자열로 취급하여 해석되지 않기 때문에 마이바티스 구문을 실행하기 위해 CDATA 섹션을 닫아준 것이다.
+ -->
+
+
+
+<!-- 목록의 경우에도 resultType은 한 행을 담는 타입을 지정한다. 책 상세와 동일하다
+https://mybatis.org/mybatis-3/ko/sqlmap-xml.html
+insert, update and delete
+데이터를 변경하는 구문인 insert, update, delete는 매우 간단하다.
+- parameterType	구문에 전달될 파라미터의 패키지 경로를 포함한 전체 클래스명이나 별칭
+-useGeneratedKeys	(입력(insert, update)에만 적용) 데이터베이스에서 내부적으로 생성한 키 
+(예를들어 MySQL또는 SQL Server와 같은 RDBMS의 자동 증가 필드)를 받는
+ JDBC getGeneratedKeys메소드를 사용하도록 설정하다. 
+디폴트는 false 이다.
+-keyProperty	(입력(insert, update)에만 적용) getGeneratedKeys 메소드나 insert 구문의 
+selectKey 하위 엘리먼트에 의해 리턴된 키를 셋팅할 프로퍼티를 지정. 
+디폴트는 셋팅하지 않는 것이다. 
+여러개의 칼럼을 사용한다면 프로퍼티명에 콤마를 구분자로 나열할수 있다.
+ -->
+
+
+<!-- 6. 책 입력 기능 만들기
+6.1. 책 입력 기능 개요
+책 정보를 입력하기 위한 기능을 만든다. 생성 화면 /create 에서 제목, 분류, 가격을 입력하고 저장 버튼을 클릭하면 서버가 해야 하는 일을 정의하는 것이다.
+
+6.2. 책 매퍼 XML 생성
+쿼리를 작성하는 XML파일을 만든다. 마이바티스는 XML에 설정된 쿼리를 읽어서 실행시키게 된다.
+
+책 매퍼 XML 디렉토리를 생성한다.
+src/main/resources/ 우클릭 후 new => folder를 차례로 클릭해서 sqlmap 디렉터리를 생성한다.
+
+책 매퍼 XML 파일을 생성한다.
+src/main/resources/ 아래 sqlmap 디렉터리를 클릭 후 => new => other를 차례로 선택한다.
+파일 이름을 book_SQL.xml 로 입력하고 finish를 눌러 파일을 생성한다.
+생성된 파일 Source탭에서 내용을 아래와 같이 수정한다. src/main/resources/sqlmap/book_SQL.xml
+
+6.3. 책 입력 기능 쿼리 작성
+쿼리를 매퍼 XML에 옮긴다. <mapper namespace="book"> 코드와 </mapper> 사이에 작성하면 된다.
+src/main/resources/sqlmap/book_SQL.xml
+
+
+7.1. 책 상세 화면 개요
+책 상세 정보를 보여주기 위한 화면을 만든다.
+브라우저에서 /detail?bookId=1 주소에 접속하면 책 정보를 확인할 수 있는 화면을 보여준다.
+
+7.2. 책 상세 쿼리 작성
+책 상세 화면을 조회하는 쿼리를 작성한다.
+데이터베이스에서 데이터를 조회하는 쿼리는 SELECT다. 이렇게 사용한다.
+
+SELECT 컬럼들 from 테이블명 where 조건
+게시글 하나를 가져오기 위한 쿼리는 다음과 같다.
+매퍼 XML에 쿼리를 옮긴다.
+SELECT title, category, price, insert_date from book where book_id = 1
+
+
+7.6 쿼리 스트링
+책 상세 화면의 URI는 /detail?bookId=1 형식이다. 주소창을 통해 파라미터가 서버로 전달되는 형태를 쿼리 스트링(Query String)이라고 부른다.
+HTTP 규격에서 쿼리 스트링은 URL(Uniform Resource Locator) 끝에 ?로 시작한다. 각 항목은 &로 이어지며, 개별 항목의 키와 값은 =로 구분하게 된다.
+
+예를 들어 /sample/test?a=1&b=2 웹 주소가 있다고 해 보면 아래와 같다.
+
+URL : /sample/test
+쿼리 스트링 : ?a=1&b=2
+쿼리 스트링의 시작 : ?
+쿼리 스트링의 항목 구분 : &
+쿼리 스트링의 항목들 : a=1 ,b=2
+URI : /sample/test?a=1&b=2
+
+
+9.1. 책 수정 기능 개요
+책 수정을 위한 기능을 만든다. 책 수정 화면 /update?bookId=1 에서 저장 버튼을 클릭할 경우 기존 책의 정보를 갱신한다.
+
+9.2. 책 수정 기능 쿼리 작성
+책 상세 화면을 수정하는 쿼리를 작성한다.
+데이터베이스에서 데이터를 수정하는 쿼리는 UPDATE다. 이렇게 사용한다.
+
+UPDATE 테이블명 SET 컬럼들 where 조건  
+책 하나를 수정하기 위한 쿼리는 다음과 같다.
+
+UPDATE book set title='제목', category='IT', price=10000 where book_id = 1  
+수정 쿼리를 작성한다. <update 태그는 수정(UPDATE) 쿼리를 실행하기 위한 마이바티스 태그다.
+
+
+10.1. 책 삭제 기능 개요
+책 삭제를 위한 기능을 만든다.
+브라우저에서 /delete 주소에 http POST 메소드로 bookId 파라미터를 전달하면 책 정보가 삭제된다.
+
+10.2. 책 삭제 기능 쿼리 작성
+책 정보를 삭제하는 쿼리를 작성한다.
+데이터베이스에서 데이터를 수정하는 쿼리는 DELETE다. 이렇게 사용한다.
+
+DELETE FROM 테이블명 WHERE 조건  
+책을 삭제하기 위한 위한 쿼리는 다음과 같다.
+
+DELETE FROM book where book_id = 1  
+-->

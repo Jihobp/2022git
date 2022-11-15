@@ -1,0 +1,30 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>8.3 책 수정 화면 뷰 작성</title>
+<!-- 8.3. 책 수정 화면 뷰 작성
+수정 뷰 화면은 생성 화면을 복사한다. create.jsp 파일에 비해서 title, 'h1' 이름이 "책 생성"에서 "책 수정"으로 변경되었다.
+또한 각 입력 항목의 value 항목들이 컨트롤러에서 전달받은 값을 보여주도록 수정되었다.
+http://localhost:8081/update?bookId=1  -->
+
+</head>
+<body>
+	<h1>책 수정</h1>
+	<form method="POST">
+		<p>
+			제목 : <input type="text" name="title" value="${ data.title }" />
+		</p>
+		<p>
+			카테고리 : <input type="text" name="category" value="${ data.category }" />
+		</p>
+		<p>
+			가격 : <input type="text" name="price" value="${ data.price }" />
+		</p>
+		<p>
+			<input type="submit" value="저장" />
+	</form>
+</body>
+</html>

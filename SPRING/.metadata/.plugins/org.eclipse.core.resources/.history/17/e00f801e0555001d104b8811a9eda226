@@ -1,0 +1,16 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>4.4 책 생성 화면 뷰 생성</title>
+<!-- 04.02. 책 입력 화면 만들기 - 2
+4.4. 책 생성 화면 뷰 생성
+책 생성 컨트롤러에서 book/create 경로를 반환했으므로, 실제 화면을 담당하는 뷰 코드를 작성한다. 
+최종 경로는 src/main/webapp/WEB-INF/views/book/create.jsp 이다. -->
+</head>
+<body>
+
+</body>
+</html>

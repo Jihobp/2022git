@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE  mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="book">
+<!-- 6.3 책입력 쿼리 작성 , daoㅇ서 메소ㅡ드실행되고 루트 컨텍스트로 가고 매퍼실행.-->
+
+<insert id="insert" parameterType="hashMap"
+		useGeneratedKeys="true" keyProperty="book_id">		
+	    <![CDATA[
+	    insert into book
+	    (title, category, price) 
+	    values
+	    (#{title}, #{category}, #{price})
+	    ]]>
+	</insert>
+</mapper>
+
+<!-- 
+https://mybatis.org/mybatis-3/ko/sqlmap-xml.html
+insert, update and delete
+데이터를 변경하는 구문인 insert, update, delete는 매우 간단하다.
+- parameterType	구문에 전달될 파라미터의 패키지 경로를 포함한 전체 클래스명이나 별칭
+-useGeneratedKeys	(입력(insert, update)에만 적용) 데이터베이스에서 내부적으로 생성한 키 
+(예를들어 MySQL또는 SQL Server와 같은 RDBMS의 자동 증가 필드)를 받는
+ JDBC getGeneratedKeys메소드를 사용하도록 설정하다. 
+디폴트는 false 이다.
+-keyProperty	(입력(insert, update)에만 적용) getGeneratedKeys 메소드나 insert 구문의 
+selectKey 하위 엘리먼트에 의해 리턴된 키를 셋팅할 프로퍼티를 지정. 
+디폴트는 셋팅하지 않는 것이다. 
+여러개의 칼럼을 사용한다면 프로퍼티명에 콤마를 구분자로 나열할수 있다.
+ -->
+
+
+<!-- 6. 책 입력 기능 만들기
+6.1. 책 입력 기능 개요
+책 정보를 입력하기 위한 기능을 만든다. 생성 화면 /create 에서 제목, 분류, 가격을 입력하고 저장 버튼을 클릭하면 서버가 해야 하는 일을 정의하는 것이다.
+
+6.2. 책 매퍼 XML 생성
+쿼리를 작성하는 XML파일을 만든다. 마이바티스는 XML에 설정된 쿼리를 읽어서 실행시키게 된다.
+
+책 매퍼 XML 디렉토리를 생성한다.
+src/main/resources/ 우클릭 후 new => folder를 차례로 클릭해서 sqlmap 디렉터리를 생성한다.
+
+책 매퍼 XML 파일을 생성한다.
+src/main/resources/ 아래 sqlmap 디렉터리를 클릭 후 => new => other를 차례로 선택한다.
+파일 이름을 book_SQL.xml 로 입력하고 finish를 눌러 파일을 생성한다.
+생성된 파일 Source탭에서 내용을 아래와 같이 수정한다. src/main/resources/sqlmap/book_SQL.xml
+
+6.3. 책 입력 기능 쿼리 작성
+쿼리를 매퍼 XML에 옮긴다. <mapper namespace="book"> 코드와 </mapper> 사이에 작성하면 된다.
+src/main/resources/sqlmap/book_SQL.xml
+-->

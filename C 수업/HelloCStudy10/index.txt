@@ -1,0 +1,8 @@
+<html>
+  <head></head>
+  <body>
+    <h1>Hello World</h1>
+    <h1 style = "color:blue">Good Bye World</h1>
+    <img src = https://www.sciencetimes.co.kr/wp-content/uploads/2020/04/1024px-Golden_hamster_front_1-480x368.jpg>
+  </body>
+</html> 

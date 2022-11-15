@@ -157,16 +157,13 @@ namespace HelloMyCSharp02_01
             Console.WriteLine("나이 : " + kb1.Age);
             Console.WriteLine("시력 : " + kb1.Eye);
             Console.WriteLine("mbti : " + kb1.MBTI);
-
-
-
             
-
-
-
-
-
-
+            KBStudent kb2 = new KBStudent();
+            kb2.Name = "김성환";
+            kb2.Age = 20;
+            kb2.Eye = 1.7;
+            kb2.MBTI = "ENFP";
+            kb2.introduce(); //kb2의 모든 정보를 다 출력함
 
 
         }

@@ -1,0 +1,816 @@
+요구사항 분석하기. /// 
+
+
+-1:N 회원정보 카테고리는 회원번호, 등록시간, 아이디, 비번, 닉네임, 이름, 성별, 생년, 전번, 이메일, 취미등의 속성을 가진다 
+-1:1 성별 카테고리는 세가지 항목 중 하나의 값을 가집니다. 
+-1:N 팔로워 카테고리는 팔로잉번호, 등록시간, 회원번호, 대상회원번호, 회원-회원 등 속성을 가진다. 
+-1:N 포스트 카테고리는 게시글번호, 등록시간, 회원번호, 게시글명, 게시글 내용, 위치 +댓글 좋아요 태그 등의 속성을 가진다. 
+-1:N 댓글 카테고리는 댓글번호, 등록시간, 회원번호, 대상 게시글번호, 댓글 내용 등 속성을 가진다.
+-1:N 좋아요 카테고리는 좋아요 번호, 등록시간, 회원번호, 대상 게시글 번호, 회원-게시글 등 속성을 가진다. 
+-
+n:n 하나는 넣어주고 싶당 ㅇㅅㅇ
+mysql oracle은 비슷하고, r은 문법이 거의 다르다 ㅇㅅㅇ rstudio
+
+cbull
+visualization
+web-
+
+
+1:1, 1:n, n:n,
+선택적 관계, 필수적 관계(not null)
+
+ERD(이알디)란 "Entity Relationship Diagram"의 약자로서, 계체-관계 다이어그램이라고도 하며 말로 되어 있는 요구사항을 분석하여 그림으로 그려내어 그 관계를 도출한 다이어그램을 말한다
+프로젝트 계획 초반에 ER Diagram을 작성하는데
+프로젝트가 끝나고 포트폴리오 만들기 위해서 최종 ER 다이어그램이 필요하다.
+오라클에서 데이터베이스를 구축하고 쉽게 ER 다이어그램을 만들 수 있는 방법을 공유한다.
+작성한 요구사항을 바탕으로 db를 구성하는데 필요한 개체, 속성, 개체간의 관계를
+추출하여 erd를 생성합니다.
+개체 entity 와 속성 attribute 추출하기.
+개체 entitiy는 현실에서의 사물이나 사람에 해당하는 실체.
+개체를 나타내는 속성attribute이 있고, 이들 속성 이 모여 하나의 정보 단위를 이루는것이
+개체.
+요구사항에서는 개체는 대부분 명사로 이뤄졌지만, 속성과 잘 구별하는것이 중요 포인트.
+요구사항에서 개체 간의 관계는 동사로 묘사되어서 동사로 찾으면 됩니다.
+
+
+entity        attribute
+main_user     메인 유저명
+pfofile       유저의 메타 프로필.
+
+
+     
+
+	comment_Registrationtime time not null 
+comment_reg_time  || comment_created_at 이렇게 하기
+동시간대에 될 확률이 거의 ㅇ벗지만 존재할 순 있으니까 unique는 nono, not null은 ok
+
+
+자동 시간을 입력할땐 to char 날짜를 직접 입력할땐  to date
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+조인~ 등등 하는건 각자 내가 뽑고 싶은 데이터형식 정해서 한번 해봐요~
+ 예를들어 난 성별별로 회원수를 뽑고 싶어!
+ 그러면 성별, 회원수 형식으로 뽑고
+
+ 난 회원 정보 입력 하는게 귀찮아 프로시저로 좀 더 간단하게 만들래
+ 하면 프로시저로 만들어보고~
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+1) @테이블 5개 이상 만들고 고유키, 외래키 설정하기- 성별 취미 회원정보 게시글 댓글 등 --
+2) 테이블당 최소 데이터 3개 넣고, 1개 바꾸고, 1개 지우기 (insert, update, delete)
+3) join ex)두개-성별이랑 취미 조인?!!!  :: 
+4) 중첩질의 길다 > 뷰로 줄이기 
+5) 그룹 바이 ex) 회원정보에 입력한 생년월일로 10대가 몇명이고 20대 각각 몇명인지 조회하는 것.
+세대별 이용자수 정보 획득 (like netflix db, 나이별 어떤 컨텐츠에 수요가 있는지를 찾는 등 여러 기업에서 통계를 냄!!) 
+ex) 10대, 20대 정하고,
+select birthdate, count(birthdate)
+from user_info
+group by teenage
+order by teenage;
+
+6) 해빙 쓰기. >> 평균 나이 avg. 
+
+7) 프로시저 및 함수 써보기. (등록, 수정, 삭제) 
+ex)
+1.생년월일을 나이로 리턴=함수 
+2.나이별로 분류=그룹바이
+3.10대, 20대 찾기=헤빙
+------------------------------------------
+8) 1교시에 취향별로 다 넣고 + select  +++++++++++
+
+2교시에 프로시저 --
+3교시 함수 ---  
+4교시에 ppt탬플릿 및 목차, 전개
+5교시 이후 ppt, 트리거
+
++
+timestamp 프로시저로 만들기 
+초단위 이하의 밀리세컨드 처리를 위해선 timestamp형 사용.
+문자열의 날짜 입력시
+insert into TABLE_NAME(COL_NAME) values(to_date'20220922104408','YYYYMMDDHH24MISS'));
+TIMESTAMP 형은
+insert into TABLE_NAME(COL_NAME==TIMESTAMP_VALUE) values(to_timestamp'20220922104408','YYYYMMDDHH24MIFF'));
+->밀리세컨드르 3자리로 지정하여 표현하고 싶다면 ff3을, 4자리로 표현하고 싶다면 ff5를 이와 같은 형식으로. 
+('2022-04-02 06:14:00.742000000', 'YYYY-MM-DD HH24:MI:SS.FF'));
+FF3 3 자리 이하의 정밀도 의미 것을 합니다. 6 자리의 정밀도까지 올릴 수 있습니다.
+to_timestamp(:timestamp_as_string,'MM/DD/YYYY HH24:MI:SS.FF3')
+https://bit1010.tistory.com/183
+
+
+timestamp를 이용해서 데이터 복구
+select * from A as of Timestamp(SYSTIMESTAMP-INTERVAL '9' HOUR) --9시간전 데이터를 불러온다
+insert into A (select * from A as of Timestamp(SYSTIMESTAMP-INTERVAL '9' HOUR))--불러온 데이터를 INSERT한다.
+SELECT * FROM A --불러온 데이터가 원래대로 돌아온 것을 알 수 있다! 
+
+//months_between 함수
+SELECT user_info(MONTHS_BETWEEN(TRUNC(SYSDATE), TO_DATE('19890326','YYYYMMDD')) / 12)
+as age FROM DUAL
+
+
+
+
+@#@#@#@#@#@@@@@@@@#@#@#@#@@@@@@@@@@@@##@#@#@#@#@#@#@#@#@#@#@#@#@#@#@##@#@#@#@#@#@
+ㄴㄻ너ㅏ로ㅓㅏㅈㄷ호셔ㅑ뵫져샤댜ㅕㅏ소더ㅏㅗ어ㅏ로아ㅣㅓ아ㅣㅓㅏㅣ뎌샤ㅐ4됴새ㅑ됴샤ㅐ돌갸됴대ㅑ쇼ㅗㅑㅐㄷ쇼ㅑ우라ㅣ오랴ㅕ둇댜ㅐ솨ㅣ돗
+당로ㅑ대ㅛ벼새ㅑㅗㄷ사ㅣ됴샤ㅐㅛ댜새ㅗ다ㅗ아로ㅕ뱌ㅐㄷ쇼 ㅐㅑ둇뱌ㅐㄷ뵤새ㅑㄷㅂ쇼ㅕㅑㅐ됴샤ㅐㄷ쇼ㅑㅐ됴샤ㅐ둅ㅈ샤ㅐ됴샤ㅐ됴샤ㅐㄷ죠새ㅑㄷㄷㅅ8;ㅐㅑㅛ댜ㅐ사얿됴댜새도바ㅣㅗ아로ㅓㅏ읻
+ㅗ아ㅏㅇㅁ나ㅣ다아ㅗ라맏타아앜 ㅏ아아아콘 저저적 아받ㄱ뱌ㅐㅈㄷㅅ ㅛㅑㅐ됴갸ㅐ둇
+어코나ㅗ쟈ㅐ숒아콘 저젖ㄱ ㄷ작짱짱매냄ㄴㅇ ㅈㄷ샤ㅐㄷ쇼ㅗㅑㅐ뎌ㅑㅐ우왕롣;ㅑ소아ㅗㅑ대쇼ㅑㅐ됴샤대 우라ㅗㄷ샤ㅐ 도사ㅣ돗댜ㅐ쇼ㅑㅐ도샤ㅐ됴샤ㅐ두사ㅜ아ㅗㄷ샤ㅐㅗㄷㅂ사ㅣ오ㅜㅏㅣㅜㄷ
+아ㅣ랍ㄷ쇼ㅑㅐ댜ㅐㅛ으,루ㅏㅓㅛㅗㄷ새ㅑㅗ다ㅜ아루ㅏ됴샤ㅐ됴소다ㅣㅜ아루됴샤ㅐㅂ더사ㅣ우ㅡㄹ
+ㅏㅣ오ㅓ랴애ㅕ댜ㅐ수;다아아앙
+아ㅣ,ㅓㅏㅇ랴ㅐ다ㅣ아아앙
+[-다ㅣ댜ㅐ 댜ㅐㄷ샤ㅐ댜ㅐ쇼ㅐㅑㄷ ㅛㅑㅐ됴ㅑㅐ됴ㅗㄷㅇ이이거 ㄴ대ㅑ비ㅏ댁다샵샤다ㅣ다ㅓㅣㄷ갿갸ㅑㅐ갸대겨ㅑㄷ겨댜겨ㅑㄷ겨ㅑㄷ겨댜ㅕ갸겨댜ㅕ갸뎌갸ㅐ뎌갲뎌ㅓㅑㅐㄷㅈㅈㅅㅈㄷㅅ
+키도븓갑다댑대밷박
+
+
+
+--
+create or replace procedure get_comment_tier(nickname IN varchar.2, out_tier OUT varchar2)
+
+IS 
+
+BEGIN
+
+	SELECT TIER INTO out_tier FROM user_info WHERE user_id = nickname;
+	
+EXCEPTION --소환사를 찾을 수 없을때
+When NO_DATA_FOUND Then
+out_tier:= 'NO_user_info_FOUND';
+END get_comment_tier;
+
+
+
+
+drop procedure get_comment_tier;
+
+
+//취미에 대한 성별 x
+--x
+create or replace procedure ex_prefer_gender_info
+(
+	prefer_type varchar2,
+	gender_type 
+)
+
+is begin 
+insert into prefer_gender_info 
+values(prefer_type, gender_type);
+end ex_prefer_gender_info;
+/
+exec ex_prefer_gender_info('스컬타운산책',2);
+
+OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO
+--이름을 받아서 성별 코드를 반환하는 함수.   >> 테이블 불러오기 
+OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO
+
+
+--프로시저로 쉽게 취미 입력
+drop procedure insert_hobby_info;
+create or replace procedure insert_hobby_info
+(
+hobby_number in int, 
+hobby_type in varchar2
+) 
+
+is begin insert into 
+hobby_info values(hobby_number, hobby_type);
+end insert_hobby_info;
+/
+exec insert_hobby_info (hobby_up.nextval, '전쟁');
+select*from hobby_info;
+--프로시저를 만들거나 있으면 덮어쒸운다, [프로시저명지정(집어넣을 테이블의 컬럼명, 타입 전부 작성)]이게 프로시저 문법이다
+--is begin으로 무조건 시작, 이후 내용을 적는다 insert into(만약 딜리트 할거면 여기 delete) 테이블명(컬럼명, 컬럼명); 위에 문법과 같다
+--end 프로시저명;
+/ --같은 워크시트 내에서 프로시저 만들고 사용하려면 필요하다 아니면 세미클론 안 먹는다
+-- exec 프로시저명(데이터값, 데이터값);
+-- 프로시저는 내가 만든 함수고, 안에 여러 구문 가능, for each, if, 넣기, 지우기 가능)
+-- 트리거는 특정 조건 발생했을시 작동
+-- 함수는 세부적인것이고 프로시저 안에 함수 가능
+
+--함수로 게시글번호 입력시 좋아요를 가장 많이 받은 게시글과의 좋아요 차이 출력
+update post_info set post_count_like=3 where post_number=1;
+update post_info set post_count_like=5 where post_number=2;
+
+drop function insufficient_like;
+create or replace function insufficient_like(post_number int) 
+return int 
+is 
+nownum int := post_number;
+num1 int;
+num2 int;
+begin 
+select max(post_count_like) 
+into num2 
+from post_info 
+end;
+begin 
+select post_count_like 
+into num1 
+from post_info 
+where post_number=nownum;
+end;
+return num2-num1;
+end;
+/
+select insufficient_like(1) from dual;
+
+-- 만들거나 있으면 덮어쒸운다. 함수명(매개변수 매개변수타입)
+-- 반환할 데이터형식
+-- is 이후로 변수 선언, 3줄에 걸쳐서 나우넘(int)=게시글 번호;
+-- 자 이제 시작이야
+-- select 찾을컬럼명 //이거를
+-- into 넣을변수값 //여기에 넣는다
+-- from 셀렉트로 가져올 테이블명 //여기에 있는
+-- 끝
+-- 또 이제 시작이야 왜냐 난 숫자 2개가 필요하거든
+-- 4.조건에 맞는 3.여기에 있는 1.이거를 2.여기에 넣는다
+-- 끝
+-- 반환한다 변수2-변수1한 값을 뽑는다
+-- 끝
+/
+-- select 함수명(매개변수) from dual; --하면 나온다
+-- 50 - null = null
+
+
+
+
+//This function is called getName_putGender 
+It has one parameter called getName and it returns a number of gender. 
+The function will return the gender_num if it finds a match based on getName. 
+Otherwise, it returns a 99999.
+
+
+이름을 받아서 성별 코드를 반환하는 함수. 
+CREATE OR REPLACE Function getName_putGender
+   ( user_name IN varchar2 )
+   RETURN int
+IS
+   DECLARE
+	userN varchar2(100);
+	PRODUCT_NAME varchar2(100);
+
+   cursor c1 
+   is
+   SELECT gender_num
+     FROM gender
+    
+
+BEGIN
+   open c1;				--명시적 커서 오픈
+   DBMS_OUTPUT.PUT_LINE('성별코드  이름');
+   LOOP
+	FETCH c1 INTO PRODUCT_ID, PRODUCT_NAME; --커서에서 데이터 가져오기
+	EXIT WHEN EX_CUR %NOTFOUND; --커서가 없을 경우 종료
+	DBMS_OUTPUT.PUT_LINE(PRODUCT_ID||'  '||PRODUCT_NAME);
+	END LOOP;
+   close c1;
+
+RETURN cnumber;
+
+EXCEPTION
+WHEN OTHERS THEN
+   raise_application_error(-20001,'An error was encountered - '||SQLCODE||' -ERROR- '||SQLERRM);
+END;
+
+
+--gender 테이블에서 1코드 > male로 출력
+Select 
+    gender_num,
+    Case when Gender_num = '1' then 'Male' when Gender_num = '2' then 'Female' else 'Other' end
+from gender
+
+
+
+
+8) 제약조건 
+닉네임(한글, 영문, 숫자 혼용 가능/ 한글 기준 12자 이내)
+게시글(사진크기, 글길이)
+
++++++++PPT 탬플릿 정하고 설계하기 > 
+ppt도 개인적으로 이걸 먼저 해놓으면(테이블 만들떄 요구사항업처럼) 
+페이지마다 작업할 거 딱딱 정해서 작업해서 집어넣음 되니까, 
+같이 모여서 참고자료들 보면서 의논하고, 
+한사람이 한번에 만들던가 하면 될 것 같습니다 > 한사람이 하는데 페이지별 필요한 작업을 나눠서 해도 부담을 줄일 수 있다고 생각해요:)
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+$
+오후에는 프로시저 및 함수 써보기 
+ 1. 테이블 5개 이상 만들고 고유키, 외래키 설정하기- 성별 취미 회원정보 게시글 댓글 등
+ 2. 테이블당 최소 데이터 3개 넣고, 1개 바꾸고, 1개 지우기
+ 3. join, 중첩질의, 뷰, 그룹바이, 헤빙 활용 (ex 성별, 사람 수 출력 (그룹바이-특정 취미를 좋아하는)(헤빙-특정 성별만))
+ 4. 프로시저 (ex 입력문 간단하게 요약)
+ 5. 함수 (ex 생년월일을 나이로 리턴)
+ 6. ppt
+
+
+
+
+
+
+
+클라우드 서비스 수요가 많다. 데이터 센터 구축. ㅇㅅㅇ?
+aws - 클라우드 서비스 ㅇㅅㅇ
+
+<<1. sql 문>>
+테이블 최소 3개 이상
+- 테이블에 반드시 pk 있어야 함 
+- 기초 crud 20개 이상(각 5개씩) 
+- fk 최소 하나 이상 
+- group by 최소 하나 이상
+- having 최소 하나 이상
+- join 최소 하나 이상
+- view 최소 1개 이상
+- 중첩 질의 최소 1개 이상
+
+2. 모델 그림 캡쳐해서 ppt에 넣기
+3. 최소 하나 이상의 프로시저, 하나 이상의 함수가 있어야 함
+
+
+T_T
+
+
+
+구상과 기획, 디자인. 구성원들의 역할.
+1) 구상 : DB 구축 
+2) 기획 : sns 데이터베이스를 구축하고 그걸 기반으로 웹프로젝트까지 비쥬얼적으로 구현화 하는것 : 포트폴리오 
+3) 디자인 : 웹프로젝트에서 향후 개발방향 의논. 
+
+각자 시간 있으면 쿼리문으로만 작성
+ 1. 각 테이블 생성
+ 2. 테이블마다 데이터 5개씩 입력 (성의있게)
+ 3. 애매한건 건너뛰기
+ 4. 추가 및 수정할 내용, 조건 및 특이사항 생각나면 카톡에 말하기
+ 
+젠더는 테이블 따로 빼서 1남자 2여자 3비공개 이렇게 하면 될거같아요
+그리고 선호분야도 따로 테이블로 만들어서 아무거나 2~3개씩만 넣어주세요
+정보
+젠더, 선호분야 굳이 따로 빼는 이유
+ 1. 성별 헬리콥터 이런거 적거나 오타 낼까봐
+ 2. 후에 동일한 취미를 지닌 사람 조사할 때 오타나 이음동의어 발생하지 않게
+ 선호분야 2~3개면 서로 중복 안되게 재미난걸로 해주세요~
+ 
+ 네 오류 날 가능성 있는건 다 외래키로 빼는게 좋겠습니다아
+ 
+ 게시글부터 외래키 회원번호 죄다 아이디로 바꾸는게 맞을 것 같습니다. 어떨까요?
+ 상관없긴한데 회원번호가 있어봤자 뭔지 모를듯.. 아이디가 보여야 임마가  썼구나 싶지
+ 
+ <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<수정
+ 계정정보를 회원정보로 올림
+ 게시글 아래 회원번호를 아이디로 수정
+ 댓글 이하 대상 게시글명은 게시글번호에 맞는 게시글번호를 따와야함 
+ (게시글명은 중복이 있을 수 있기 때문에)
+
+$
+태그, 좋아요, 팔로잉 무시하기
+오후부터는 프로시저, 함수 고민해보면서 데이터 넣어봐요
+
+$
+외래키나 유니크에 낫널 붙어야하는 경우 보여서 수정했습니다. 
+각자 하면서 값이 반드시 있어야 하는 경우 같은거 생각해보아요.
+
+PRIMARY KEY는 UNIQUE + NOT NULL을 의미합니다.
+어떤 테이블의 외래키는 primary key 이기 때문에 굳이 unique + not null  안해줘도 됩니다 ㅇㅅㅇ....!!!!!!!!!
+당겨온 외래키가 유일한 값이어야되면 유니크가 또 필요하겠지만 
+보통 당겨온 외래키는 중복되는 경우니까 --join  유니크는 안쓸거 같아요 
+외래키엔 유니크를 안넣는당!!!!!!!!!!!!
+
+대상 게시글 번호 를 유니크로 하게 되면 그 유니크 값이 중복이 안되게 해버리니까, 댓글 하나밖에 못답니다 ㅋㅋㅋㅋㅋㅋㅋㅋㅋ 
+
+젠더를 외래키- 유니크, not null 로 두면 ,  여자한명, 남자한명, 비공개 한명 아이디 세개 밖에 못만듬 
+not null 이 아니라 null 을 넣으면 데이터를 더 집어 넣을 수 있다. but, 데이터를 구분못할것이다. 
+말한것처럼 프라이머리는 유니크+낫널이라 굳이 프라이머리에 추가해줄 필요는 없고 유니크에는 낫널 가능~
+
+닉네임 유니크+낫널 : 프라이머키 >
+닉네임 유니크 걸면 닉 삭제후에 다시 만들어도 중복닉으론 뜨지 않는다. 
+db 에서 지우면 중복안 뜨는데 몇일 뒤 반영되는 이유. ? 보기엔 지운거 처럼 보이는데, 디비에선 일정기간 후에 지우는 기능을 써서 그렇다. 
+그런 기능을 안쓰면 바로바로 만들 수 있다. 
+
+
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+내일까지 테이블 5개(성별 취미 회원정보 게시글 댓글) 만들고 데이터 3개씩 넣어오기~
+다한 사람은 출력, 프로시저, 함수 생각해보기~
+내일은 출력, 프로시저, 함수 좀 보고 월요일부터 ppt하죠
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+
+
+
+3. 프로젝트 관련 조건
+1. sql 문
+테이블 최소 3개 이상
+- 테이블에 반드시 pk 있어야 함
+- 기초 crud 20개 이상(각 5개씩)
+- fk 최소 하나 이상
+- group by 최소 하나 이상
+- having 최소 하나 이상
+- join 최소 하나 이상
+- view 최소 1개 이상
+- 중첩 질의 최소 1개 이상
+
+2. 모델 그림 캡쳐해서 ppt에 넣기
+
+3. 최소 하나 이상의 프로시저, 하나 이상의 함수가 있어야 함
+<<<요구사항 분석>>>
++- 넣기 ㅇㅅㅇ
+
+회원정보, 게시글, 댓글, 좋아요.
+
+1. Table users; 가입자 
+이름
+비밀번호
+생년월일 > 주민번호??
+핸드폰번호
+이메일
+시간(가입일-timestamp)
+회원아이디 (중복x 이거는 가입자 
+ㄴ회원번호 pk ??? 외래키????????????? 
+닉네임(중복x 한글, 영문, 숫자 혼용가능/ 한글 기준 12자 이내)
+프로필 사진
+ㄴ사진파일 이름
+ㄴ사진파일 경로
+Table users {
+  id int [pk, increment] // auto-increment
+  name varchar
+  email varchar
+  password password
+  created_at timestamp [default: `now()`]
+}
+
+
+2. Table profile meta; 가입자가 정한 메타 : 사진파일 이름
+
+이거 지금 계정정보에 보여주는 댓글 수는 회원이 지금까지 작성한 댓글 수
+그럼 회원정보볼때 작성한 댓글도 보여주는 식으로 할거에요?
+지금까지 작성했던 댓글이나 게시글같은거 보여주는 식으로?
+회원이 궁금할때 누르면 뜨는 느낌? 으로 함수라고 표시해뒀습니다
+
+3. Table post ; 게시글 
+게시글 번호(post id)
+post-사진
+ㄴ파일이름
+ㄴ파일사이즈
+ㄴ파일컨텐츠타입?
+post-글
+
+작성자
+작성시간
+Table posts {
+  id int [pk, increment]
+  user_id int
+  textcontent varchar
+  created_at timestamp [default: `now()`]
+}
+Table medias {
+  id int [pk, increment]
+  creator_id int
+  content_type int // 0:image, 1:video
+  content_url varchar
+}
+Table post_media {
+  media_id int
+  post_id int
+}
+
+
+3-1 Table likes; 
+좋아요=하트 눌린 횟수
++user 좋아요 누른 유저
++post 좋아요 눌린 포스트
+
+*좋아요는 좋아요 번호를 기본 키로 만들면 한명이 좋아요를 곗속 누를 수 있게 된다. 
+ 한 회원이 동일 게시글에 여러번 좋아요를 누르면 안되기 때문에
+ 회원-게시글이라고 유니크 항목을 추가해서 중복을 방지합니다.
+$ 좋아요와 팔로잉의 유니크 항목은 중복방지용입니다.
+
+*누가 눌렀는지 확인을 하고 이미 누른 사람이면 다시 못누르게끔, 누른 사람 아이디나 회원번호를 넣고
+*팔로잉도 번호를 굳이 기본키로 안하고
+*게시글 테이블 안에 좋아요???
+Table likes {
+  id int [pk, increment]
+  target_id int
+  target_type int // 0: post, 1: comment
+  user_id int [not null] // user - click likes btn
+  created_at timestamp [default: `now()`]
+}
+
+3-2 Table comments; 댓글
+댓글 번호(commnet_id) <- 기본키로 사용
+닉네임(댓글단사람)
+시간
++댓글달린 포스트
++댓글내용
++댓글 수 ??
+Table comments {
+  id int [pk, increment]
+  post_id int
+  user_id int
+  content varchar
+  created_at timestamp
+}
+
+
+
+
+
+
+4. Table follow;
++팔로워 수
++팔로우 회원번호, 아이디
++팔로우 한 사람
++팔로우 당한 사람
+Table follow {
+  user_id int
+  following_id int
+}
+
+태그, 좋아요, 팔로잉은 테이블 5개 만드시고 데이터도 3개씩 넣으시고 시간 있으시면 하셔도 됩니다
+5. Table tag; --etc. hash tag, block/
++태그명
++태그수(제한 5개?)
++태그한 사람 이름
++태그된 포스트
+Table tagged_user {
+  target_id int
+  target_type int // 0: post(textcontent), 1: comment, 2: media
+  taggedUser_id int
+}
+Table post_hashtag {
+  post_id int
+  hashtag_id int
+}
+
+Table comment_hashtag {
+  comment_id int
+  hashtag_id int
+}
+
+Table hashtags {
+  id int [pk, increment]
+  hashtag varchar
+}
+
+
+etc. 
+Table block {
+  user_id int
+  block_id int
+}
+
+
+
+create table post
+(
+    post_id primary key, -- 외래키
+    post_pic varchar2(255),
+    pic_filename varchar2(255) not null,
+    pic_filesize varchar2(255) not null,
+    
+    post_text varchar2(255),
+    post_timestamp varchar2(255) not null,
+    post_uploader varchar2(255) not null
+    
+    post_url varchar2(255)
+    comment_count int,
+    like_count int,
+    constraint fk_post_id foreign key(post_id) references post(post_id)
+);
+-- CONSTRAINT fk_midx foreign key(midx) references memberA (midx)  --외래키 지정문
+  --CONSTRAINT [FK명] foreign key([FK가 될 컬럼명]) references [PK가 위치하는 테이블] ([PK컬럼명])
+
+
+헐 대박 ㅇㅅㅇㅅㅇㅅㅇ c# 배우면 ar,vr 만들기 가능이라구욥!!!!!!!!!!
+
+
+
+
+//갑자기 여기서  ㅡmit 스탠포드요?ㅇㅅㅇ
+//잭슨홍, commonsense 방망이 ,,,, 근거를 떠나 벗어나 상상
+//커먼센스를 빼고 다른 상상적 사고를 해줘야 한다. 미술,이 필요하다?
+//갑자기요? ㅇㅅㅇ 이젠 인문학의 세카이로........
+//
+
+
+// dbdiagram
+Table users {
+  id int [pk, increment] // auto-increment
+  name varchar
+  email varchar
+  password password
+  created_at timestamp [default: `now()`]
+}
+
+Table follow {
+  user_id int
+  following_id int
+}
+
+Table block {
+  user_id int
+  block_id int
+}
+
+Table posts {
+  id int [pk, increment]
+  user_id int
+  textcontent varchar
+  created_at timestamp [default: `now()`]
+}
+
+
+Table medias {
+  id int [pk, increment]
+  creator_id int
+  content_type int // 0:image, 1:video
+  content_url varchar
+}
+
+Table post_media {
+  media_id int
+  post_id int
+}
+
+Table comments {
+  id int [pk, increment]
+  post_id int
+  user_id int
+  content varchar
+  created_at timestamp
+}
+
+Table tagged_user {
+  target_id int
+  target_type int // 0: post(textcontent), 1: comment, 2: media
+  taggedUser_id int
+}
+
+Table likes {
+  id int [pk, increment]
+  target_id int
+  target_type int // 0: post, 1: comment
+  user_id int [not null] // user - click likes btn
+  created_at timestamp [default: `now()`]
+}
+
+Table post_hashtag {
+  post_id int
+  hashtag_id int
+}
+
+Table comment_hashtag {
+  comment_id int
+  hashtag_id int
+}
+
+Table hashtags {
+  id int [pk, increment]
+  hashtag varchar
+}
+
+Ref: posts.user_id > users.id
+Ref: "users"."id" < "likes"."user_id"
+Ref: "posts"."id" < "post_hashtag"."post_id"
+Ref: "hashtags"."id" < "post_hashtag"."hashtag_id"
+Ref: "hashtags"."id" < "comment_hashtag"."hashtag_id"
+Ref: "posts"."id" < "comments"."post_id"
+Ref: "users"."id" < "comments"."user_id"
+Ref: "comments"."id" < "likes"."target_id"
+Ref: "posts"."id" < "likes"."target_id"
+Ref: "comments"."id" < "comment_hashtag"."comment_id"
+Ref: "post_media"."post_id" < "posts"."id"
+Ref: "post_media"."media_id" < "medias"."id"
+Ref: "users"."id" < "medias"."creator_id"
+Ref: "tagged_user"."taggedUser_id" < "users"."id"
+Ref: "tagged_user"."target_id" < "medias"."id"
+Ref: "tagged_user"."target_id" < "comments"."id"
+Ref: "tagged_user"."target_id" < "posts"."id"
+Ref: "users"."id" < "follow"."user_id"
+Ref: "users"."id" < "follow"."following_id"
+Ref: "block"."user_id" < "users"."id"
+Ref: "block"."block_id" < "users"."id"
+
+
+
+--------made by 세룡쨩 -------------------------------------------------------
+-- 회원정보 테이블
+create table user_info
+(
+    user_num int primary key,
+    user_id varchar2(255) unique,
+    user_password varchar2(255) not null,
+    user_nickname varchar2(255) not null,
+    user_name varchar2(255) not null,
+    user_gender char(6) not null, --남자, 여자 6바이트 크기 고정
+    user_birth varchar2(255) not null,
+    user_email varchar2(255) not null,
+    user_regdate date not null,
+    user_prefer varchar2(255),
+    user_profile_name varchar2(255),
+    user_profile_path varchar2(255)
+);
+
+create table account_info
+(
+    post_count int,
+    comment_count int,
+    like_count int,
+    following_count int,
+    follower_count int
+);
+
+create table post
+(
+    post_num int primary key,
+    created_at timestamp not null,
+    user_num varchar2(255), --외래키로 설정
+    post_title varchar2(255) not null,
+    post_content varchar2(255) not null,
+    tag_content varchar2(255), -- 외래키로 설정
+    position varchar2(255),
+    comment_count int,
+    like_count int
+);
+
+create table tag
+(
+    tag_num int primary key,
+    tag_content varchar2(255) not null
+);
+
+create table comment
+(
+    comment_num int primary key,
+    comment_reg_time timestamp not null,
+    comment_user_num int, -- 외래키로 설정
+    comment_post_num int, -- 외래키로 설정
+    comment_content varchar2(255) not null
+);
+
+
+
+
+ㅠ 3 ㅠ 힁...
+뜬금없는데 제가 생각한 앱? 중에
+술마시면 핸드폰 분실하자나여
+그래서 술마시기 전에 그앱을 키는거에여
+그래서 그동안만 위치정보를 저장해서,
+원하는 사람한테 실시간으로 시간 지정해서
+그 시간내에 체크 안하면 -알람에 확인 안누르거나 ㅣㅇㅇㅇ
+그러면 문자 발송 ㅋㅋㅋ
+'주인님이 핸드폰을 분실 했습니다!!! ㅇㅇ 님이 확인해주세요!!! '
+술 같이 마시는 친구로 설정하게 즐찾 추가나 ㅇㅇㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋ
+
+괜찮지 않아요?
+저 알바할때 술마시는 사람들 핸드폰 분실 
+진짜 얼마나 많이 하는 지 
+
+괜찮은거 같은데 예약발송을 살짝만 건드리면 ㅇㅅㅇ
+
+미래에 해보고싶은..............................
+이름은 주인님 일어나세요....
+master wake up...
+오레사마.. 오키로!
+
+헉 그럼 정시방에 12시까지 공부하고 
+새벽에 조지면 따기게싿샤ㅐㄷ샤대샤대샤ㅐㄷ쇼ㅑ대ㅙ쇼댜ㅐ쇼ㅐㅑㅛ샤ㅐ됴 ㅑㅐ됴샤ㅐㄷ
+야-호!!!!!!!!!!!!
+행복하다
+
+컴터쪽이랑
+나 
+맞을지도....
+너무 아늑한 환경
+집순이/...
+
+자바!!!!!!!!!!
+당장 백준풀어
+
+
+
+
+DELETE문 기본형태
+--DELETE문
+DELETE FROM 테이블명
+WHERE
+조건;
+DELETE문의 사용법은 위와같습니다.
+
+ 
+
+회사테이블 (COMPANY_TABLE)에 회사코드(COMPANY_CODE)가 1인 데이터삭제
+DELETE FROM COMPANY_TABLE
+WHERE
+COMPANY_CODE = 1
+DELETE문은 위와같은 방식으로 사용하시면 됩니다. DELETE문을 사용하실때에 WHERE절이 잘 명시되었는지 확인하셔야 합니다. WHERE절에 조건을 명시하지않으면 테이블에 있는 전체 데이터의 컬럼 값이 삭제됩니다.
+
+ 
+데이터 변경을 실수 했을 경우 대처법
+데이터 삭제 실수는 종종 일어납니다. 
+당황스럽겠지만 정신만 잘 차리면 원상복구 시킬 수 있습니다. 
+오라클에는 트랜잭션이라는 기능을 지원합니다. 
+그러므로 COMMIT문을 실행하기 전까지는 변경된 데이터는 현재 세션에서만 볼 수 있고 
+최종적으로 데이터베이스에 변경된 상태는 아닙니다.
+
+ COMMIT / ROLLBACK
+COMMIT --반영
+ROLLBACK --취소
+데이터를 잘못 삭제했다면 데이터베이스에 COMMIT되기 전에 ROLLBACK을 시켜줍시다. 
+이미 COMMIT된 데이터는 ROLLBACK을 해도 데이터가 복구되지 않으니 주의합니다. 
+이미 COMMIT된 데이터를 다시 원상복구 시키는 방법은 오라클 데이터베이스 일정 시간 이전으로 되돌리는 방법밖에 없으니 주의합시다!! 
+반대로 데이터베이스에 바로 반영하고싶다면 COMMIT이라는 명령어를 사용하시면 됩니다. 

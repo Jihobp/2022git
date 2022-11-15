@@ -1,0 +1,95 @@
+create table food_category
+(
+   code int primary key,
+   name varchar2(100) not null unique
+);
+
+insert into food_category values(1, '한식');
+insert into food_category values(2, '중식');
+insert into food_category values(3, '일식');
+insert into food_category values(4, '양식');
+insert into food_category values(5, '괴식');
+insert into food_category values(6, '기타');
+insert into food_category values(7, '음식아님');
+insert into food_category values(8, '디저트');
+
+
+create table food_Truck
+(
+   num int primary key,
+   name varchar2(100) not null,
+   price int,
+   foodcode number not null, 
+    foreign key(foodcode) REFERENCES food_category(code)
+);
+
+
+create SEQUENCE food_rownum;
+
+
+insert into food_truck values(food_rownum.nextval, '비빔밥', 6000, 1);
+insert into food_truck values(food_rownum.nextval, '청국장', 5500, 1);
+insert into food_truck values(food_rownum.nextval, '김치전', 5000, 1);
+
+insert into food_truck values(food_rownum.nextval, '취두부', 3000, 2);
+insert into food_truck values(food_rownum.nextval, '도삭면', 4500, 2);
+insert into food_truck values(food_rownum.nextval, '유산슬', 8000, 2);
+
+insert into food_truck values(food_rownum.nextval, '초밥', 12000, 3);
+insert into food_truck values(food_rownum.nextval, '오꼬노미 야끼', 2500, 3);
+insert into food_truck values(food_rownum.nextval, '라멘', 9000, 3);
+
+insert into food_truck values(food_rownum.nextval, '스파게티', 16000, 4);
+insert into food_truck values(food_rownum.nextval, '스테이크', 57000, 4);
+insert into food_truck values(food_rownum.nextval, '청어조림', 15000, 4);
+
+insert into food_truck values(food_rownum.nextval, '오렌지탕', 18000, 5);
+insert into food_truck values(food_rownum.nextval, '초코파이 찌개', 500, 5);
+insert into food_truck values(food_rownum.nextval, '파인애플 매운탕', 1200, 5);
+
+insert into food_truck values(food_rownum.nextval, '토룡탕', 12000, 6);
+insert into food_truck values(food_rownum.nextval, '드래곤 덮밥', 650000, 6);
+insert into food_truck values(food_rownum.nextval, '삼치 가시 찜', 500, 6);
+
+insert into food_truck values(food_rownum.nextval, '마우스', 7500, 7);
+insert into food_truck values(food_rownum.nextval, '키보드', 130000, 7);
+insert into food_truck values(food_rownum.nextval, '모니터', 99000, 7);
+
+
+insert into food_truck values(food_rownum.nextval, '아아', 3500, 8);
+insert into food_truck values(food_rownum.nextval, '쉬폰케이크', 160000, 8);
+insert into food_truck values(food_rownum.nextval, '아이스크림케이크', 85000, 8);
+
+
+
+
+-- join
+-- 두 테이블에서 공통되는 키 값을 가져와서 
+-- 그 값이 겹치는 걸 보여준다.
+select food_truck.name 음식명, price, food_category.name 분류 
+from food_truck join food_category on food_truck.foodcode=food_category.code;
+
+-- 가격 저렴한 순
+select food_truck.name 음식명, price, food_category.name 분류 
+from food_truck join food_category on food_truck.foodcode=food_category.code order by food_truck.price;
+
+-- 가격 비싼 순
+select food_truck.name 음식명, price, food_category.name 분류 
+from food_truck join food_category on food_truck.foodcode=food_category.code order by food_truck.price desc;
+
+
+
+
+
+-- view
+-- view : 가상 테이블
+-- select문으로 만들어진 가상의 테이블
+-- create table 문으로 만들어진 정식 테이블이 아니고
+-- 기존테이블들을 이용해서 자료조회하고, 그 조회된 자료가지고 만들어진 가상의 테이블
+
+-- food_truck의 최고가만 저장하는 테이블을 만듦
+create view find_max_price as select max(price) max_price from food_truck;
+select * from find_max_price;
+
+-- view를 잘 이용하면 중첩 질의가 더 간략해줄 수 있다.
+select * from food_truck where price=(select * from find_max_price);

@@ -1,0 +1,53 @@
+create table saumsungpeople(
+i_d integer primary key,
+name varchar2(20),
+boss integer);
+
+
+insert into samsungpeople values (1,'이건희',1);
+insert into samsungpeople values (2,'홍라희',2);
+insert into samsungpeople values (3,'이부진',1);
+insert into samsungpeople values (4,'이재용',1);
+insert into samsungpeople values (5,'신라호텔',3);
+insert into samsungpeople values (6,'삼성전자',4);
+
+
+create table samsungpeople(
+id number primary key,
+name varchar2(3) not null,
+boss_is number)
+
+create table samsungpeople(
+id number primary key,
+name varchar2(2) not null,
+bossid number)
+
+insert into samsungpeople values (1, 'dfd',1);
+
+select * from samsungpeople;
+
+select a.name as id, select b.name as boss from samsungpeople a
+join samsungpeople b on a.id=b.boss;
+첫번째로 아이디를 넣는당 b=boss가 있는 테이블에서 boss를 가져와사/
+
+
+select * from samsungpeople;
+select a.name as i_d, b.name as boss from samsungpeople a, samsungpeople b where a.i_d=b.boss;
+
+select a.name as i_d, b.name as boss from samsungpeople a join samsungpeople b on a.i_d=b.boss; 
+select a.name as i_d, b.name as boss from samsungpeople a join samsungpeople b on a.boss=b.i_d; 
+
+
+--where 도 ok, join on 도 ok.
+--select a.name as SSSS, b.name as VVVV from tablename a, tablename b   where/join~on a.xx=b.xx;
+--a네임의 id를, b네임의 보스=id에 넣는다. samsungpeople a, samsungpeople b에서 온,  where,join 
+where ~ 인걸 찾는다. 
+join ~인걸 찾는다.
+
+order by sl.__
+
+
+<view group by>
+--view 만들려면 sql plus에서 권한 줘야 한다.
+--view는 가상테이블, 원본에 영향을 끼치지 않는다. but, max_age student를 삭제하니 
+--중첩지리할때 쓰는것. 

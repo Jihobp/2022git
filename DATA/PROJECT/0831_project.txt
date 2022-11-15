@@ -1,0 +1,349 @@
+SELECT 
+    Person.lastName,
+    Person.firstName,
+    Address.city,
+    Address.state
+FROM
+    Person LEFT JOIN Address USING (personId)
+	
+
+SELECT
+	person.latsName,
+	Person.firstname,
+	address.city,
+	address.state
+FROM
+	PERSON LEFT JION ADDRESS USING (PERSONID)
+	
+	
+	select firstname, lastname, city, state
+	from person 
+	left join address
+	on person.personid=address.personid
+	
+	
+
+
+클라우드 서비스 수요가 많다. 데이터 센터 구축. ㅇㅅㅇ?
+aws - 클라우드 서비스 ㅇㅅㅇ
+
+<<1. sql 문>>
+테이블 최소 3개 이상
+- 테이블에 반드시 pk 있어야 함 
+- 기초 crud 20개 이상(각 5개씩) 
+- fk 최소 하나 이상 
+- group by 최소 하나 이상
+- having 최소 하나 이상
+- join 최소 하나 이상
+- view 최소 1개 이상
+- 중첩 질의 최소 1개 이상
+
+2. 모델 그림 캡쳐해서 ppt에 넣기
+3. 최소 하나 이상의 프로시저, 하나 이상의 함수가 있어야 함
+
+
+T_T
+
+
+
+구상과 기획, 디자인. 구성원들의 역할.
+1) 구상 : DB 구축 
+2) 기획 : sns 데이터베이스를 구축하고 그걸 기반으로 웹프로젝트까지 비쥬얼적으로 구현화 하는것 : 포트폴리오 
+3) 디자인 : 웹프로젝트에서 향후 개발방향 의논. 
+
+각자 시간 있으면 쿼리문으로만 작성
+ 1. 각 테이블 생성
+ 2. 테이블마다 데이터 5개씩 입력 (성의있게)
+ 3. 애매한건 건너뛰기
+ 4. 추가 및 수정할 내용, 조건 및 특이사항 생각나면 카톡에 말하기
+ 
+젠더는 테이블 따로 빼서 1남자 2여자 3비공개 이렇게 하면 될거같아요
+그리고 선호분야도 따로 테이블로 만들어서 아무거나 2~3개씩만 넣어주세요
+정보
+젠더, 선호분야 굳이 따로 빼는 이유
+ 1. 성별 헬리콥터 이런거 적거나 오타 낼까봐
+ 2. 후에 동일한 취미를 지닌 사람 조사할 때 오타나 이음동의어 발생하지 않게
+ 선호분야 2~3개면 서로 중복 안되게 재미난걸로 해주세요~
+ 
+ 네 오류 날 가능성 있는건 다 외래키로 빼는게 좋겠습니다아
+ 
+ 게시글부터 외래키 회원번호 죄다 아이디로 바꾸는게 맞을 것 같습니다. 어떨까요?
+ 상관없긴한데 회원번호가 있어봤자 뭔지 모를듯.. 아이디가 보여야 임마가  썼구나 싶지
+ 
+ <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<수정
+ 계정정보를 회원정보로 올림
+ 게시글 아래 회원번호를 아이디로 수정
+ 댓글 이하 대상 게시글명은 게시글번호에 맞는 게시글번호를 따와야함 
+ (게시글명은 중복이 있을 수 있기 때문에)
+'
+
+
+
+3. 프로젝트 관련 조건
+1. sql 문
+테이블 최소 3개 이상
+- 테이블에 반드시 pk 있어야 함
+- 기초 crud 20개 이상(각 5개씩)
+- fk 최소 하나 이상
+- group by 최소 하나 이상
+- having 최소 하나 이상
+- join 최소 하나 이상
+- view 최소 1개 이상
+- 중첩 질의 최소 1개 이상
+
+2. 모델 그림 캡쳐해서 ppt에 넣기
+
+3. 최소 하나 이상의 프로시저, 하나 이상의 함수가 있어야 함
+<<<요구사항 분석>>>
++- 넣기 ㅇㅅㅇ
+
+회원정보, 게시글, 댓글, 좋아요.
+
+1. Table users; 가입자 
+이름
+비밀번호
+생년월일 > 주민번호??
+핸드폰번호
+이메일
+시간(가입일-timestamp)
+회원아이디 (중복x 이거는 가입자 
+ㄴ회원번호 pk ??? 외래키????????????? 
+닉네임(중복x 한글, 영문, 숫자 혼용가능/ 한글 기준 12자 이내)
+프로필 사진
+ㄴ사진파일 이름
+ㄴ사진파일 경로
+Table users {
+  id int [pk, increment] // auto-increment
+  name varchar
+  email varchar
+  password password
+  created_at timestamp [default: `now()`]
+}
+
+
+2. Table profile meta; 가입자가 정한 메타 : 사진파일 이름
+
+이거 지금 계정정보에 보여주는 댓글 수는 회원이 지금까지 작성한 댓글 수
+그럼 회원정보볼때 작성한 댓글도 보여주는 식으로 할거에요?
+지금까지 작성했던 댓글이나 게시글같은거 보여주는 식으로?
+회원이 궁금할때 누르면 뜨는 느낌? 으로 함수라고 표시해뒀습니다
+
+3. Table post ; 게시글 
+게시글 번호(post id)
+post-사진
+ㄴ파일이름
+ㄴ파일사이즈
+ㄴ파일컨텐츠타입?
+post-글
+
+작성자
+작성시간
+Table posts {
+  id int [pk, increment]
+  user_id int
+  textcontent varchar
+  created_at timestamp [default: `now()`]
+}
+Table medias {
+  id int [pk, increment]
+  creator_id int
+  content_type int // 0:image, 1:video
+  content_url varchar
+}
+Table post_media {
+  media_id int
+  post_id int
+}
+
+
+3-1 Table likes; 
+좋아요=하트 눌린 횟수
++user 좋아요 누른 유저
++post 좋아요 눌린 포스트
+
+*좋아요는 좋아요 번호를 기본 키로 만들면 한명이 좋아요를 곗속 누를 수 있게 된다. 
+*누가 눌렀는지 확인을 하고 이미 누른 사람이면 다시 못누르게끔, 누른 사람 아이디나 회원번호를 넣고
+*팔로잉도 번호를 굳이 기본키로 안하고
+*게시글 테이블 안에 좋아요???
+Table likes {
+  id int [pk, increment]
+  target_id int
+  target_type int // 0: post, 1: comment
+  user_id int [not null] // user - click likes btn
+  created_at timestamp [default: `now()`]
+}
+
+3-2 Table comments; 댓글
+댓글 번호(commnet_id) <- 기본키로 사용
+닉네임(댓글단사람)
+시간
++댓글달린 포스트
++댓글내용
++댓글 수 ??
+Table comments {
+  id int [pk, increment]
+  post_id int
+  user_id int
+  content varchar
+  created_at timestamp
+}
+
+
+
+
+
+
+4. Table follow;
++팔로워 수
++팔로우 회원번호, 아이디
++팔로우 한 사람
++팔로우 당한 사람
+Table follow {
+  user_id int
+  following_id int
+}
+
+
+5. Table tag; --etc. hash tag, block/
++태그명
++태그수(제한 5개?)
++태그한 사람 이름
++태그된 포스트
+Table tagged_user {
+  target_id int
+  target_type int // 0: post(textcontent), 1: comment, 2: media
+  taggedUser_id int
+}
+Table post_hashtag {
+  post_id int
+  hashtag_id int
+}
+
+Table comment_hashtag {
+  comment_id int
+  hashtag_id int
+}
+
+Table hashtags {
+  id int [pk, increment]
+  hashtag varchar
+}
+
+
+etc. 
+Table block {
+  user_id int
+  block_id int
+}
+
+
+
+헐 대박 ㅇㅅㅇㅅㅇㅅㅇ c# 배우면 ar,vr 만들기 가능이라구욥!!!!!!!!!!
+
+
+
+
+//갑자기 여기서  ㅡmit 스탠포드요?ㅇㅅㅇ
+//잭슨홍, commonsense 방망이 ,,,, 근거를 떠나 벗어나 상상
+//커먼센스를 빼고 다른 상상적 사고를 해줘야 한다. 미술,이 필요하다?
+//갑자기요? ㅇㅅㅇ 이젠 인문학의 세카이로........
+//
+
+
+// dbdiagram
+Table users {
+  id int [pk, increment] // auto-increment
+  name varchar
+  email varchar
+  password password
+  created_at timestamp [default: `now()`]
+}
+
+Table follow {
+  user_id int
+  following_id int
+}
+
+Table block {
+  user_id int
+  block_id int
+}
+
+Table posts {
+  id int [pk, increment]
+  user_id int
+  textcontent varchar
+  created_at timestamp [default: `now()`]
+}
+
+
+Table medias {
+  id int [pk, increment]
+  creator_id int
+  content_type int // 0:image, 1:video
+  content_url varchar
+}
+
+Table post_media {
+  media_id int
+  post_id int
+}
+
+Table comments {
+  id int [pk, increment]
+  post_id int
+  user_id int
+  content varchar
+  created_at timestamp
+}
+
+Table tagged_user {
+  target_id int
+  target_type int // 0: post(textcontent), 1: comment, 2: media
+  taggedUser_id int
+}
+
+Table likes {
+  id int [pk, increment]
+  target_id int
+  target_type int // 0: post, 1: comment
+  user_id int [not null] // user - click likes btn
+  created_at timestamp [default: `now()`]
+}
+
+Table post_hashtag {
+  post_id int
+  hashtag_id int
+}
+
+Table comment_hashtag {
+  comment_id int
+  hashtag_id int
+}
+
+Table hashtags {
+  id int [pk, increment]
+  hashtag varchar
+}
+
+Ref: posts.user_id > users.id
+Ref: "users"."id" < "likes"."user_id"
+Ref: "posts"."id" < "post_hashtag"."post_id"
+Ref: "hashtags"."id" < "post_hashtag"."hashtag_id"
+Ref: "hashtags"."id" < "comment_hashtag"."hashtag_id"
+Ref: "posts"."id" < "comments"."post_id"
+Ref: "users"."id" < "comments"."user_id"
+Ref: "comments"."id" < "likes"."target_id"
+Ref: "posts"."id" < "likes"."target_id"
+Ref: "comments"."id" < "comment_hashtag"."comment_id"
+Ref: "post_media"."post_id" < "posts"."id"
+Ref: "post_media"."media_id" < "medias"."id"
+Ref: "users"."id" < "medias"."creator_id"
+Ref: "tagged_user"."taggedUser_id" < "users"."id"
+Ref: "tagged_user"."target_id" < "medias"."id"
+Ref: "tagged_user"."target_id" < "comments"."id"
+Ref: "tagged_user"."target_id" < "posts"."id"
+Ref: "users"."id" < "follow"."user_id"
+Ref: "users"."id" < "follow"."following_id"
+Ref: "block"."user_id" < "users"."id"
+Ref: "block"."block_id" < "users"."id"

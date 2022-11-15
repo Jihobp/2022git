@@ -1,0 +1,83 @@
+Table "gender" {
+  "gender_num" int [pk]
+  "gender_type" varchar2(9) [unique, not null]
+}
+
+Table "prefer" {
+  "prefer_num" int [pk]
+  "prefer_type" varchar2(255) [unique, not null]
+}
+
+Table "user_info" {
+  "user_num" int [pk]
+  "user_id" varchar2(255) [unique, not null]
+  "user_password" varchar2(255) [not null]
+  "user_nickname" varchar2(255) [unique, not null]
+  "user_name" varchar2(255) [not null]
+  "user_birth" varchar2(255) [not null]
+  "user_email" varchar2(255) [unique, not null]
+  "user_phonenum" varchar(255) [unique, not null]
+  "user_regdate" varchar2(255) [not null]
+  "user_profile_name" varchar2(255)
+  "user_profile_path" varchar2(255)
+  "user_gender_num" int [not null]
+  "user_prefer_num" int
+  "user_count_post" int
+  "user_count_comment" int
+  "user_count_like" int
+  "user_count_following" int
+  "user_count_follower" int
+}
+
+Table "post" {
+  "post_num" int [pk]
+  "post_created_at" varchar2(255) [not null]
+  "post_user_num" int [not null]
+  "post_title" varchar2(255) [not null]
+  "post_content" varchar2(3000) [not null]
+  "post_writer_position" varchar2(255)
+  "post_comment_count" int
+  "post_like_count" int
+}
+
+Table "comments" {
+  "comment_num" int [pk]
+  "comment_created_at" varchar2(255) [not null]
+  "comment_user_num" int [not null]
+  "comment_post_num" int [not null]
+  "comment_content" varchar2(300) [not null]
+}
+
+Table "like_info" {
+  "like_num" int [pk]
+  "like_create_time" varchar2(20) [not null]
+  "like_user_num" int [not null]
+  "like_post_num" int [not null]
+  "like_relation" varchar2(100) [unique, not null]
+}
+
+Table "following_info" {
+  "following_num" int [pk]
+  "following_create_time" varchar2(20) [not null]
+  "following_user_num" int [not null]
+  "following_user2_num" int [not null]
+  "following_relation" varchar2(100) [unique, not null]
+}
+
+Ref "fk_user_gender_num":"gender"."gender_num" < "user_info"."user_gender_num"
+
+Ref "fk_user_prefer_num":"prefer"."prefer_num" < "user_info"."user_prefer_num"
+
+Ref "fk_post_user_num":"user_info"."user_num" < "post"."post_user_num"
+
+Ref "fk_comment_user_num":"user_info"."user_num" < "comments"."comment_user_num"
+
+Ref "fk_comment_post_num":"post"."post_num" < "comments"."comment_post_num"
+
+Ref:"user_info"."user_num" < "like_info"."like_user_num"
+
+Ref:"post"."post_num" < "like_info"."like_post_num"
+
+Ref:"user_info"."user_num" < "following_info"."following_user_num"
+
+Ref:"user_info"."user_num" < "following_info"."following_user2_num"

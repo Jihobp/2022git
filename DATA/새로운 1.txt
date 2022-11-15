@@ -1,0 +1,173 @@
+
+oracle detabase xe downloads >> 21c express edition for windows x64
+install
+sql plus serach > 콘솔로 명령문 써야한다.
+
+sqldeveloper install ? ?>>그냥 zip 풀어서 쓰는거.
+
+
+
+★☆★☆★☆★☆★☆★☆★☆★☆★☆★☆
+*키 속성=기본키, 키 : 개체들을 구별할 수 있는 유일한 제약조건을 가지는 속성.
+ㄴ> 중복을 허용하지않음
+*데이터 삽입 혹은 추출 //읽기,추가, 수정,삭제, 기본키, 외래키
+//추가, 삭제, 변경, 삽입, 업데이트, 처리, 조회
+1:1, 1:n, m:n 관계
+실무에서 많이 쓰이는 건 1:n!!!! m:n은 사실 1:n의 연속!! 
+-----------------------------------------------
+varchar2 : 문자열
+--최대 20글자 varchar, 고정숫자 char,
+이번 프로젝트는 헬스장이나 병원등에서 데이터를 갖고 와서 넣어볼거당.
+데이터베이스에 집중해서 설계 및 이용. 프로그램 연동 c, java 등이 아니라!
+설계한걸 웹상에서 실제로 구현.
+
+데이터베이스 스키마 schema = 개요
+
+
+
+// SQL vs non SQL
+documentDB
+oracle, mysql, mssql < SQL 80%
+1. mongo DB //json document 형태로 저장
+ 
+ 
+ /////////////////////////////////////////0817
+ --이 코드가 SQL문의 가~~~~~~~~~~장 기본적인 코드
+--모든 데이터를 조회해 볼 수 있는 코드
+SELECT * FROM STUDENT; -- 주석 
+
+-- where 붙이고 내가 원하는 조건들을 적으면 된다.
+SELECT * FROM STUDENT WHERE AGE>25; -- 25살 넘는 사람만 출력한 것
+
+--SQL문의 조건문에선 같은지 체크할 때 =으로 한다.
+SELECT * FROM STUDENT WHERE AGE>25 AND HAKBEON='3';
+--나이가 25살 넘으면서 학번이 3번인 학생을 출력
+
+-- 괄호 안에 있는 건 컬럼(=열) 이름
+-- values 다음에 값들을 적으면 된다.
+-- 순서대로 데이터를 넣는다는 보장만 있으면 컬럼명 생략 가능함
+
+--문자열은 따옴표 안에 적는다.
+INSERT INTO STUDENT (HAKBEON, NAME, AGE) VALUES ('1','이동준',34); --삽입은 규칙이 없다.
+
+-- SQL의 핵심
+-- CRUD
+-- select = read = 조회
+-- insert = create = 삽입
+-- update = updtae = 수정
+-- delete = delete = 삭제
+-- 전부 다 삭제하고 싶으면
+--delete from student;
+
+update student set name='장태연' where hakbeon='1';
+
+delete from student where age>30;
+
+
+commit; --추가 수정 삭제할 때 마다 그 내용을 저장해주는 것(git의 commit과 유사)
+--마지막으로 commit한 지점으로 돌아갈 수도 있다.
+
+rollback; -- 내가 마지막으로 커밋한 지점으로 돌아갈 수 있다.
+delete from student;
+
+--ctrl space, ctrl enter(줄실행)
+--ctrl f9 한줄씩 실행 ?
+
+SELECT *FROM STUDENT WHERE 10<=AGE and age<20 ;
+delete from student where name='최호준';
+update student set name='박지호' where age='20'; --20살인 사람의 이름을 박지호로 바꾸는거,.
+update student set age=20 where name='박지호'; --박지호인 학생의 나이를 20으로 수정한다.
+
+update student set age=1 where name='오세룡';
+INSERT INTO STUDENT (HAKBEON, NAME, AGE) VALUES ('19','이용희',28);
+
+select * from student; --작업을 마치고 그 줄에서 ctrl enter 하고......    scott에서 이 select * 옆에 ctrl enter를 하면 적용이 된다. or student 에서 새로고침 해도 되고!!
+
+--update delete 하면바로안나온당
+-- * 모든 컬럼을 얘기한다
+
+
+
+
+
+ commint;
+ rollback;
+ delete from student;
+ 
+ select *from student where 10<=age and age<20;
+ delete from student where name='최호준'
+ update student set name='박지호' where age='20'
+ update student set age=20 where name='박지호';
+ update student set age1 where name='오세룡';
+ insert into student (hakbeon, name, age) values ('19','이용희',28);
+  
+ insert into student values('20', '김보규', 30)
+
+
+/////////////////////////////////////////////8/18
+
+-- delete
+--  안의 내용을 지움
+-- 다 지울 수도 있고 일부만 지울 수도 있다.
+-- drop, truncate
+-- 테이블 자체를 삭제
+-- 복구가 안됨
+-- 초보자는 안 쓰는게 좋다. 그래도 알고는 있어야 한다.
+
+drop table student;
+drop table table1;
+
+create table stu ( name varchar2(20));
+insert into stu values('조영탁');
+
+
+#데이터 export import  //새로고침 까먹지마~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~!!!
+
+export
+cmd 열구 
+d: 
+exp c##scott/tiger file=mybackup.dmp // d드라이브에 백업파일 생성
+테이블 우클릭 > export > 다음다음다음> 
+생긴 .sql에 쿼리문 ctrl a ctrl v > .scott에 붙여넣고 녹색 새로고침 눌러주면 다시 테이블 새로 생성됨.
+테이블을 만들고 데이터 만드는 스크립트를 그대로 실행한거지, 백업이라고 보기 힘들다.
+
+import
+cmd 열구 
+d: 
+imp c##scott/tiger file=mybackup.dmp fully=y // d드라이브에 백업파일 불러오깅 
+
+
+drop table student;
+drop table table1;
+
+
+테이블을 새로 만드는 방법 : 우크릭해서 만드는 방법이랑 쿼리를 새로 만드는 방법 2개
+create table stu ( name varchar2(20)); //테이블 새로만듬
+insert into stu values('조영탁');
+
+
+create table MYSTUDENTS ( --중복 되면 생성안되고, 테이블 누르고 새로고침 하늘색 눌러서 만드렁야함.1 
+name varchar2(20),
+age number,
+hakbeon varchar2(20) primary key); --기본키냐 아니냐 지정하는거.
+
+
+-- 데이터를 실질적으로 저장한게 table. detabase는 테이블 모음집. 
+-- detabase = schema (mysql), c##scott||user(oracle) 통상적으로 다루는 툴마다 하는 말.
+-- detabase 는 스캇, table은 mystudent. db는 드럼틍을 만드는 것. 테이블의 모음집.
+-- 데이터 타입은 거의 varchar 문자열. 심지어 다 통일하는 경우가 많다. 따옴표 싹다 붙여~~ 통일! 학번은 특히 앞에 0이 들어갈 수 있기때문에 통일. number도 거의 안쓴다. 
+-- 컬럼명을 수동으로 scott에 넣으면 좋은 점이, 적어논 순서를 바꿀수 있다. 
+
+-- 테이블 명 정확히 명시, sql 연두색 인간 클릭하고 mr. scott  새로 생성 하고 거기다가.
+-- 거지같은 oracle!!!! 여러번 클릭하지말고,  insert into ~~~~정확히 입력하고 입력할거 드래그하고 ctrl enter 
+
+
+-- crud
+-- pk 기본키
+-- fk 외래키
+-- 관계를 표현함에 있어서 매우 중요한 요소인 fk를 할것
+-- 2개 이상의 테이블을 하나로 보이게 해주는 join에 대해서 다뤄볼 것, join == 교집합
+외래키(FK) ; 다른 테이블의 기본키를 외래키로 많이 쓴다.  //실무에선 생각보다 별로 안쓴다. 테이블 여러개에서 데이터 수정하려면 ㄱㅊ
+fkfkfkfkfkfkfkdfkfkfkfkfkfkfkfkfkfkfkfkfkfkfkfkfkfkfkfkfkfkfkfkfkfkfkfkfkfkff
+
+samsung 테이블 1개, 셀프조인

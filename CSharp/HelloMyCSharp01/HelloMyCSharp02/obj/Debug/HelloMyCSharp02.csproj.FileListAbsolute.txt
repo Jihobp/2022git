@@ -1,0 +1,16 @@
+E:\GitHub\CSharp\HelloMyCSharp01\HelloMyCSharp02\bin\Debug\HelloMyCSharp02.exe.config
+E:\GitHub\CSharp\HelloMyCSharp01\HelloMyCSharp02\bin\Debug\HelloMyCSharp02.exe
+E:\GitHub\CSharp\HelloMyCSharp01\HelloMyCSharp02\bin\Debug\HelloMyCSharp02.pdb
+E:\GitHub\CSharp\HelloMyCSharp01\HelloMyCSharp02\obj\Debug\HelloMyCSharp02.csproj.AssemblyReference.cache
+E:\GitHub\CSharp\HelloMyCSharp01\HelloMyCSharp02\obj\Debug\HelloMyCSharp02.csproj.SuggestedBindingRedirects.cache
+E:\GitHub\CSharp\HelloMyCSharp01\HelloMyCSharp02\obj\Debug\HelloMyCSharp02.csproj.CoreCompileInputs.cache
+E:\GitHub\CSharp\HelloMyCSharp01\HelloMyCSharp02\obj\Debug\HelloMyCSharp02.exe
+E:\GitHub\CSharp\HelloMyCSharp01\HelloMyCSharp02\obj\Debug\HelloMyCSharp02.pdb
+E:\2022git\CSharp\HelloMyCSharp01\HelloMyCSharp02\bin\Debug\HelloMyCSharp02.exe.config
+E:\2022git\CSharp\HelloMyCSharp01\HelloMyCSharp02\bin\Debug\HelloMyCSharp02.exe
+E:\2022git\CSharp\HelloMyCSharp01\HelloMyCSharp02\bin\Debug\HelloMyCSharp02.pdb
+E:\2022git\CSharp\HelloMyCSharp01\HelloMyCSharp02\obj\Debug\HelloMyCSharp02.csproj.AssemblyReference.cache
+E:\2022git\CSharp\HelloMyCSharp01\HelloMyCSharp02\obj\Debug\HelloMyCSharp02.csproj.SuggestedBindingRedirects.cache
+E:\2022git\CSharp\HelloMyCSharp01\HelloMyCSharp02\obj\Debug\HelloMyCSharp02.csproj.CoreCompileInputs.cache
+E:\2022git\CSharp\HelloMyCSharp01\HelloMyCSharp02\obj\Debug\HelloMyCSharp02.exe
+E:\2022git\CSharp\HelloMyCSharp01\HelloMyCSharp02\obj\Debug\HelloMyCSharp02.pdb

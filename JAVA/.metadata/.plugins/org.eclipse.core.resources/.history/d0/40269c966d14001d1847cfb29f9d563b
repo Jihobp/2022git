@@ -1,0 +1,28 @@
+import java.util.Scanner; 
+public class BaekJoon_Q4 {
+	public static void main(String args[]){
+		Scanner s = new Scanner(System.in);
+			//	백준 4번 알파벳 바꾸기 영어 소문자와 대문자로 이루어진 단어를 입력받은 뒤, 
+			// 	대문자는 소문자로, 소문자는 대문자로 바꾸어 출력하는 프로그램을 작성하시오.
+			
+			String text=s.nextLine();
+			char[]str = text.toCharArray();
+	
+			for(int i=0;i<text.length(); i++)
+				{
+					if(65<=str[i] && str[i]<=90) 
+					{
+						str[i]=(char)(str[i]+32);
+						continue; //있어도 업어도 ok
+					}
+				
+					if(97<=str[i]&&str[i]<=122)
+					{
+						str[i]=(char)(str[i]-32);
+						continue;
+					}
+			
+				}
+			System.out.println(text); 
+	}
+}

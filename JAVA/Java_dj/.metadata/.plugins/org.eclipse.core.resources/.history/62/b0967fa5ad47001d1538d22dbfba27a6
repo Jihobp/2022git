@@ -1,0 +1,93 @@
+
+public class col_13_5_Heritance {
+
+	public static void main(String[] args) {
+		개발자들은 귀찮은 걸 싫어하고 효율적인 방법을 계속 생각한다. 
+		기존에 있던 것을 확장해서 쓰는 방법이다. 허나 처음부터 끝까지 다 만들기엔 귀찮다. 
+		기존의 것을 가져다가 내가 원하는 것을 추가한다. 그렇게 새로운 것을 만들고 출처를 밝힌다.
+		
+		
+		
+		
+//		상속(inheritance)는 부모class에 있는 함수나 변수를 받아오는 것으로 볼 수 있다. 상속은 extends를 사용해서 나타낸다. 
+//		부모class와 자식class에서 method가 겹치면 override를 사용한다
+//하나의 클래스가 가진 메소드(함수)와 필드(변수)를 이어받아 본인이 원하는 대로 수정 보완등을 하여 하나의 (자식)클래스를 만드는 것.이 상속		
+//		자바에는, 부모class 자식class가 있고, 자식 class는 자신이 가지고 있지 않은 method여도 
+//		부모 class가 갖고있으면 사용이 가능하고, 부모와 자식 class 모두가 가지고있는 method를 사용할 경우 자식 class의 method가 1순위(override)가 된다.	
+//상속이란 부모의 class에 있는 method&field를 그대로 물려받으면서 + 자신만의 field와 method를 추가하는 것이다.
+		//추가적으로 부모class에 포함되어있는 method가 자식의 method에 포함이 안되있더라도 자식 class에서 부모의 method를 구현이 가능하다. 
+		//또한 부모의 class와 자식의 class에서 중복되는 method가 있다면 자식의  method를 구현한다. 
+		//이는 override라고 하고 덮어쓰기 라고 이해하면 된다.	
+		
+		
+	
+		
+//		 상속 족보 확인법
+//		 자바 내 Class를 우클릭 후 Open type Hierarchy 클릭
+//		 
+//		 자식 이기는 부모 없다. 부모껄 자식 클래스에서 사용하면 자식 클래스의 메서드사용. 이처럼 덮어쓰기(오버라이드)가능. 
+//		 패키지>클래스>메서드=변수(필드). 근데 new 왜 쓰는지 까먹었다. 전편 다시봐야지
+		 
+		 // 클래스를 사용할 때 해당 클래스가 특정 메소드나 변수가 없다면 상위 클래스에서 있나 확인하고 없으면 에러가 뜬다.
+		 // 하위 클래스는 상위 클래스가 포함하고 있는 명령어를 이용하기 위해서는 포함된 명령어를 재선언해야하는데, 이런 식으로 덮어쓰는 작업을 오버라이드(override)라고 한다.
+	
+		 
+		 //+클래스(반)는 학생들(변수들)과 학생들에게 무엇을 시킬것인가(메소드)의 집합체 
+				 //예시) 수학반에서 영희와 철수(변수)에게 수학 문제를 풀어라!(메소드)라고 하는 것
+		
+		/*
+		variable vs field
+		//https://stackoverflow.com/questions/10115588/what-is-the-difference-between-field-variable-attribute-and-property-in-java
+		변수는 포괄적인 표현이고 필드는 인스턴스의 소속을 말한다는 의견이 보이네요. 
+		알아보시고 정리 차원의 댓글 달아주시면 다른 분들께도 도움이 될 것 같습니다.
+		field :클래스의 데이터 멤버.달리 지정한 필드가 정적이 아니다.
+		A data member of a class. Unless specified otherwise, a field is not static.
+		property :사용자 창문의 색과 같은 정할 수 있는 개체의 특성.
+		Characteristics of an object that users can set, such as the color of a window. 
+		attribute :위의 용어 사전에 등재되지 않습니다.
+		Not listed in the above glossary
+		variable :데이터는 식별자에 의해 명명 항목.각 변수 int또는 객체와 같은 형식과 범위를 갖다.참고 항목 클래스 변수, 인스턴스 변수, 지역 변수.
+		An item of data named by an identifier. Each variable has a type, such as int or Object, and a scope. See also class variable, instance variable, local variable.
+		Look at a field as a rudimentary piece of data related to an object. A property (to me) is a characteristic of an object that is visible (and apparently mutable) to the outside world.
+		필드를 개체와 관련된 기본적인 데이터 조각으로 봅니다. 성질(性質, )은 외부 세계에 보이는 물체의 특성이다.
+		
+		
+		Variable can be local, field, or constant (although this is technically wrong). 
+		It's vague like attribute. 
+		Also, you should know that some people like to call final non-static (local or instance) variables
+		"Values". This probably comes from emerging JVM FP languages like Scala.
+		변수는 로컬, 필드 또는 상수일 수 있습니다(기술적으로 잘못됨). 속성과 같이 모호합니다. 
+		또한 일부 사람들은 최종 비정적(로컬 또는 인스턴스) 변수를 호출하는 것을 좋아한다는 것을 알아야 합니다.
+		"값". 이것은 아마도 스칼라와 같은 JVM FP 언어에서 비롯되었을 것이다.
+
+
+		Field is generally a private variable on an instance class. It does not mean there is a getter and a setter.
+		필드는 일반적으로 인스턴스 클래스의 개인 변수입니다. 그것은 게터와 세터가 있다는 것을 의미하지 않는다.
+		Attribute is a vague term. It can easily be confused with XML or Java Naming API. Try to avoid using that term.
+		속성이 모호한 용어입니다. XML 또는 Java Naming API와 쉽게 혼동될 수 있습니다. 그 용어의 사용은 피하도록 노력하세요.
+		Property is the getter and setter combination. 속성은 게터와 세터의 조합입니다.
+		Some examples below
+		*/
+		 //Constant
+	    public final static String MY_VARIABLE = "that was a lot for a constant";
+
+	    //Value
+	    final String dontChangeMeBro = "my god that is still long for a val";
+
+	    //Field
+	    protected String flipMe = "wee!!!";
+
+	    //Property
+	    private String ifYouThoughtTheConstantWasVerboseHaHa;
+
+	    //Still the property
+	    public String getIfYouThoughtTheConstantWasVerboseHaHa() {
+	        return ifYouThoughtTheConstantWasVerboseHaHa;
+	    }
+
+	    //And now the setter
+	    public void setIfYouThoughtTheConstantWasVerboseHaHa(String ifYouThoughtTheConstantWasVerboseHaHa) {
+	        this.ifYouThoughtTheConstantWasVerboseHaHa = ifYouThoughtTheConstantWasVerboseHaHa;
+	}
+
+}

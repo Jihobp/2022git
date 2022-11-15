@@ -1,0 +1,55 @@
+
+// 1. 학생 클래스 선언
+class Learner{
+	// 멤버 변수 선언부
+	private String name;
+	private int number;
+	private String gender;
+	
+	// 생성자 선언부 :: 3개의 값을 초기화하도록 함
+	public Learner(String n, int num, String g) {
+		this.name=n;
+		this.number=num;
+		this.gender=g;
+	}
+	
+	// 멤버 함수 선언부
+	public String getName() {return this.name;}
+	public int getNum() {return this.number;}
+	public String getGender() {return this.gender;}
+	public void setName(String n) {this.name=n;}
+	public void setNum(int num) {this.number=num;}
+	public void setGender(String g) {this.gender=g;}
+}
+
+public class Ans_Ex {
+	public static void main(String args[]) {
+		// 2. 객체 배열 선언
+		Learner stu[]=new Learner[3];
+		// 각 배열에 관한 Student 객체를 생성
+		stu[0]=new Learner("이동준", 2009038033, "남");
+		stu[1]=new Learner("이제영", 2007012034, "여");
+		stu[2]=new Learner("박준현", 2002012034, "남");
+		
+		// 3. 이름이 이동준인 학생의 학번을 2019038033으로 변경
+		for(int i=0;i<3;i++) {
+			if((stu[i].getName()).equals("이동준")) {
+				stu[i].setNum(2019038033);
+			}
+		}
+		
+		// 4. 2명의 학생 정보 각각 변경
+		stu[2].setName("이유나");
+		stu[2].setNum(18130956);
+		stu[2].setGender("여");
+		
+		// 5. 객체 배열 출력
+		for(int i=0;i<3;i++) {
+			System.out.println((i+1)+"번째 학생");
+			System.out.println("이름: "+stu[i].getName());
+			System.out.println("학번: "+stu[i].getNum());
+			System.out.println("성별: "+stu[i].getGender());
+			System.out.println();
+		}
+	}
+}

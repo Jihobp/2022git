@@ -1,0 +1,14 @@
+
+public class HelloWorld_java {
+	public static void main(String args[]) { //main 함수 //public ->class 의 접근 제어자
+			System.out.printf("%s","Hello World\n");
+			System.out.print("Hello World"); // "Hello world" 출력
+			
+			System.out.printf("%s","Hello World\n");
+			System.out.println("Hello World"); // "Hello World\n" 출력
+			
+			//printf 	//출력하고 끝내는 것
+			//print
+			//printfln //출력문을 작성하고 그 뒤에 개행을 실행. ㅇㅅㅇ ~~~~~~~~~~~~~~~~~
+	}
+}

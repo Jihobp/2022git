@@ -1,0 +1,31 @@
+
+class Students{
+	//멤버 변수 선언부
+	private String name;
+	private int num;
+	private String major;
+	
+	//멤버 함수 선언부
+	public String getName() {return name;}
+	public int getNum() {return num;}
+	public String getMajor() {return major;}
+	
+	//생성자 선언부
+	public Students(String na, int n, String m) {
+		this.name=na;
+		this.num=n;
+		this.major=m;
+	}
+}
+
+public class teachers_ans22 {
+	public static void main(String[] args) {
+		Students stu=new Students("LeeYuna", 18130956,"컴공");
+		
+		System.out.println("내이름은"+stu.getName());
+		System.out.println("내학번은"+stu.getNum());
+		System.out.println("내전공은"+stu.getMajor());
+
+	}
+//클래스 선언, 변수 선언 , 함수선언,    생성자???????????????????????? 변수를 밖에서 이용하려면 생성자가 필요하다.
+}

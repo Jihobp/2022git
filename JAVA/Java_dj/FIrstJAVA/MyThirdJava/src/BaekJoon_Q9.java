@@ -1,0 +1,40 @@
+import java.util.Scanner;//백준 #1009 50m1!!!
+public class BaekJoon_Q9 { 
+	public static void main(String[] args) {
+		Scanner s=new Scanner(System.in);
+//		재용이는 최신 컴퓨터 10대를 가지고 있다. 
+//		어느 날 재용이는 많은 데이터를 처리해야 될 일이 생겨서 각 컴퓨터에 1번부터 10번까지의 번호를 부여하고, 
+//		10대의 컴퓨터가 다음과 같은 방법으로 데이터들을 처리하기로 하였다.
+//		1번 데이터는 1번 컴퓨터, 2번 데이터는 2번 컴퓨터, 3번 데이터는 3번 컴퓨터, ... ,
+//		10번 데이터는 10번 컴퓨터, 11번 데이터는 1번 컴퓨터, 12번 데이터는 2번 컴퓨터, ...
+//		총 데이터의 개수는 항상 a*b(제곱)개의 형태로 주어진다. 재용이는 문득 마지막 데이터가 처리될 컴퓨터의 번호가 궁금해졌다. 
+//		이를 수행해주는 프로그램을 작성하라.
+		
+		//1의 자리만 출력하게. 
+		//데이터를 10으로 나눈 나머지 a*b%10=
+		//10ㅉ 컴퓨터는 1의 자리 0? =예외 처리!
+//		
+		int computer=s.nextInt(); //컴퓨터 갯수
+		int a,b,mul;
+		for(int i=0; i<computer;i++) {
+			a=s.nextInt();
+			b=s.nextInt();  // f!!!!!!!!!!!!!!!메인 int 가져오는거!!!
+			mul=1; //?? f!!!!!!!!!!
+			for(int j=0;j<b;j++) { //??????????? 0~제곱b까지, 
+				mul=(a*mul)%10;
+			}
+			
+			if(mul==0) { //10으로 나눈 나머지가 0일떄;
+				mul=10;
+		
+			}
+			System.out.println(mul);
+		}
+		
+	}
+}
+
+//https://soo-vely-dev.tistory.com/173
+//https://ming9mon.tistory.com/104 굿설명 깰꼼
+//https://blog.itcode.dev/posts/2021/06/09/a1009 알파카?
+//https://comain.tistory.com/59 for 노가다 

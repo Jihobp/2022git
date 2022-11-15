@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {width:100px; height:100px; position: absolute;}
+        .red { z-index:100; background-color: red; left:50px; top:50px}
+        .green{z-index:110; background-color: green; left:20px; top:0px}
+        .blue{z-index:105;background-color: blue;}
+        body>div
+        {
+            position: relative;
+            width: 500px;
+            height: 100px;
+            overflow:hidden;
+            border: 1px solid black;
+        }
+
+        /* 중앙정렬 공식 : 넓이 지정하고 
+        margin을 0 auto로 주기 */
+        #center{
+            width: 960px;
+            margin: 0 auto; 
+            background-color: blanchedalmond;
+        }
+
+         /* float : 수평정렬할 때 쓰임. left대신
+        right쓰면 오른쪽으로 정렬이 됨 */
+        img{float:left}
+        .box{float:left; width: 100px; height: 100px;
+        background-color:aquamarine;
+        border: 1px solid black;}
+
+
+        /* Standard_WEB01 */
+        #wrap {
+            width: 560px;
+            margin : 0 auto;
+        }
+        #aside {
+            width: 200px;
+            float:left;
+            background-color: pink;
+        }
+        /* 중간에 비는 30은 여백 */
+        #section {
+            width: 330px;
+            float: right;
+            background-color: black;
+            color:white
+        }
+        /* 이 두개 감싸는데 hidden 일종의 공식처럼 생각하고 주면됨 ㅇㅅㅇ */
+        #contents {overflow: hidden;}
+
+        #demotext {
+        color: #FFFFFF;
+        background: #333333;
+        text-shadow: #FFF 0px 0px 5px, #FFF 0px 0px 10px, #FFF 0px 0px 15px, #FF2D95 0px 0px 20px, #FF2D95 0px 0px 30px, #FF2D95 0px 0px 40px, #FF2D95 0px 0px 50px, #FF2D95 0px 0px 75px;
+        color: #FFFFFF;
+        background: #333333;
+        }
+        .p{
+                text-size-adjust: 100px;
+        }   
+    </style>
+</head>
+<body>
+    <p><div id="demotext">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis, tenetur.</div></p>
+    <!--overflow를 hidden으로 하면 침범하지 않는다 ㅇㅅㅇ-->
+    <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis, tenetur.</h1>
+    <div>
+        <div class="box red"></div>
+        <div class="box green"></div>
+        <div class="box blue"></div>
+    </div>
+    <h1>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iste quae eum, delectus ab enim dolorum.</h1>
+
+    <div id="center">
+        <h1>중앙 정렬 예시</h1>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iusto non illum neque ea iure est commodi tempora. Totam deserunt, delectus ipsa optio tempora deleniti minus inventore doloremque nulla consectetur ullam nihil velit. Unde, molestias. Odit, cumque alias, provident labore veniam quos laboriosam rerum expedita ullam velit ex dolor vero aspernatur.</p>
+    </div>
+
+    <img src="https://picsum.photos/id/684/300/300" alt="">
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium sit, illum exercitationem consequuntur id earum aut facere dolorem architecto beatae, quam necessitatibus, perferendis animi soluta minus veniam. At ullam voluptatum dignissimos? Praesentium non sed repudiandae, vel quibusdam commodi quod fugiat nostrum atque fugit odio, beatae illo ullam qui corrupti odit omnis maxime. Tempora corporis tenetur sit voluptatum pariatur perferendis fugiat deserunt quibusdam officia saepe voluptate dicta quas, delectus consequuntur sapiente, vel accusamus veniam? Architecto animi error veniam ea. In quae a, architecto expedita maiores nulla autem assumenda harum. Repellat, accusamus hic! Saepe, officiis odio dolor ex nihil labore minus aperiam porro quis quae laboriosam sit eveniet reprehenderit temporibus sed necessitatibus molestias accusamus enim beatae animi et omnis. Adipisci molestiae beatae autem aliquam, consequuntur quaerat quidem dolor non! Ipsa dolorem ipsam, nihil iure eos impedit sit maxime sequi et delectus perspiciatis sunt sint suscipit asperiores praesentium voluptas ratione minus error possimus. Unde quasi, similique laborum eius dicta reiciendis natus eveniet odio distinctio atque id, ullam quam ex ratione suscipit aliquam molestias iure aperiam. Possimus veritatis dolor distinctio assumenda neque consequuntur ducimus ipsa, alias ut vitae aut laudantium sequi aperiam minus molestiae quasi amet rem et enim sed. Eos nesciunt maxime dicta, facilis officia debitis deserunt possimus aspernatur provident doloremque illo sint amet est reiciendis a. Tempore harum veritatis laudantium doloremque ea sit quas exercitationem dolorem quae asperiores doloribus expedita ex earum eligendi laborum natus, impedit beatae inventore facere ipsa nisi sed, quidem qui aliquam? Eos reprehenderit ipsa quasi nisi illo incidunt rem assumenda non beatae numquam neque delectus a corrupti vero laborum iste impedit explicabo, quos ut accusamus aspernatur alias. Eos voluptate molestias placeat enim soluta eum possimus aspernatur consectetur fugit hic, veritatis magni repellendus qui esse, perferendis debitis numquam exercitationem cupiditate assumenda non. Quam, repudiandae vero? Ratione, quia obcaecati! Laboriosam sed eveniet numquam perspiciatis? Voluptatem nihil enim saepe, corporis expedita nisi dolor perspiciatis est alias ipsa hic delectus consequatur dolores, debitis ipsum, iusto totam accusamus repudiandae. Aliquid distinctio esse facere incidunt commodi quibusdam enim similique maiores cumque? Labore pariatur quia dicta distinctio quam! Impedit culpa, ipsum deserunt, dicta ab esse inventore omnis quaerat eius illum eligendi soluta officia dolore qui? Odio neque quos consectetur sequi doloribus quasi laudantium expedita corporis vel reprehenderit perferendis omnis molestias architecto, nemo earum itaque repellat ex quaerat ad totam voluptatibus suscipit, consequuntur enim! Explicabo enim recusandae, iusto molestiae consequatur quia aliquid nostrum. Facere eligendi ab, quod quibusdam dolore dicta, aperiam accusamus debitis amet ducimus aspernatur voluptatem tempore voluptates hic aut modi nesciunt molestias at explicabo quis quae exercitationem perferendis cumque? Maxime repellendus consectetur, quia deserunt fuga ipsam vel voluptates? Magnam, officiis commodi. Sit quis dicta vitae praesentium nostrum impedit, qui ea ratione placeat eaque explicabo, quaerat facilis obcaecati doloremque cum aut! Dolorem blanditiis minima ab consequuntur eius fuga? Libero saepe nisi cumque officiis alias eos, dignissimos perspiciatis animi, et vero quasi aliquid nesciunt fugiat repellat illo dolor quod temporibus sapiente itaque ipsa omnis aspernatur totam distinctio possimus. Hic rerum voluptate odit sunt excepturi asperiores est!</p>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+
+    <!--표준 웺사이트양식-->
+    <div id="wrap">
+        <div id="header">
+            <div id="demotext">Edit this text</div>
+            <h1>Header</h1>
+        </div>
+        <div id="navigation">
+            <h1>Navi</h1>
+        </div>
+        <div id="contents">
+            <div id="aside">
+                <h1>Aside</h1>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quae necessitatibus sapiente voluptatum eos rem expedita aliquam, hic illo repellendus ad, saepe iure cupiditate beatae. Dolorem obcaecati recusandae ullam a quae!</p>
+            </div>
+            <div id="section">
+                <h1>Section</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore architecto odit unde ut culpa, delectus omnis aut nulla sint earum error expedita dicta amet nisi distinctio, ab voluptate dolor fugit!</p>
+            </div>
+        </div>
+        <div id="footer">
+            <h1>footer</h1>
+        </div>
+    
+    </div>
+    
+</body>
+</html>

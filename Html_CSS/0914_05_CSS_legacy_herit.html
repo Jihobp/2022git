@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--화면 구현 챕터 3-->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /*h1, h2 태그에 같이 적용, ,(콤마)를 이용해서 태그 여러개 선택가능(or조건)
+        #id 속성은 웹 페이지 내부에서 중복되면 안된다. id가 중복되면 트 ㄱ히 자바스크립트, jQuery 에서 문제가 됨. 태그의 아이디는 절대 중복 되면 안됩니당!!!!
+        .select id와는 다르게 중복이 될경우가 많다. 
+        @@@저거 .이나 #앞에 아무 태그도 안적으면 div 자동으로 만들어진다.  
+        @@@즉,,,  div만들땐 굳이 div를 적을 필요가 없다!
+
+        
+        h2.big = 클래스명이 big에 h2 클래스
+        h1#temp = 태그명이 temp에 h1 클래스 
+        h2.big, h1#temp = 둘다 기능 ㅇㅅㅇ
+
+
+        class="text-danger" 빨간색 덴져덴져 하나의 클래스에 여러개의 속성 들어감...........
+        ex) 사람<직장인, 사람<학생
+
+        부모>자손>후손 별개로 분리 ㅇㅅㅇ
+	    자손은 칸을 띄움으로써 선택할 수 있는건 
+	    div 안쪽에 있으면 후손, 꺾쇠로 선택 할 수 있는거
+	    테이블의 자손은 tbody, table>tbody>후손인 tr>th 로 해줘야함
+	
+	    + 옆에 있는, 인접해 있는 테이블
+	    ~ 옆에 있는
+
+        */
+        * {color:red}
+        body{
+            color:pink
+        }
+        h1, h2{
+            background-color: blue;
+            font-family: 'd2coding';
+        }
+        p{
+            background-color: brown;
+        }
+        #header>h1{color:red}
+        /*#section h1,p* :섹션 안에 모두 컬러 설정,  <- id가 section 인 태그안의 h1 */
+        #section>* {color:orange}
+        #section>h1, #section>p{background-color:black;}
+        table>tr>th{color:blueviolet}
+        table>tbody>tr>th{background-color: pink;}
+
+        /*div는 제외,*/
+        h3+h4{color:aqua}
+        h3~h4{background-color: springgreen;}
+
+        h4 :hover{color:red}
+        
+        /*img:active*/
+        #apex:hover{visibility: hidden;}
+        #pathfinder:hover{opacity:0.3;}      
+        
+        /*input태그(=checkbox)가 체크된 상태면 높이를 0으로 하고  check 안되면 크기를 키운다!!!!!!!!! 
+         input[type=checkbox]:checked+div{height:0;}
+        반대로 하는건? input 이랑 div 안 height 서로 바꾸면 된당.*/
+        input[type=checkbox]:checked+div{height:500px;} 
+        div{
+            overflow:hidden;
+            /*div 태그의 빈공간에 글을 잔뜩 넣었는데, 높이값을 설정해주면 잘라지게 된다. hidden:자르기, scroll:스크롤*/
+            /*width:650px;*/
+            height:0px;
+            transition-duration: 1s; /*1초동안 변하겠다.*/
+        }
+
+        /*바디 타입안에 모든 태그에  first-of type 들에 다 칠함??*/
+        h5:first-child{color:green} /*순서중요: 첫번째 태그면서 h5여야한다! : body안에서 첫번째h5에 색칠, */     
+        h5:first-of-type{background-color:purple} /*타입중요: 태그중 첫번쨰, : div 안에서 첫번째 h5 색칠*/ 
+        h5:nth-child(2n){border: 2px solid red}/*(2):두번째, (2n):짝수번쨰*/
+    </style>
+</head>
+<body>
+    <input> <!--넣ㄴ기-->
+    <!--<p>루루루룰루랄</p><이게 있으면 첫번째 순서는 없어진다.-->
+    <h5>eiteiotyi</h5>
+    <h5>eiteiotyi</h5>
+    <h5>eiteiotyi</h5>
+    <div>
+        <h5>안뇽</h5>
+        <h5>안뇽</h5>
+        <h5>안뇽</h5>
+    </div>
+    <br>    
+        <input type="checkbox" name="" id="">
+        <div>
+            <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam, quod.            </h1>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laborum praesentium a voluptates ducimus placeat libero minima, laboriosam error ea ex.</p>
+        </div>
+    <img id="apex" src="https://blog.ko.playstation.com/tachyon/sites/9/2021/05/4179a672b58006ce10dbae7edbbb4940fa4b2fb8.jpg?resize=1088%2C612&crop_strategy=smart" alt="">
+    <img id="pathfinder" src="https://cdn.vox-cdn.com/thumbor/kD7lFpJue_-_3RKpZ133KaApT_c=/1400x1050/filters:format(jpeg)/cdn.vox-cdn.com/uploads/chorus_asset/file/13746755/PREVIEW_SCREENSHOT6_174019.jpg" alt="고양이" width="700" height="500">
+    
+    
+    <div id=""header>
+        <h1>안뇽</h1>
+        <div id="nav">
+            <h1>네비용</h1>
+        </div>
+        <h1>하십니까</h1>
+    </div>
+    <div id="section">
+        <h1>안뇽 여긴 섹션</h1>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nesciunt molestiae molestias quidem debitis error labore eum at rerum quaerat necessitatibus, corrupti ea explicabo atque, quam cupiditate non eius asperiores veniam.</p>
+    </div>
+    <p>Lorem, ipsum dolor sit amet consectetur, adipisicing elit. Eveniet, aliquid. </p>
+    
+    <h3>안녕</h3>
+    <h4>하세</h4>
+    <h4>하세</h4>
+    <h4>하세</h4>
+    <div>
+        <h4>요</h4>
+    </div>
+    <table border=1>
+        <tr>
+            <th>이름</th>
+            <th>지역</th>
+        </tr>
+        <tr>
+            <td>이동준</td>
+            <td>동두천</td>
+        </tr>
+        <tr>
+            <td>이유나</td>
+            <td>대구</td>
+        </tr>
+    </table>
+    <!--div는 블럭 span은 인라인속성-->
+    <div>안녕</div>
+    <div>안녕</div>
+    <div>안녕</div>
+    <span>잘가</span>
+    <span>잘가</span>
+    <span>잘가</span>
+    <!--h1[style='display:inline']*3{Hello}-->
+    <h1 style="display:inline">Hello</h1>
+    <h1 style="display:inline">Hello</h1>
+    <h1 style="display:inline">Hello</h1>
+    <!--h1{bye}*3-->
+    <h1>bye</h1>
+    <h1>bye</h1>
+    <h1>bye</h1>
+    <h2>안녕하세요 잘가세요</h2>
+    <p>사요나루토</p>
+    <hr>
+    <h1>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ab ex odit veritatis inventore, velit impedit maxime adipisci sed praesentium aspernatur, pariatur voluptates, explicabo amet? Natus ipsam reiciendis quod sapiente molestiae?</h1>
+    <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim laboriosam placeat, excepturi earum mollitia impedit dolorum, velit dicta architecto totam ab iusto sint veniam, eos eum. Maiores fugit adipisci molestias, aliquam natus doloremque cum minus incidunt dolor quas totam aliquid, ipsa dolorem minima harum deserunt nisi laudantium! Maxime nihil quos cupiditate vitae a impedit provident nesciunt. Adipisci fuga distinctio optio, excepturi dolorum perspiciatis sunt sapiente sed voluptates neque cupiditate ipsam doloremque architecto ducimus molestiae, libero vitae expedita quidem voluptatem omnis magni nam. Quis quod veritatis minus voluptate quasi, odit iure vel dolores similique ea nisi temporibus accusamus velit rem cum. Rerum consectetur ducimus a eveniet quis velit beatae necessitatibus soluta aperiam ad accusantium temporibus accusamus sapiente, aliquid id cumque quasi ipsum blanditiis eligendi! Eos at, labore nemo nisi dolor doloremque quisquam ea officia rerum culpa tenetur expedita? Impedit quaerat sint fugiat, ipsum velit culpa animi sunt nam voluptatum aspernatur, reiciendis laudantium aut ex labore ipsa, voluptatem distinctio repellat beatae recusandae vero dolor! Doloremque, id veniam a incidunt at ipsa? Porro consequuntur voluptates nisi suscipit, ad culpa, dolorem doloremque quia sit, commodi debitis quos sapiente vero maxime itaque. Corrupti, eum qui, maxime at cum nobis fugiat quo, ducimus officia velit amet ipsam odit doloremque dignissimos adipisci veritatis totam quidem veniam delectus temporibus quaerat id? Consequuntur, ipsa ad, soluta delectus aliquam illum corrupti, quo quia praesentium nisi aut ex nemo sapiente atque necessitatibus modi assumenda maiores! Deleniti, perferendis voluptatem. Exercitationem odio porro sequi animi suscipit excepturi illum, tempore vitae! Laudantium ipsum architecto ullam maiores assumenda tempora animi itaque velit nulla. Quam officiis totam ex quod iste in quos ipsa maxime dolorem distinctio numquam fugiat voluptate molestias, autem itaque laborum ducimus dignissimos unde praesentium vero quia ab corporis quas debitis. Et perspiciatis labore explicabo blanditiis sunt quisquam, harum est omnis ea a fugiat reiciendis excepturi! Aut, praesentium veritatis sint dolorem iusto aliquid fugit velit iste eligendi harum atque autem repudiandae saepe officiis sequi neque? Tenetur voluptatum omnis aperiam placeat dolorem necessitatibus doloremque, illum distinctio dicta? Natus sed tenetur ipsum, ratione itaque quibusdam odio dolorum facilis optio provident similique amet, est quasi magnam minus maiores dicta illum doloremque animi deserunt voluptas veniam soluta quia? Assumenda mollitia pariatur quo architecto expedita, reiciendis ipsa natus, ex sit sint excepturi esse illum praesentium! Delectus quaerat corporis, ratione, iste numquam, incidunt reiciendis beatae nam nostrum similique neque cum exercitationem fugiat. Mollitia nihil ipsam sed unde excepturi! Harum aperiam sit, quos porro illum perspiciatis in accusantium ratione laboriosam veritatis aspernatur hic laborum, nihil dignissimos ipsam nam. Eligendi consequatur assumenda, obcaecati delectus cumque quo voluptatum officia inventore necessitatibus sapiente ab tempore odit, tempora, officiis quam ad. Sapiente porro quasi facere aperiam iste accusantium blanditiis voluptatem. Vero laudantium odit accusamus numquam id. Laboriosam officiis voluptas rem nesciunt distinctio voluptatibus aspernatur ad. Architecto rerum numquam reiciendis temporibus eaque provident minima quibusdam aperiam placeat id vitae, praesentium obcaecati perspiciatis amet enim iste officiis laboriosam commodi animi quisquam deleniti! Itaque, temporibus? Quod laborum expedita eius officiis. In neque ab accusantium voluptates perspiciatis incidunt odit sint odio quisquam consequuntur, doloremque quas laborum, numquam mollitia eum perferendis nisi expedita dolorem fuga cumque illo recusandae aspernatur! Quia eligendi blanditiis, voluptatibus quisquam iusto ex numquam commodi similique minima pariatur? Dolores laudantium alias quas culpa delectus voluptas, maxime modi debitis illo quibusdam rem aliquid vitae error deserunt corrupti maiores ex ducimus aliquam exercitationem vero accusantium voluptate perspiciatis hic. Porro obcaecati repudiandae nostrum sequi asperiores laborum perspiciatis doloribus error laudantium ex omnis veritatis eos pariatur alias aperiam hic nobis animi nisi, suscipit deleniti nesciunt facilis minima! Maiores, excepturi harum? Doloribus eum quidem hic vero ab facilis id reprehenderit culpa libero! Fuga voluptatum assumenda eos, natus praesentium consectetur illum odio architecto, illo iusto in itaque repellendus! Quasi eius voluptatem vero corrupti architecto harum laudantium praesentium, perspiciatis explicabo asperiores libero expedita cum culpa quae quisquam excepturi repellat neque hic labore porro. A, suscipit corporis est sequi fugiat repellat iste assumenda saepe, labore cupiditate quibusdam accusamus iusto numquam recusandae aut adipisci reiciendis modi? Soluta repellendus fuga vero architecto quod assumenda dignissimos id odit! Eaque cupiditate corporis autem nostrum voluptate quas fugit modi vel veritatis, commodi debitis aperiam cumque fuga similique vero saepe animi eos ullam magnam optio, unde aliquam quis. Sequi hic ex odio officia ducimus quis vel soluta, numquam amet saepe dolorem eaque? Laudantium dolore, natus aut cum ducimus ratione. Cumque, quasi. Ullam expedita nulla dignissimos rerum fuga. Iure rem cupiditate, non earum eius dolore neque est laborum impedit. Expedita, obcaecati. Tenetur libero a repudiandae? Quia dolor nemo distinctio, incidunt, mollitia similique eligendi corporis voluptatem ut quam non magni autem! Minima ipsa quisquam quos. Quisquam ullam facilis amet fugiat consectetur maxime accusantium et officia ea. Quae ducimus sint delectus tenetur laudantium commodi vitae a veniam, aut iure incidunt odio perspiciatis alias ea dolores excepturi dolor nihil aperiam mollitia. Odio pariatur veniam id quo, voluptatibus vitae sapiente magnam commodi. Atque adipisci nemo eveniet id tempora, omnis aliquid iusto, at assumenda ipsum nisi asperiores qui repudiandae eaque impedit consectetur ullam nesciunt inventore deleniti dolore odit velit dolor. Consequuntur dolores amet ad quos sunt exercitationem ea corrupti, maxime sequi, delectus nam vero quia pariatur nobis! Ducimus sequi labore quas! Maxime rem saepe debitis quisquam assumenda aspernatur facere. Nemo quas suscipit aliquam rerum possimus sit quod fugiat officia quidem at quis, quos sed. Reiciendis voluptatum suscipit laudantium, doloribus vero odio hic inventore ut in id deleniti aperiam obcaecati dolor quod. Fuga quod accusantium in deleniti amet necessitatibus hic quo vitae, neque similique deserunt. Nemo repellat earum harum veritatis voluptas esse amet. Sunt voluptatem magni repellendus vero accusantium, quia, nulla dolores harum libero culpa odio consequuntur! Soluta quas tempore impedit eum, sapiente consequatur accusamus iure? Doloremque laboriosam iure illum! Exercitationem ducimus ad nisi! Natus ullam hic iusto laborum reiciendis officia. Cum sequi voluptatibus ab qui suscipit rerum cupiditate, assumenda, consequatur officiis tempore illo eaque placeat velit autem optio. Quod nam aliquam modi reprehenderit obcaecati saepe assumenda iusto sint voluptatem dolor numquam reiciendis laboriosam maiores et, maxime nobis, fuga a, deleniti repudiandae. Debitis mollitia modi reiciendis ad neque!</h1>
+</body>
+</html>

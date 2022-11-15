@@ -1,0 +1,14 @@
+{
+  "name": "@chamthesleeptalker/flowers-and-tracks",
+  "main": "9ee00c8d0c784e4d@832.js",
+  "version": "832.0.0",
+  "homepage": "https://observablehq.com/@chamthesleeptalker/flowers-and-tracks",
+  "author": {
+    "name": "Cham Mamador",
+    "url": "https://observablehq.com/@chamthesleeptalker"
+  },
+  "type": "module",
+  "peerDependencies": {
+    "@observablehq/runtime": "4"
+  }
+}

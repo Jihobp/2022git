@@ -1,0 +1,30 @@
+span{
+    position: absolute;
+    display: inline-block;
+    width: 60px;
+    bottom: 0;
+}
+div{
+    position: relative;
+    height: 400px;
+}
+
+/* span:nth-of-type(1){height: 100%;}
+span:nth-of-type(2){height: 80%;}
+span:nth-of-type(3){height: 60%;}
+span:nth-of-type(4){height: 20%;} */
+
+body{background: #262626;}
+.purple{background: rgb(144, 80, 204);}
+.blue{background: #4c76ff;}
+.babypurple{background: #ce99de;}
+.babyblue{background: rgb(155, 215, 238);}
+
+div { margin: 50px 50px;}
+.span{
+    font-size: 20px;
+    line-height: 1.8rem;
+    color: #fff;
+    text-align: center;
+    border-radius: 15px;
+}

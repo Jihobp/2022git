@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #wrap {
+            width: 560px;
+            margin : 0 auto;
+        }
+        #aside {
+            width: 200px;
+            float:left;
+            background-color: pink;
+        }
+        /* 중간에 비는 30은 여백 */
+        #section {
+            width: 330px;
+            float: right;
+            background-color: black;
+            color:white
+        }
+
+        /* 투명막같은 거 */
+        /* footer가 aside, section으로 올라오지 못 함 */
+        /* 옛날 웹브라우저에선 안 됨 */
+        .clear{clear: both;}
+    </style>
+    <style>
+        #demotext {
+text-shadow: 0 0 5px #FFF, 0 0 10px #FFF, 0 0 15px #FFF, 0 0 20px #49ff18, 0 0 30px #49FF18, 0 0 40px #49FF18, 0 0 55px #49FF18, 0 0 75px #49ff18, 18px -15px 13px rgba(206,0,0,0.42);
+color: #123314;
+background: #FF48CE;
+}
+    </style>
+</head>
+<body>
+
+<div id="wrap">
+    <div id="header">
+        <h1>Header</h1>
+        <div id="demotext">Edit this text</div>
+    </div>
+    <div id="navigation">
+        <h1>Navi</h1>
+    </div>
+        <div id="aside">
+            <h1>Aside</h1>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quae necessitatibus sapiente voluptatum eos rem expedita aliquam, hic illo repellendus ad, saepe iure cupiditate beatae. Dolorem obcaecati recusandae ullam a quae!</p>
+        </div>
+        <div id="section">
+            <h1>Section</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore architecto odit unde ut culpa, delectus omnis aut nulla sint earum error expedita dicta amet nisi distinctio, ab voluptate dolor fugit!</p>
+        </div>
+    <div class="clear"></div>
+    <div id="footer">
+        <h1>footer</h1>
+    </div>
+
+</div>
+
+
+
+
+</body>
+</html>

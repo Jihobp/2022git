@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #n{
+            /*display:none; 없는거당. 
+                visibility: hidden; 안보이는거당.*/
+            visibility: hidden;
+        }
+        div{
+            margin: 10px;
+            padding: 10px;
+            border: 10px solid black;
+            width: 100px;
+            height: 100px;
+        }
+        #blue{
+            background-color: blue;
+            box-sizing: border-box;
+        }
+
+        #red{
+            background-color:red;
+            /*content-box는 기본값임*/
+            box-sizing:content-box;
+        }
+        h1{
+            font-family: '궁서체';
+        }
+        h2{
+            /*이동준싼쓰가 엇ㅂ으면 D2Coding 적용함*/
+            font-family: '이동준싼쓰', D2Coding;
+        }
+        .d2{
+            font-family: D2Coding;
+        }
+    </style>
+</head>
+<body>
+    <h1>Lorem, ipsum.로렘입슘랄랑루ㅏㅇㄹ우릳샤ㅐ둅샤ㅐ</h1>
+    <h1 id="n">Lorem ipsum dolor sit amet.</h1>
+    <h2>Lorem, ipsum dolor.</h2>
+    <p class="d2">1Ili</p>
+    <p class="d2">안녕 o 0 0</p>
+    <div id="red"></div>
+    <div id="blue"></div>
+    
+</body>
+</html>

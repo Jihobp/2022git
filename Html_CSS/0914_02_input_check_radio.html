@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- input 태그는 보통 form 태그 안에 쓴다. -->
+    <!-- alt 누르고 화살표 위아래하면 코드 움직임 ㅇㅅㅇ -->
+    <!-- ctrl alt 방향키면 커서 여러개 생김 -->
+    <form action="http://www.naver.com">
+        <input type="text" name="jiho" id="jihojjang">
+        <input type="password" name="" id="">
+        <input type="submit" value="접속">
+        <!--내가 작성한걸 주석창에 띄우는걸 get 방식이라한다. f12-->
+    </form>
+    <!-- input:t,s,p -->
+    <!-- 로그인 할때 포스트 방식으로 한다. 비번 안뜨게 보안이 중요하니까 ㅇㅅㅇ -->
+    <hr>
+    <form action="http://www.naver.com" method="post">
+        <input type="text" name="myid" id="t_id">
+        <input type="password" name="mypw" id="t_pw">
+        <input type="submit" value="로그인">
+    </form>
+    <!-- check box -> 여러개 설정, radio-> 한개만 설정 단, radio로 하나씩 묶을땐 네임 그룹으로 으로 묶는당.-->
+    <form action="">
+        <!-- ctrl +alt 누르고 화살표 누르면 동시 선택 가능--> -
+        <input type="checkbox" name="hobby">게임<br>
+        <input type="checkbox" name="hobby">유튜브<br>
+        <input type="checkbox" name="hobby">영화<br>
+        <hr>
+        <input type="radio" name="gender" checked>남자<br> 
+        <input type="radio" name="gender">여자<br>
+        <hr>
+        <!--input[type=radio name=grade]*3-->
+        <input type="radio" name="grade">상<br>
+        <input type="radio" name="grade">중<br>
+        <input type="radio" name="grade">하<br>
+
+        <hr>
+        <form action="">
+            <!--label 태그의 for 속성에 id 적으면, 해당 id인 태그를 선택하게 할 수 있다.-->
+            <label for="name">이름</label>
+            <input type="text" name="myname" id="name"> 
+        </form>
+
+        <hr>
+        <!--Textarea : 안에 입력하는 모든 텍스트 형식 타입이 저장 된다. -->
+
+    </form>
+</body>
+</html>

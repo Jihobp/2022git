@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jq.js"></script>
+    <script>
+        //$(function(){}) // <-window.onload 와 동일💛 💡
+
+        $(  
+            function () { //jquery 시작
+                //jQuery 에서 text 불러오는 법과 text 바꾸는 법
+                //바꾸는 법
+                $('h1:first').text('일')            // 글자를 변경할땐 .text('') 메소드 매개변수 이용. 
+                //텍스트 받아오기
+                let mytext = $('h1:first').text()   //글자를 가져올떈 .text()
+                console.log(mytext)
+
+                $('h1:first').text('1')
+            }
+        )
+
+        $(
+            //버튼 입력 prompt //click 이벤트 생성
+            $("#btn_prompt").click(function () {
+                //prompt ㄱnum 값 저장
+                var result = prompt("입력하세요");
+
+                if (result != ""){ //if()를 활용, 변수 result의 값이 빈값인지 체크.
+                    //font태그 변경
+                    $("#font_text").text(result);   //result의 값이 ""(빈값) 아니라면 font 태그의 텍스트 값을 result 값으로 변경,.
+                }
+                else{   //if()조건이 아니라면, 즉"""(빈값)이 아니라면 진행되는 else 구문.                    //font태그 변경
+                    $("font_text").text("입력 값이 없습니다."); //else 조건이라면, font 태그의 값을 '입력 값이 없습니다'로 변경
+                }
+            })
+        )
+
+        //🧶🎯1. prompt창으로 숫자를 입력받음
+        // 2. 주사위(정사각형)를 해당 숫자만큼 던짐
+        // 3. 그랬을 때 각 숫자의 개수 출력
+        // 4. 단, 가장 높은 숫자가 나온 부분은 별도의 색으로 표시
+
+        //var num = prompt('숫자를 입력해주세요.');
+        //let num = Math.floor(Math.random() * 6) + 1
+
+        //for (let i = 0; i < 6; i++) {}
+
+
+    </script>
+</head>
+
+<body>
+    <button id="btn_prompt">숫자 입력</button>
+    <font id="font_text"></font>
+    <h1>1</h1>
+    <h1 class="a1">0</h1>
+    <h2 class="a1">0</h2>
+    <h1>2</h1>
+    <h1 class="a2">0</h1>
+    <h2 class="a2">0</h2>
+    <h1>3</h1>
+    <h1 class="a3">0</h1>
+    <h2 class="a3">0</h2>
+    <h1>4</h1>
+    <h1 class="a4">0</h1>
+    <h2 class="a4">0</h2>
+    <h1>5</h1>
+    <h1 class="a5">0</h1>
+    <h2 class="a5">0</h2>
+    <h1>6</h1>
+    <h1 class="a6">0</h1>
+    <h2 class="a6">0</h2>
+</body>
+
+</html>

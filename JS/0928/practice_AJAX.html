@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>Ajax Intro</title>
+<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+
+<script>
+    $(function() {
+
+        $("#requestBtn").on("click", function() {       //reuqestBTN  버튼에 클릭 기능이 들어가 있고, on함수 한다.  
+
+            $("#text").load("/examples/media/ajax_intro_data.txt"); //#text 태그를 불러오는데 그안에 ".txt"가 들어가 있다.
+                                                                    //콜백함수
+        });
+
+    });
+</script>
+</head>
+<body>
+<h1>Ajax(Asynchronous JavaScript and XML)</h1>
+<p id="text">이 단락에 다른 텍스트를 불러와보죠!</p>
+<button id="requestBtn">데이터 불러오기!</button>
+</body>
+</html>

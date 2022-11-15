@@ -1,0 +1,11 @@
+E:\2022git\CSharp\HelloMyCSharp01\HelloMyCSharp02_04_guiQuest\bin\Debug\HelloMyCSharp02_04_guiQuest.exe.config
+E:\2022git\CSharp\HelloMyCSharp01\HelloMyCSharp02_04_guiQuest\bin\Debug\HelloMyCSharp02_04_guiQuest.exe
+E:\2022git\CSharp\HelloMyCSharp01\HelloMyCSharp02_04_guiQuest\bin\Debug\HelloMyCSharp02_04_guiQuest.pdb
+E:\2022git\CSharp\HelloMyCSharp01\HelloMyCSharp02_04_guiQuest\obj\Debug\HelloMyCSharp02_04_guiQuest.csproj.AssemblyReference.cache
+E:\2022git\CSharp\HelloMyCSharp01\HelloMyCSharp02_04_guiQuest\obj\Debug\HelloMyCSharp02_04_guiQuest.csproj.SuggestedBindingRedirects.cache
+E:\2022git\CSharp\HelloMyCSharp01\HelloMyCSharp02_04_guiQuest\obj\Debug\HelloMyCSharp02_04_guiQuest.Form1.resources
+E:\2022git\CSharp\HelloMyCSharp01\HelloMyCSharp02_04_guiQuest\obj\Debug\HelloMyCSharp02_04_guiQuest.Properties.Resources.resources
+E:\2022git\CSharp\HelloMyCSharp01\HelloMyCSharp02_04_guiQuest\obj\Debug\HelloMyCSharp02_04_guiQuest.csproj.GenerateResource.cache
+E:\2022git\CSharp\HelloMyCSharp01\HelloMyCSharp02_04_guiQuest\obj\Debug\HelloMyCSharp02_04_guiQuest.csproj.CoreCompileInputs.cache
+E:\2022git\CSharp\HelloMyCSharp01\HelloMyCSharp02_04_guiQuest\obj\Debug\HelloMyCSharp02_04_guiQuest.exe
+E:\2022git\CSharp\HelloMyCSharp01\HelloMyCSharp02_04_guiQuest\obj\Debug\HelloMyCSharp02_04_guiQuest.pdb

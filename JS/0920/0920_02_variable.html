@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //var let 둘 다 변수. 
+        //대신 var가 더 옛날꺼이고 변수 중복 선언해도 ok
+        //하지만 let은 변수 중복 선언하면 브라우저 콘솔에서 
+        //에러메세지 찍어냄. 즉 중복 선언  xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+        //에러를 안띄워줘서, 변수 선언 만큼은 에러를 잡아주자 해서 let 을 쓴다 ;ㅅ;
+        var a=100
+        var a='안녕'
+        let b=200 //Identifier 'b' has already been ???????
+        let bb='200'
+        alert(b)
+
+        //DevTools ins now available in korean!
+        //shift + enter로 f12화면에서 치기
+        let abc='이동준'
+        if(abc=='이동준')
+            console.log('잘생겼다')
+        for(let i=0; i<10; i++)
+            console.log(abc+'선생님 짱')
+
+        //상수 : 메모리 공간이 일정하니가 특별히 변할거 같지 않으면 상수를 쓴다.: 자바스크립트는 상수를 많이 쓴다.
+        //js 특징상 어떤 변수를 쓸지 모르기때문에. 바이트만큼 공간할당해쥬셈
+        //절대 변하지 않을 거 같으면 const 쓰는게 맞다. 편하게 쓰면 댑니댱~~~!
+        const 학교이름 = '경북산업직업전문학교'
+        alert(학교이름)
+    </script>
+    <script src="0920_testjs.js"></script>
+</body>
+</html>

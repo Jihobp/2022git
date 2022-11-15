@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input id="one" type="text">
+    <input id="two" type="text">
+    <button id="add">더하기</button>
+    <button id="mul">곱하기 </button>
+    <h1></h1>
+    <script>
+        //1. promt -> input 태그로 바꾸기
+        //2. button을 눌러서 결과가 화면에 나오게 하기.
+        //즉 (계산기 11번) 참고해서 하기
+        //input 태그랑 button 태그 그 밑에 h1 태그 집어넣기.
+        //그래서 button 누르면 h1 태그에 결과가 나오게 하기.
+
+        let input = prompt ('num1 입력')
+        let input2 = prompt ('num2 입력')
+        
+
+        let h1=document.querySelector('h1')
+        add.onclick = function() {
+            let num1 = o.value
+            let num2 = t.value
+            // alert(Number(num1)+Number(num2))
+            result.textContent = Number(num1)+Number(num2)
+        }
+
+        mul.onclick = function() {
+            let num1 = o.value
+            let num2 = t.value
+            result.textContent = Number(num1)*Number(num2)
+        }
+
+        for(let result of h1)
+            result.textContent=Re
+
+
+    </script>
+
+</body>
+</html>

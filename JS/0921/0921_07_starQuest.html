@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1></h1>
+    
+    <script>
+        //별을.. 찍어..보자...
+                //다이아몬드를 실제 화면에서 띄워주세요
+
+        //document.write 나 document.writeln을 써도 되고
+        //textContent 를 대신하여
+        //innerHTML을 써도 됨.
+        //정답 : 1. <pre>라는 태그안에 띄어쓰기 하면 그대로 들어감
+        //정답 : 2. <&nbsp> 라는 태그 쓰면됌. ㅇㅅㅇ
+        //변수 대소문자 구분
+        let output=''                   //output 이ㅏ라는 비어있는 문자를 만든다. 
+        const SIZE = 5 //다이아몬드 크기 5
+        for(let i=1; i<=SIZE; i++)      // i값이 증가하면 띄어쓰기는 줄어든다.  5.4.3.2.1
+        {
+            //스페이스바
+            for(let j=SIZE; j>i; j--)
+                output +=' &nbsp;'
+
+            //별 찍는 부분
+            for(let k=0; k<2*i-1;k++)       //i 값 1= 1개, i 값 2=3개 i 값 3=5개
+                output+='*'
+            output +='<br>'
+        }
+        
+        for(let i = SIZE-1; i>0; i--)       //i 값을 기준으로, i가 4 ㅇㅅㅇ
+        {
+            for(let j = SIZE; j>i; j--)
+                output+='&nbsp;'
+            for(let k = 0; k<2*i-1; k++)
+                output +='*'
+
+            output+='<br>'    
+        }
+        console.log(output)
+        document.querySelector('h1').innerHTML=output
+    </script>
+</body>
+</html>

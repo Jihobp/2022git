@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="0922_02_mincho.json"></script>  <!--자바스크립트 소스가져오기-->
+    <script>
+        //window : documnet 보다 더 상위 계층
+        //우리가 보는 창(웹브라우저) 의미 함
+        //window .onload = function() {} 의 의미
+        //body 태그에 있는걸 다 불러들인 다음에 실행하겠다.
+        //ctrl a + ctrl k + f
+        window.onload=function()    //window.onload
+        {
+            let btn = document.querySelector('button')
+            let mylunch = document.querySelector('img')
+            let result = document.querySelector('#result')
+            
+            //객체랑 타이머 설명?
+            let 국수 = {
+                이름 : '국수',
+                사진 : 'https://i.pinimg.com/originals/92/25/b2/9225b22d0e1956a6dc04af65b8251fc8.jpg'
+            }
+
+            let 햄버거 = {
+                이름 : '햄버거',
+                사진 : 'https://media-cdn.tripadvisor.com/media/photo-s/19/08/75/67/triple-burgers.jpg'
+            }
+
+            let 샌드위치 = {
+                이름 : '샌드위치',
+                사진 : 'http://i.fltcdn.net/contents/3257/original_1470353134756_e2qiplxflxr.jpeg'
+            }
+
+
+            //else 안에 while 집어넣는 이윤 참일경우에만 출력, 
+            //(idx==idxprev)가 다를때까지 랜덤 계속 돌리는 거
+
+//자바 스크립트 객체  =  JSON , = JAVA SCRIPT OBJECT NOTATION
+//속성명 : 값
+
+//직관적으로 데이터를 저장할 수 있어서 XML 형태와 같이 많이 쓰이는 파일처리 데이터 방식
+
+            //한글 변수도 쓰입니댜 ㅇㅅㅇ 
+            let lunch = [국수, 햄버거, 샌드위치]
+            //배열에 바로 넣는법
+            lunch[3] = {
+                이름 : '하와이안 민트초코 피자',
+                사진 : 'https://s3.orbi.kr/data/file/united2/380fae48dba14b28a5c9d4576c683663.jpeg' 
+            }
+
+            lunch[4] = 민초
+            
+
+            //두번이상 연속으로 같은거 안나오게 하기? 
+            
+
+            
+            btn.textContent = '점심선택'
+            mylunch.width = 0
+            mylunch.height = 0
+            mylunch.src = ''
+            mylunch.style.display = 'block'
+            btn.onclick = ()=>
+            {
+                mylunch.width = 300
+                mylunch.height = 300
+                mylunch.src = ''
+                result.textContent = ''
+                let idx = 
+                Math.floor(Math.random()*lunch.length)
+                mylunch.src = lunch[idx].사진
+                //속성 불러올 때 배열 연산자 써도 됨.
+                //웹쪽으로 취직하면 다양한 문법을 배울 수 있다. 
+                result.textContent = lunch[idx]['이름']
+            }
+        }
+        
+    </script>
+</head>
+<body>
+    <h1>오늘의 점심은?</h1>
+    <button></button>
+    <img src="" alt="">
+    <h1 id="result"></h1>
+</body>
+</html>

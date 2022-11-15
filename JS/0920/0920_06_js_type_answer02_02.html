@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let num=prompt('숫자 입력하기')//이 시점에선 문제 x
+        num %=12 //이 떄도 '문자열' > X  > 연산이 들어가면 숫자가 된다 'ㅅ'
+        num++    //이 때는 숫자
+        num=Number(num) //이 때에 되서야 숫자가 됨 - > Number로 감싸면 숫자가 되니까 감싸버려랏 ㅇㅅㅇ
+        console.log(num)
+
+        //결론: 입력받는 값은 기본적으로 문자다.
+        //숫자로 쓰고 싶다면 별도의 처리가 필요하다!!
+
+        let test=20
+        if(test=='20')
+            console.log('==은 값을 비교')   //같은걸로 취급합니댱.
+        if(test==='20')
+            console.log('타입도 비교함!')
+
+            console.log(test=='20')//true
+            console.log(test==='20')//false
+
+            //4계절문제 다시 풀어보기 이번엔 if문으로
+            //여기에선 Number 형 변환 안해도됨.
+            let mymonth=prompt('몇월생?')
+            document.querySelector('body').
+
+            //바디 태그에 아무것도 없고 ex)img가 없다. 
+            style.backgroundRepeat="no-repeat" //바디태그에다가 바로 백그라운드 박아버리자 해서 박은겨.
+
+            //mymonth=Number(mymonth)와 같은 처리 필요 없음
+            if(mymonth==12 || mymonth==1 || mymonth==2)
+            document.querySelector('body').background
+            ='https://pbs.twimg.com/media/FLnq8JaVUAcsE9C?format=jpg&name=large'
+
+            else if(mymonth>=3 && mymonth<=5)
+            document.querySelector('body').background
+            ='http://www.stardailynews.co.kr/news/photo/201904/238878_271851_5726.jpg'
+
+            else if(mymonth>=6 && mymonth<=8)
+            document.querySelector('body').background
+            ='https://w.namu.la/s/23ac0b1e977bd419163cb31161429e3330a8d43778d12d8c6aa7ed28dfc520237e169a0c57b4546840e88ea1a4d7a67e63c187fdd3b719c6739add021ef38f94cc35c92ffcc890551f312d4e1d5aa7d5d10941c200d6945d7c8804a2d1bb9fff8836aa0e4a1992cd44bf5b4f20322552'
+
+            else if(mymonth>=9 && mymonth<=11)
+            document.querySelector('body').background
+            ='https://w.namu.la/s/6f514e81b9f8a4c01d063caa8bbb6f8ced338474f564f35e7cb6174d8d48b469ac109c0af5d390daa90722d52d9b7d2f33a4910333770f238dea5e8584236ba47d5cdf832ce6a068ec1c491042d34dd9e7cf86be9b60b0be352609ae04405f94adf00961b6f132fee0c8f08d5cc109be'
+
+            else //엉뚱한 값일 경우
+            {
+                document.querySelector('body').background
+                =
+                'https://file2.nocutnews.co.kr/newsroom/image/2018/11/03/20181103154544539681_0_750_1050.jpg'
+            }
+
+            // Boolean, String, Number, Null
+            // undefined, object
+            //Symbol도 아주 최근에 추가 됨
+
+            //Boolean
+            //참 거짓
+            //숫자 0이나 null값, 공백은 false이고
+            //나머진 모두 true
+            console.log(Boolean(0))
+            console.log(Boolean(null))
+            console.log(Boolean(''))    //아무것도 없는건 거짓.
+            //NaN : 문자를 숫자로 바꾸려고 할 때 생김
+            console.log(Boolean(NaN))
+            //잘못된 연산을 할 때 나옴
+            console.log(Boolean(undefined)) 
+            console.log(Boolean(' ')) //1칸이라도 있으면 true. 참
+
+            //++공백도 아스키코드 값이 있다. 
+
+            let num = 12
+            num = String(num)
+            num += 14
+            console.log(num)
+
+            //문자열의 길이와 문자열 일부를 찾는 방법
+            let sentense = "안녕 잘 지내니 우워우어"
+            console.log(sentense.length) //13(공백포함)
+            console.log(sentense[0])//첫번째 글자 접근됨
+
+            //처음에 아무것도 없는 배열 만들고
+            //내가 추가하고 싶은 인덱스에 값을 넣는 방법
+            let arr1 = []
+
+            //처음부터 배열을 만드는 것도 있다.
+            //단, C나 Java처럼 크기 잡는 건 없다.
+            //보이는 것처럼 배열에는 어떤 값도 다 들어갈 수 있다.
+            let arr2 = [1,"안녕", arr1, null]
+    </script>
+</body>
+</html>

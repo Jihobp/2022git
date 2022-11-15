@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 리액트 공유폴더에 script 3줄 복붙 !!1 -->
+    <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    <!-- 대규모 웹작업에 적합하다. 블로그, 자동차 조립등 리액트는 부품을 다 만들어 놓고 
+    그 만들어 놓은 부품들을 화면만들때 조립한다.  but 그 블록들을 우리가 만들어야한다.
+    소규모 면 순수 자바 스크립트가 낫다.  -->
+    <!-- 🐉sr🧨JSP > html 코드안에 다른 언어 있는거..장고도 그렇댕..... -->
+</head>
+<body>
+    <div id="root"></div>
+    <script type="text/babel">
+        //변수 = <태그>값</태그>
+        //이런 형식을 적을 수 있는 게 babel 이라는 
+        //라이브러리 덕이다.
+        //JSX 라고 함
+        //babel은 jsx를 자바스크립트로 변환을 시켜줌
+        //component;구성요소로 그려놓고 랜더링.....container 안에 집어 넣는다???!!!!
+        const component = <h1>리액트 시작</h1> //jsx 형식, 변수에 태그를 넣어준다./...
+        const container = document.getElementById('root')
+        ReactDOM.render(component, container)   //reactDOM 도 라이브러리로 부터 가져옴.
+    </script>
+</body>
+</html>

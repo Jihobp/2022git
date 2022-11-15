@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>가격은 아래와 같습니다.</h1>
+    <h1 id="result"></h1>
+    <h1>위 결과 확인해보세요.</h1>
+    <script>
+        //최신 바닐라 js의 ajax
+        //fetch  :  git 동기화. 
+        fetch('https://dongjoonleedj.github.io/testWebHosting/myjson.json').then(response=>{ //요청 
+            if(!response.ok) //요청 실패시
+                throw new Error('400이나 500에러')
+
+            //요청 성공시
+            return response.json()    
+        }).then(result=>{   //응답
+            console.log(result) //응답 데이터 로그 찍어보기
+            let h1 = document.querySelector('#result')  //result 갖고 와서
+            h1.textContent = result['price']        //result.price  가져온다,.
+                                                //price 속성 777111         //=JSON.parse(ajax.responseText).price 로 속성에 접근 or []배열에 접근 같다. 대소문자 틀리면 안댐.
+
+        }).catch(()=>{console.log('error')}) //제대로 응답안하면 catch. 
+        //json 에 있는 price 값을 잘 땡겨올거다.
+
+        //제이쿼리 핵심은 달러. 
+        //함수 안에 하나의 객체가 매개변수로 들어가 있는당.
+
+    </script>
+</body>
+</html>

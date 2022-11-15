@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="first">Lorem ipsum dolor sit amet.</h1>
+    <h1 id="second">Lorem ipsum dolor sit amet.</h1>
+    <script>
+        //자바스크립트로 태그 선택(first)
+        //체이닝메소드,
+        let firstTag = document.getElementById('first')
+        let first2 = document.querySelector('#first')
+        firstTag.style.clolr='red'
+        first2.style.backgroundColor='pink'
+
+        //제이쿼리로 태그 선택(second)
+        $('#second').css('color','green').
+        css('background-color','springgreen')
+
+        //jquery cdn 갖고와서 > uncompressed > 코드 카피, 
+    </script>
+</body>
+</html>

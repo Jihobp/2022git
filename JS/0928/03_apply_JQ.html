@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 코드 복사해서 전체 선택해서 붙여넣고 jq.js 만들고  불러와랑ㅇㅇㅅㅇㅅㅇㅅㅇㅅㅇㅅㅇㅅㅇ-->
+    <script src="jq.js"></script>
+    <style>
+        .myred{border:3px solid red;}
+        .mycyan{background-color: cyan;;}
+    </style>
+</head>
+<body>
+    <h1 id="first">Lorem ipsum dolor, sit amet consectetur adipisicing.</h1>
+    <h1 id="second">Lorem ipsum dolor, sit amet consectetur adipisicing.</h1>
+    
+    <script>
+        $('#first').css('color','red').addClass('myred') //css직접 수정, class 직접추가 가능. 자바스크립트 기능 거의 대부분을 제이쿼리에서 가능
+        let first = document.getElementById('second')
+        first.setAttribute('class','myred')
+        first.style.color='blue'
+        first.className +=' mycyan' //클래스 추가
+
+        //자바스크립트보다 제이쿼리가 더 쓰기편하당. 줄 이 네줄인데 네줄을 한줄로 편하게 할 수 있당.
+    </script>
+</body>
+</html>

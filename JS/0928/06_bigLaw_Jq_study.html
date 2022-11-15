@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .max {
+            color: deepskyblue
+        }
+    </style>
+    <script src="jq.js"></script>
+    <script>
+        //$(function(){}) // <-window.onload 와 동일💛 💡
+        //🧶 대수의 법칙
+        //🎯1. prompt창으로 숫자를 입력받음
+        // 2. 주사위(정사각형)를 해당 숫자만큼 던짐
+        // 3. 그랬을 때 각 숫자의 개수 출력
+        // 4. 단, 가장 높은 숫자가 나온 부분은 별도의 색으로 표시
+
+        $(
+            function () {
+
+                let bigCountLaw = prompt('주사위 시도 횟수') //100번 쓰면  for문 100번실행
+                let emptyArrary = [0, 0, 0, 0, 0, 0]     //0부터 시작해서 99번돈다. 
+                for (let i = 0; i < bigCountLaw; i++) {
+                    let random = Math.floor(Math.random() * 6) //math가 1미만이기때문에 1을 절대 못넘는다. 그 상태에서 소수점을 버리면 5가 된다. 0 던지면 1나온걸로 간주한당. 10번 던져서 0 10번 나오면 0번째 값이 10개나온댣. 
+                    emptyArrary[random]++ //random
+                }
+                for (let i = 1; i <= 6; i++) {
+                    //$('h1.a'+i)
+                    //h1태그이면서 클래스명이 a1 혹은 a6 이런것들인데,
+                    //document.querySelector 처럼 한개 //document.querySelectall 이랑 같당? 
+                    $('h1.a' + i).text(emptyArrary[i - 1]) //클래스명이 a1 a2 a3이냐 ? 에 값을 넣겠다 .       
+                    //대수의 법칙 !!!! 계산할건 미리미리 계산하고 최선의 동작을 하도록 만든거다.
+                }
+                //최댓값, 최댓값의 위치
+                let max = 0
+                let maxIndex = 0
+                for (let i = 1; i <= 6; i++) {
+                    //h1태그이면서 클래스명이 a1인 것들
+                    //a1~a6 인 것들의 값을 이용해서
+                    //최댓값과 퍼센트를 찾음.
+                    let percent = $('h1.a' + i).text()
+                    if (max < Number(percent)) {
+                        max = percent
+                        maxIndex = i
+                    }
+                    //몇 퍼센트인지 표시하기 위한 값
+                    percent = (percent / bigCountLaw) * 100
+                    $('h2.a' + i)
+                        .text(parseFloat(percent).toFixed(2) + '%')
+                }
+
+                //maxIndex 를 구했으므로 색칠할 때 이용하기
+                $('h1.a' + maxIndex).addClass('max')
+                $('h2.a' + maxIndex).addClass('max')
+
+
+
+                //버튼 입력 prompt //click 이벤트 생성
+                $("#btn_prompt").click(function () {
+                    
+                    var bigCountLaw = prompt('주사위 시도 횟수') //100번 쓰면  for문 100번실행
+                    let emptyArrary = [0, 0, 0, 0, 0, 0]     //초기화
+                    for (let i = 0; i < bigCountLaw; i++) {
+                        let random = Math.floor(Math.random() * 6) //math가 1미만이기때문에 1을 절대 못넘는다. 그 상태에서 소수점을 버리면 5가 된다. 0 던지면 1나온걸로 간주한당. 10번 던져서 0 10번 나오면 0번째 값이 10개나온댣. 
+                        emptyArrary[random]++ //random
+                    }
+                    for (let i = 1; i <= 6; i++) {
+                        $('h1.a' + i).text(emptyArrary[i - 1])
+                    }
+                })
+
+            }
+        )
+    </script>
+</head>
+
+<body>
+    <button id="btn_prompt">숫자 입력</button>
+    <font id="font_text"></font>
+    <h1>1</h1>
+    <h1 class="a1">0</h1>
+    <h2 class="a1">0</h2>
+    <h1>2</h1>
+    <h1 class="a2">0</h1>
+    <h2 class="a2">0</h2>
+    <h1>3</h1>
+    <h1 class="a3">0</h1>
+    <h2 class="a3">0</h2>
+    <h1>4</h1>
+    <h1 class="a4">0</h1>
+    <h2 class="a4">0</h2>
+    <h1>5</h1>
+    <h1 class="a5">0</h1>
+    <h2 class="a5">0</h2>
+    <h1>6</h1>
+    <h1 class="a6">0</h1>
+    <h2 class="a6">0</h2>
+</body>
+
+</html>

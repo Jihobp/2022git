@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jq.js"></script>
+</head>
+<body>
+    <!-- ///ctrl enter , script src -->
+    <!-- api 주소 입력 .json?key=dd4d03432f42d84664a096b7f56e413a -->
+    <h1>박스오피스 탑 10</h1>
+    <p>최신영화</p>
+    <div class="boxOffice">     <!--데이터틀을 만들어 놓고 이 안에다 집어 넣어야 한다. -->
+        <h2 class="boxOfficeType"></h2>
+        <p class="showRange"></p>
+        <ul class="boxOfficeList"></ul>
+    </div>
+    <script>
+        $(function(){       //$function 시작하자마자 진행하는거, bdouy안에 있는거.ㅇㅅㅇ
+            const key = "dd4d03432f42d84664a096b7f56e413a"
+            const url = "http://www.kobis.or.kr/kobisopenapi/webservice/rest/boxoffice/searchDailyBoxOfficeList.json"       //영화 진흥원 url 받아 왔당.
+            const apiurl = `${url}?key=${key}&targetDt=20220927`
+            //?물음표 ㅇㅅㅇ 기능??
+            console.log(apiurl)
+
+            const boxOfficeType = $('.boxOfficeType')
+            const showRange = $('.showRange')
+            const myUl = $('.boxOfficeList')
+        
+            $.ajax(
+                {
+                    url:apiurl,
+                    dataType:'json',
+                    success:function(result){
+                        console.log(result)
+                        const jsonObj = result  //결과를 jsonObj에 집어넣고,
+                        const boxOfficeResult = jsonObj['boxOfficeResult']  //객체에 boxOfficeResult 속성을 가져오는 거다.
+                        const movieList = boxOfficeResult['dailyBoxOfficeList']
+                    
+                        boxOfficeType.text(boxOfficeResult['boxofficeType'])
+                        showRange.text(boxOfficeResult['showRange'])
+
+                        //💚each 는 js의 forEach랑 똑같은 것.
+                        //each js forEach 랑 똑같은것. 만든 수만큼 for문 도는 것?!!! 
+                        $(movieList).each(function(index, element){ //태그 새로 만들어줌
+                            const myLi = $('<li></li>')
+                            const myDiv = $('<div></div>')
+                            const mh2 = $('<h2></h2>')
+                            const mp1 = $('<p></p>')
+                            const mp2 = $('<p></p>')
+                            const mp3 = $('<p></p>')
+                            mh2.text(element['movieNm'])
+                            mp1.text('개봉일:'+element['openDt'])
+                            mp2.text('누적관객수:'+element['audiAcc'])
+                            mp3.text('순위 변동:'+element['rankInten'])
+
+                                myLi.append(myDiv)      //myLi 안에  mydiv 가 있고,  그안에 mh2, mp1,mp3가 있다. 이 모든걸 감싸는게 my UL  
+                                    myDiv.append(mh2)
+                                    myDiv.append(mp1)
+                                    myDiv.append(mp2)
+                                    myDiv.append(mp3)
+                            myUl.append(myLi)
+
+                        })
+                        //데일리 박스오피스 배열 {} >> {} 안에 배열이 들어가 있는 것., 
+
+                        
+                    },error:()=>{console.log('error')}
+                }
+            )
+        })
+    </script>
+</body>
+</html>

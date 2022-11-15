@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 리액트 공유폴더에 script 3줄 복붙 !!1 -->
+    <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    <!-- 대규모 웹작업에 적합하다. 블로그, 자동차 조립등 리액트는 부품을 다 만들어 놓고 
+    그 만들어 놓은 부품들을 화면만들때 조립한다.  but 그 블록들을 우리가 만들어야한다.
+    소규모 면 순수 자바 스크립트가 낫다.  -->
+    <!-- 🐉sr🧨JSP > html 코드안에 다른 언어 있는거..장고도 그렇댕..... -->
+</head>
+<body>
+    <div id="root"></div>
+    <script type="text/babel">
+
+        //리액트 실습
+            // 1. prompt 창을 띄우고 이름을 입력하게 한다.
+            // 그래서 그 이름이 h1에 나타나게 한다.
+
+            // 2. 1번에서 받은 값을 이용해
+            // 그 값에 따라서 다른 이미지 띄운다.
+            // (최소 3가지 이상)
+            // ex) 토끼 입력하면 h1에 토끼 적히고
+            // 토끼 이미지가 나오면 됨
+
+        //참고 alt+z를 누르면 url 길이 줄어듬 
+        let nameOn = prompt('이름을 입력하세요')
+
+        const imageUrl = 'https://www.brookvets.co.uk/wp-content/uploads/2018/07/aggressive-cat-1.jpg'
+        const name='재앙을 맞이한 박지호'
+        //component;구성요소로 그려놓고 랜더링.....container 안에 집어 넣는다???!!!!
+        const component = 
+        <div>
+            <h1>리액트 시작({nameOn})</h1>
+            <img src={imageUrl}/>  
+        </div>    
+        //리액트는 /slash/ 적어줘야함.
+        const container = document.getElementById('root')
+        ReactDOM.render(component, container)   //reactDOM 도 라이브러리로 부터 가져옴.
+    </script>
+    <h1>1</h1>
+</body>
+</html>

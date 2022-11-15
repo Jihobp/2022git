@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+// 2. 저번주에 했던 움직이는 글자에
+// 아래와 같은 옵션들을 추가해보시오.
+// 1) 다국어(최소 3개국어)
+// 2) input 태그와 button태그 이용한
+// 글자 추가
+// 3) 배경화면 깜빡이게 하기(여러가지 색상)
+// 4) 글자 깜빡이게 하기(글자별 다른 색상)
+// 3,4번은 배열을 이용해도 되고
+// rgb 값을 이용해도 됨
+// 단, 최소 색상은 2가지 이상은 되어야 함
+
+        function nextRandomInteger(limit){
+            //round는 반올림
+            return Math.round(Math.random()*limit)//
+            //함수는 괄호 열고 닫고!
+    }
+    //벼ㅑㄴ수에 함수를 집어넣음
+    
+    let randomAlphabet = {
+        function()
+        {
+            let alphabet='ABCDEFGHIJKLMNOPQRSTUVWXYZ'
+                return function(){
+                    return alphabet[nextRandomInteger(alphabet.length-1)]
+                }
+        }
+    }()
+
+
+    let randomKorean = {
+        function()
+        {
+            let korean='ㄱㄴㄷㄹㅁㅂㅅㅇㅈㅊㅋㅌㅍㅎ'
+                return function(){
+                    return korean[nextRandomInteger(korean.length-1)]
+                }
+        }
+    }()
+
+
+    let randomJapanese = (
+        function()
+        {
+            let japanese='アイウエオカキクゲコサシスセソ'
+                return function(){
+                    return japanese[nextRandomInteger(japanese.length-1)]
+                }
+        }
+    )
+
+    let randomColor = (
+            function()
+            {
+                let color=['red', 'purple', 'pink', 'black', 'green']
+                return function(){
+                    return color[nextRandomInteger(color.length-1)] //a부터 z까지 하나를 리턴
+                }
+            }
+        )()   
+
+    let canvasWidth = 800
+    let canvasHeight = 400
+
+    //랜덤 색 출력
+    function nextRandomInteger2(limit){
+        return Math.random() * limit
+    }
+
+    function MovingText()
+    {
+        this.x = nextRandomInteger(canvasWidth)
+        this.y = nextRandomInteger(canvasHeight)
+        this.vx = randomSpeed(10)
+        this.vy = randomSpeed(10)
+        this.text = document.createElement('h1')
+        //랜덤 색상, 투명도
+        this.text.style.color = `rgba(${nextRandomInteger(255)},${nextRandomInteger(255)},${nextRandomInteger(255)},${nextRandomInteger(1)})`
+        //this.text.src=randomPicture()
+       
+        this.text.innerText = randomAlphabet()
+        this.text.innerText = randomJapanese()
+        this.text.innerText = randomKorean() 
+        this.text.style.position='fixed'
+        document.body.appendChild(this.text)
+    }
+
+    MovingText.prototype.move=
+    function(){
+            if(this.x<0 || this.x>canvasWidth+1000)
+                this.vx *=-1 //방향 반대로
+            if(this.y<0 || this.y>canvasHeight+1000)
+                this.vy *=-1 //방향 반대로
+            this.x +=this.vx
+            this.y +=this.vy
+            //좌표 위치 조정
+            this.text.style.left = this.x+'px'
+            this.text.style.top = this.y+'px'
+        }
+
+    let movingTexts = []
+    for(let i =0; i<5000; i++)
+            movingTexts.push(new MovingText())
+        setInterval(function(){
+            for(let i in movingTexts)
+                movingTexts[i].move()
+        },1000/30) 
+    </script>
+
+</body>
+</html>

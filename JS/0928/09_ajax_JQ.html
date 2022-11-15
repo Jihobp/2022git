@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jq.js"></script>
+</head>
+<body>
+    <h1></h1>
+    <script>
+        //ajax 비동기 통신, price랑 name 값이 바뀐당. 
+        //제이쿼리 라이브러리에 있는 함수를 호출하는데 매개변수가 객체다.
+        //제이쿼리 핵심은 달러. 제이쿼리는 달러로 간단하게 쓸 수 있는것이댜.....................................주르륵............달러 뒤에 뭐가 있느냐에 따라서.. 
+        //함수 안에 하나의 객체가 매개변수로 들어가 있는당.
+        $.ajax(
+            {
+                url:'https://dongjoonleedj.github.io/testWebHosting/myjson.json',
+                dataType:'json',
+                success : function(data){
+                    //jQuery로 태그 만드는 법(===createElement) > 삽입 
+                    let result = $('<h1></h1>')         //> 태그 만든당.
+                    result.text('가격은 '+data.price+'입니다.'+         
+                    ' 그리고 담당자는'+data.Name+'입니다.')     //응답받은거 result.text 에 price, name 값 가져 오는거.     +data.price로도 쓸수 있다. 
+                    $('body').append(result)    //createElement 가 끝이아니라, body 안에 append 해줘야 한다.
+                },
+                error:function(r,s,e){
+                    alert('error!!!')
+                }
+            }
+        )
+
+            //api 주소 입력 .json?key=dd4d03432f42d84664a096b7f56e413a
+
+
+    </script>
+</body>
+</html>

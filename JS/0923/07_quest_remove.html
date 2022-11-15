@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .block{
+            display:block;
+        }
+    </style>
+</head>
+<body>
+    <!-- 1. drawdia를 호출하는 버튼 만들기 ( SIZE 값은 input 태그로 받기)
+    (이버튼  여러번 누르면 다이아가 여러개 만들어지겠쥐)
+    2. 1번에서 만든 버튼을 아무리 여러번 눌러도 다이아 하나만 있게 해보기
+    * 제거버튼 누르면 다이아 싹 다 지워질겨 이건 그냥 냅두기 -->
+    <br><br><br>
+    <!-- br*3 -->
+    <button class="blockTag" id="remove">모두 제거</button>
+    <label class="blockTag" for="size">다이아 수</label> <!--같은거가 선택, 포커스가 맞춰진다.-->
+    <input class="blockTag" type="text" id="size">
+    <button class="blockTag" id="add">다야 추가</button>
+    <button class="blockTag" id="oneAdd">다야 무조건 하나만 추가</button>
+    <br><br><br>
+    <script>
+        function drawDia(SIZE)
+        {
+            for(let i = 1; i<=SIZE; i++)
+        {
+            //스페이스바
+            for(let j = SIZE; j>i; j--)
+            {
+                let space = document.createElement('span')
+                space.innerHTML = '&nbsp;'
+                document.body.appendChild(space)
+            }
+            //별 찍는 부분
+            for(let k = 0; k<2*i-1; k++)
+            {
+                let star = document.createElement('span')
+                star.innerHTML = '*'
+                document.body.appendChild(star)
+            }
+            let br = document.createElement('br')
+            document.body.appendChild(br)
+        }
+        for(let i = SIZE-1; i>0; i--)
+        {
+            for(let j = SIZE; j>i; j--)
+            {
+                let space = document.createElement('span')
+                space.innerHTML = '&nbsp;'
+                document.body.appendChild(space)
+            }
+                
+            for(let k = 0; k<2*i-1; k++)
+            {
+            
+                let star = document.createElement('span')
+                star.innerHTML = '*'
+                document.body.appendChild(star)
+            }
+    
+            document.body.appendChild(document.createElement('br'))
+        
+           
+        }
+        }
+    
+       // drawDia(10)
+       
+        document.querySelector('#remove').onclick = 
+        () => {
+            
+            document.querySelectorAll('span,br').forEach (
+                //배열요소의 의미 : 
+                //배열 안에 있는 값들 전부
+                //즉 span 태그와 br 태그 전부
+                //remove : 해당 태그 삭제
+                (배열요소)=>{배열요소.remove()}
+            )
+            
+            document.body.appendChild(document.createElement('br'))
+            document.body.appendChild(document.createElement('br'))
+            document.body.appendChild(document.createElement('br'))
+        }
+        document.querySelector('#add').onclick = 
+        () => {
+            let size = document.querySelector('input')
+            drawDia(Number(size.value))
+        }
+        document.querySelector('#oneAdd').onclick = 
+        () => {
+            document.querySelector('#remove').click()
+            document.querySelector('#add').click()
+        }
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <img src="" alt="">
+    <script>
+        let month =prompt('몇 월생?')   //여기선 문자열.
+     // month는 prompt의 값을 저장하고
+        // prompt는 기본적으로 문자열을 반환한다.
+        //아까 12지신문제는 반환받은 값을 12로 나누는 연산이
+        //있어서 따로 Number로 감쌀 필요가 없지만
+        //이건 month를 바로 숫자로써 써야하므로 Number로
+        //형변환해줘야 한다.
+        //참고로 if문으로 적게되면 이런 형변환이 필요없다.
+        //그 이유는 좀 따 설명할게요. 궁금하면 500원
+        //switch c 자바랑 똑같은데 오류 날 수 있으니 세미콜론 안쓰면 된다.
+        let imageTag = document.querySelector('img')
+        switch(Number(month)) //괄호로 감싸줘야함. //if문에선 안해도됨/switch문 쓸때는 넘버를 써서 숫자라고 명확히 써줘야 함.
+        {
+            case 12:
+            case 1:
+            case 2:
+                imageTag.src='https://pds.joongang.co.kr/news/component/htmlphoto_mmdata/201402/13/htm_20140213100749571.jpg'
+                break
+            case 3:
+            case 4:
+            case 5:
+                imageTag.src='https://media.bunjang.co.kr/product/126451569_2_1652368821_w360.jpg'
+                break
+            case 6:
+            case 7:
+            case 8:
+                imageTag.src='http://www.artinsight.co.kr/data/news/1912/2949403117_gxB9XmOG_ED919CECA780.jpg'
+                break
+            case 9:
+            case 10:
+            case 11:
+                imageTag.src='https://t1.daumcdn.net/cfile/blog/226E453D5543469213'
+            break
+                default: //month가 1~12가 아닌 것
+
+
+        }
+    </script>
+</body>
+</html>

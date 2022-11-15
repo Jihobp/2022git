@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    
+    <title>Document</title>
+</head>
+<body>
+    <h1>Lorem, ipsum.</h1>
+    <img src="" alt="">
+    <h1 id="title">Lorem, ipsum dolor.</h1>
+    <img src="" alt="" id="abcd">
+    <script>
+        //자바 스크립트로 태그들을 변경해보기 'ㅅ'
+        //이때 핵심적으로 쓰이는 것이 document 객체이다.
+        //무조건 img 태그가 위에 있어야합니당.
+        //getSelector 선택자 이용해서
+        //
+
+        //getElementById id를 선택하는데, # 생략한다.
+        //(id만 적음)
+
+        //querySelectorAll 선택지에 해당하는 모든 태그
+        //선택가능하고, 배열 형태로 불러서 쓸 수 있다.
+        //가장 첫번쨰 태그는 [0]부터이다.
+
+        //getElementsByTagName
+        //겟엘리먼'츠'=복수형
+        //마찬가지로 주 석 형 태 로 쓸 수 있 다. 
+
+        //도큐먼트는 js에 이미 있는 함수, 에 querySelector 를 불러온다.
+        let title=document.querySelector('#title')          //쿼리선택지는 하나만 select 됨. ex) 'h1' 백만개 있어도 첫번쨰 h1 만 선택됨. 클래스 선택하고싶으면 .test라는 클래스담음.
+        let img=document.getElementById('abcd')
+        title.style.color='blue'
+        img.src='https://mblogthumb-phinf.pstatic.net/20150203_181/theprint_14229415647147kaIs_JPEG/19.jpg?type=w2'
+        let h1=document.querySelectorAll('h1')                      //화면에 있는 모든 h1태그들을 담는 배열
+        let images=document.getElementsByTagName('img')
+        
+
+        //h1 변수가 배열이다. (모든 h1들을 담고 있다)◈ 배열의 길이만큼 반복문 도는 것. 
+        //하나의 변수가 배열이 될수도 있고 배열이 될수 도 있다. 
+        //for of 문은 배열 안에 있는 요소들을 전부 선택해서
+        //배열 길이만큼 반복문 돌림
+        //item은 배열안에 있는 각각의 값들을 의미.
+        // c나 java 처럼 똑같이 쓸 수 있다.
+        //배열안에 들어가 있는 h1만큼 돈다.
+        for(let item of h1)
+            item.style.background='springgreen'                     //그 배열 안에 있는 태그들 개수만큼 반복문 돌고, item은 그 배열 안에 있는 태그들./ ex) <h1 id="title">Lorem, ipsum dolor.</h1>
+            images[0].src='data:image/jpeg;base64,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'
+            //.src는 이미지태그에 src소스를 ''로 바꾸겠다.
+        
+        //prompt 입력받는 것
+        let name=prompt('이름이 뭐예요?')
+        h1[1].textContent=name  //입력받은 것을 
+                                //해당 태그의 텍스트에 적용 => 
+
+        //querySelector, querySelectorAll 은
+        //비교적 최신 문법(css 선택자 잘 쓰면 태그 선택하기가 수월)
+        //getElementById, getElementsByTagaName,
+        //getElementsByClassName은 이전부터 쓰여온 것.
+    
+        //내가 태어난 연도를 입력받아서 그 해에 맞는 띠를 띄우시오. ex) 1989년 입력하면 뱀 그림 띄우기. 
+        //내가 태어난 월을 입력받으면 그에 맞는 계절 이미지를 띄우세요. ex) 123/456/789/101112
+    </script>
+</body>
+</html>

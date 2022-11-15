@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="start">시작번호</label>
+    <input type="text" id="start">
+    <button>시작하기</button>
+    <h1></h1>
+    <script src="0926_genLotto2.js"></script> 
+    <script>
+        //js 스크립트 불러올려면 위에 따로 적어주고 새로 만들어야 한다.
+        let startnum = document.querySelector('#start')
+        document.querySelector('button').onclick
+        = () =>{
+            if(startnum.value==''){
+                alert('값을 입력해주세요.')
+                return //이벤트 종료(=함수 종료)
+            }
+            if(isNaN(Number(startnum.value)))
+            {
+                alert(startnum.value+'는 숫자가 아님')
+                return
+            }
+            //ex) startnum이 39라면
+            //39 40 41 42 43 44 45
+            //이렇게 보너스번호까지 나온다.
+            //뭐를 기준으로 잡느냐가 문제댜.
+            if(Number(startnum.value)>38)
+            {
+                alert(startnum.value+' 너무 큰 값')
+                return
+            }
+            lotto = genLotto(startnum.value)
+
+            let bns = Math.floor(Math.random()*45)+1
+            while(lotto.indexOf(bns) !=-1) //true 일때
+                bns = Math.floor(Math.random()*45)+1
+
+            document.querySelector('h1').textContent
+            =lotto.toString()+'보너스 '+ bns
+        }
+    </script>
+</body>
+</html>

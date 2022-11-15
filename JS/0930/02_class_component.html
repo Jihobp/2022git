@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+        <!-- 리액트 공유폴더에 script 3줄 복붙 !!1 -->
+        <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
+        <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+        <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+</head>
+<body>
+    <div id="root"></div>
+    <script type="text/babel">
+        //Student 객체의 name, age와 같은 것들
+        //props = properties(속성)의 약자
+
+        //🐉💚클래스 쓰는 방법은 옛날방식. 넹 요즘은 () => {} 이거써서 많이 해요
+        class MyApp extends React.Component {   //react.Component 에 render함수를를 오버라이딩 하는것. 
+            //container에 그릴 component를 리턴해줌
+            render(){
+                <div>
+                    return <div> 
+                    <h1>{this.props.name}</h1>
+                    <img src={this.props.imgUrl}/>
+                    </div>
+            }
+        }
+        const container = document.getElementById('root')
+        ReactDOM.render(<MyApp name='이동준' imgUrl='https://pbs.twimg.com/media/FMmFBsJacAU3jup?format=jpg&name=240x240'/>,
+        container)
+    </script>
+</body>
+</html>

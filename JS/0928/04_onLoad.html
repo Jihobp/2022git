@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jq.js"></script>
+    <script>
+      //$().ready(function(){}) 
+        //= window.onload=function(){}
+        //$().ready(function(){}) =
+        //$(function(){})
+        //$() != $ 같지 않당.
+        $().ready(
+            function(){ //이벤트 추가 가능. 여러줄로 다 추가가능.
+                $('#hello')
+                .css('color', 'gold')
+                .on('click', function(){alert('헬로')})                
+                $('#world').click(function(){alert('안녕')}) //기능 추가도 가능.
+            }   //이벤트 추가. 클릭이벤트는 on 혹은 click라고 쓰고
+                //다른 이벤트 들은 on 함수 쓴다 .
+                //.event  || .on 해서 쓸 수 있당. ㅇㅅㅇ 
+
+        )
+    </script>
+</head>
+<body>
+    <h1 id="hello"></h1>
+    <h1 id="world"></h1>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const size12 = 5
+        for (let i = 1; i <= size12; i++) {
+            for (let j = size12; j > i; j--)
+                document.write("<img src='https://mblogthumb-phinf.pstatic.net/20161008_248/sasa9508_1475929220263OMzsO_JPEG/2.jpg?type=w2' width=\"50\" height=\"50\">")
+            for (let k = 0; k < 2 * i - 1; k++)
+                document.write("<img src='https://image.newdaily.co.kr/site/data/img/2013/12/16/2013121610013_0.jpg' width=\"50\" height=\"50\">")
+            document.writeln("<br>")
+        }
+        for (let i = size12 - 1; i > 0; i--) {
+            for (let j = size12; j > i; j--)
+                document.write("<img src='https://mblogthumb-phinf.pstatic.net/20161008_248/sasa9508_1475929220263OMzsO_JPEG/2.jpg?type=w2' width=\"50\" height=\"50\">")
+            for (let k = 0; k < 2 * i - 1; k++)
+                document.write("<img src='https://image.newdaily.co.kr/site/data/img/2013/12/16/2013121610013_0.jpg' width=\"50\" height=\"50\">")
+            document.writeln("<br>")
+        }
+    </script>
+</body>
+</html>

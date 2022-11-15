@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 조건에 따라서 class 값을 다르게 줘보기 */
+        .red{background-color:pink;}
+        .black{background-color:gainsboro;}
+    </style>
+</head>
+<body>
+    <h1></h1>
+    <textarea name="" id="" cols="30" rows="10"></textarea>
+    <script>
+        const mytextarea = document.querySelector('textarea')
+        const myh1 = document.querySelector('h1')
+        mytextarea.addEventListener('keyup', //타자 칠때 키보드를 누르면 뗀다.;
+        
+        function(){
+            const mylength = mytextarea.value.length
+            if(mylength>50) //50초과시
+            {   
+                //직접적으로 스타일을 바꾼 것.
+                myh1.style.color='red'
+                //특정 클래스명을 추가할 것(간접적으로 바꿈)
+                myh1.setAttribute('class', 'red')
+            }
+            else
+            {
+                myh1.style.color='black'
+                myh1.setAttribute('class', 'black')
+            }  
+            myh1.textContent = `글자수 : ${mylength}`
+            })
+
+
+
+        // //테두리 샊이 바꼈댱 ㅠㅠ
+        const color = function() ////컬러풀이라는 상수에 function 을 넣고
+        {
+            if(mylength>50)
+            {
+                myh1.textContent = color
+            }
+            myh1.style.color = `rgb(${(count*50)%255},25,0)`
+        }
+    </script>
+</body>
+</html>

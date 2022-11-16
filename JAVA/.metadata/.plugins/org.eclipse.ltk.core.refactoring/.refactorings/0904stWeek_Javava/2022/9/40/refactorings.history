@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">
-<refactoring comment="Rename type &apos;bj_musik&apos; to &apos;bj_2920_musik&apos;&#x0D;&#x0A;- Original project: &apos;0904stWeek_Javava&apos;&#x0D;&#x0A;- Original element: &apos;bj_musik&apos;&#x0D;&#x0A;- Renamed element: &apos;bj_2920_musik&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;bj_musik&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;{bj_musik.java[bj_musik" matchStrategy="1" name="bj_2920_musik" qualified="false" references="true" similarDeclarations="false" stamp="1664285177070" textual="false" version="1.0"/>
-</session>

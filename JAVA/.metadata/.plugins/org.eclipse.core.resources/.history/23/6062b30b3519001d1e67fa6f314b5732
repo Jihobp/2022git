@@ -1,0 +1,37 @@
+import java.util.Scanner;
+public class BaekJoon_Q11 {
+	public static void main(String[] args) {
+		Scanner s=new Scanner(System.in);
+		//백설공주 페이커 두명 찾기
+		//rh's hint
+		//7p<9p
+		//AllSum==100<100+2f's sum
+		//AllSum==100-2f's sum
+		
+		int Little[]= new int[9];
+		int sum=0;
+		int faker1=0;
+		int faker2=0;
+		
+		//1. 9명의 합
+		for(int i=0; i<9; i++){ 	
+			Little[i]=s.nextInt();
+			sum +=Little[i];
+		}
+		//2. 9명의 합에서 100빼주면 faker 두명 더한 값 나온다.
+		for(int i=0; i<9; i++){ 
+			for(int j=0; j<8;j++) //마지막은 비교할 필요 없으니까
+			if(sum-100==Little[i]+Little[j]) {
+				faker1=Little[i];
+				faker2=Little[j];	
+				continue;
+			}
+		}
+		for(int i=0; i<9; i++) {
+			if(Little[i]!=faker1&&Little[i]!=faker2)
+			System.out.println(Little[i]);
+		}
+			
+
+	}
+}

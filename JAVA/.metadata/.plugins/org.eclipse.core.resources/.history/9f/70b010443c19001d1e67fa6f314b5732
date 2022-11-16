@@ -1,0 +1,59 @@
+class SS{ //	1.(CLASS)
+	// 2. 학생 변수 선언 (FIELD)
+	private String name;
+	private int num;
+	private String jender;
+	 
+	// 2. 학생 함수 선언
+	public String getName() {return name;}
+	public int getNum() {return num;}
+	public String getJender() {return jender;}
+	
+	public int setNum(int n) {this.num=n;}
+	
+	//생성자 만듬
+	public SS(String name, int num, String jender) {
+	this.name=name; //색깔 잘봐라!!! 생성자 매개변수를  private 변수안에 집어넣는거.
+	this.num=num;
+	this.jender=jender;	}
+}
+public class Java_Ts_Quest01 {
+	public static void main(String[] args) {
+		
+	//	3. 객체 배열
+	SS s[]=new SS[3]; //배열 선언, 객체 생성 아직 x.
+	s[0]=new SS("이동준", 2009038033, "남");
+	s[1]=new SS("이제영", 2007012034, "여");
+	s[2]=new SS("박준현", 2002012034, "남");
+	//s[0].getNum(); //반환?
+	
+	// 4. 이동준 학번 변경
+	s[0].setNum(2019038033); //s[0]의 num을 바꿔준다. 
+	s[0].setNum(2019038033);
+	
+	
+	
+	}
+}
+//* 학생 관리 프로그램을 만들고자 한다. 아래 지시사항들을 수행할 수 있는 프로그램을 작성하시오.
+//1) 학생의 이름, 학번, 성별을 저장하는 class를 작성하시오. 
+
+//2) 다음 학생들에 대한 정보를 저장할 수 있는 변수들을 생성하시오. 
+//이름: 이동준, 학번:2009038033, 성별: 남
+//이름: 이제영, 학번: 2007012034, 성별: 여
+//이름: 박준현, 학번: 2002012034, 성별: 남
+//(위 3명의 학생들은 생성자로 초기화하여 생성)
+//ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
+//3) 해당 학생들을 하나의 배열에 저장하시오. 
+//
+//4) 이름이 이동준인 학생의 학번을 2019038033으로 변경하시오. ??????
+//
+//5) "이제영" 학생의 정보와 "박준현" 학생의 정보를 자기 자신과 옆사람의 정보로 각각 변경하시오.
+//
+//6) 최종 완성된 배열 화면에 출력하시오.(이름, 학번, 성별이 나타나도록 출력)
+//
+//<출력 양식>
+//이름: 000
+//학번: 00000000000
+//성별: _
+//(\n)

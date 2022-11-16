@@ -1,0 +1,28 @@
+import java.util.Scanner; //2750번 //Q3무ㅜㄴ제 참고!
+public class BaekJoon_Q10 {
+
+	public static void main(String[] args) {
+		Scanner s=new Scanner(System.in);
+		//N개의 수가 주어졌을 때, 이를 오름차순으로 정렬하는 프로그램을 작성하시오.
+		//끝으로 갈수록 수가 커지게
+		int n=s.nextInt();
+		int[] arr=new int[n]; //f. !!!! n개짜리 배열 변수를 선언한다.
+	
+		for(int i=0; i<n; i++) { //변수 n개까지 반복문으로 입력받는다.
+			arr[i]=s.nextInt(); //scanner.nextInt 입력받는다.
+		}
+		
+		//선택정렬
+		for(int i=0; i<n-1;i++) {
+			for(int j=i+1; j<n; j++) {
+				if(arr[i]>arr[j]) {
+					int temp=arr[j];
+					arr[j]=arr[i];
+					arr[i]=temp;
+				}
+			}
+		}
+		System.out.println(n);
+	}
+
+}

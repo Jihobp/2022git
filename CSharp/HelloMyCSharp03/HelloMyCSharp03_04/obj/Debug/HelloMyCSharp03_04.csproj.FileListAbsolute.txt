@@ -1,0 +1,12 @@
+E:\2022git\CSharp\HelloMyCSharp03\HelloMyCSharp03_04\bin\Debug\HelloMyCSharp03_04.exe.config
+E:\2022git\CSharp\HelloMyCSharp03\HelloMyCSharp03_04\bin\Debug\HelloMyCSharp03_04.exe
+E:\2022git\CSharp\HelloMyCSharp03\HelloMyCSharp03_04\bin\Debug\HelloMyCSharp03_04.pdb
+E:\2022git\CSharp\HelloMyCSharp03\HelloMyCSharp03_04\obj\Debug\HelloMyCSharp03_04.csproj.AssemblyReference.cache
+E:\2022git\CSharp\HelloMyCSharp03\HelloMyCSharp03_04\obj\Debug\HelloMyCSharp03_04.csproj.SuggestedBindingRedirects.cache
+E:\2022git\CSharp\HelloMyCSharp03\HelloMyCSharp03_04\obj\Debug\HelloMyCSharp03_04.Form1.resources
+E:\2022git\CSharp\HelloMyCSharp03\HelloMyCSharp03_04\obj\Debug\HelloMyCSharp03_04.Properties.Resources.resources
+E:\2022git\CSharp\HelloMyCSharp03\HelloMyCSharp03_04\obj\Debug\HelloMyCSharp03_04.csproj.GenerateResource.cache
+E:\2022git\CSharp\HelloMyCSharp03\HelloMyCSharp03_04\obj\Debug\HelloMyCSharp03_04.csproj.CoreCompileInputs.cache
+E:\2022git\CSharp\HelloMyCSharp03\HelloMyCSharp03_04\obj\Debug\HelloMyCSharp03_04.exe
+E:\2022git\CSharp\HelloMyCSharp03\HelloMyCSharp03_04\obj\Debug\HelloMyCSharp03_04.pdb
+E:\2022git\CSharp\HelloMyCSharp03\HelloMyCSharp03_04\obj\Debug\HelloMyCSharp03_04.Form2.resources

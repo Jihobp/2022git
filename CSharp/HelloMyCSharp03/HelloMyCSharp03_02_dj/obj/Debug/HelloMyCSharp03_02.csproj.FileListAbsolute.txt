@@ -1,0 +1,13 @@
+D:\study\mywork\AI_305_7_20220627\djCharp\HelloMyCSharp03\HelloMyCSharp03_02\bin\Debug\HelloMyCSharp03_02.exe.config
+D:\study\mywork\AI_305_7_20220627\djCharp\HelloMyCSharp03\HelloMyCSharp03_02\bin\Debug\HelloMyCSharp03_02.exe
+D:\study\mywork\AI_305_7_20220627\djCharp\HelloMyCSharp03\HelloMyCSharp03_02\bin\Debug\HelloMyCSharp03_02.pdb
+D:\study\mywork\AI_305_7_20220627\djCharp\HelloMyCSharp03\HelloMyCSharp03_02\obj\Debug\HelloMyCSharp03_02.csproj.AssemblyReference.cache
+D:\study\mywork\AI_305_7_20220627\djCharp\HelloMyCSharp03\HelloMyCSharp03_02\obj\Debug\HelloMyCSharp03_02.csproj.SuggestedBindingRedirects.cache
+D:\study\mywork\AI_305_7_20220627\djCharp\HelloMyCSharp03\HelloMyCSharp03_02\obj\Debug\HelloMyCSharp03_02.FirstCustomControl.resources
+D:\study\mywork\AI_305_7_20220627\djCharp\HelloMyCSharp03\HelloMyCSharp03_02\obj\Debug\HelloMyCSharp03_02.Form1.resources
+D:\study\mywork\AI_305_7_20220627\djCharp\HelloMyCSharp03\HelloMyCSharp03_02\obj\Debug\HelloMyCSharp03_02.Properties.Resources.resources
+D:\study\mywork\AI_305_7_20220627\djCharp\HelloMyCSharp03\HelloMyCSharp03_02\obj\Debug\HelloMyCSharp03_02.csproj.GenerateResource.cache
+D:\study\mywork\AI_305_7_20220627\djCharp\HelloMyCSharp03\HelloMyCSharp03_02\obj\Debug\HelloMyCSharp03_02.csproj.CoreCompileInputs.cache
+D:\study\mywork\AI_305_7_20220627\djCharp\HelloMyCSharp03\HelloMyCSharp03_02\obj\Debug\HelloMyCSharp03_02.exe
+D:\study\mywork\AI_305_7_20220627\djCharp\HelloMyCSharp03\HelloMyCSharp03_02\obj\Debug\HelloMyCSharp03_02.pdb
+D:\study\mywork\AI_305_7_20220627\djCharp\HelloMyCSharp03\HelloMyCSharp03_02\obj\Debug\HelloMyCSharp03_02.MySecondCustomControl.resources

@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HelloMyCSharp03_03_youtube_
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HelloMyCSharp03_04", "HelloMyCSharp03_04\HelloMyCSharp03_04.csproj", "{B7D52C2A-30C7-4A2A-B5BF-85054A185E29}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HelloMyCSharp03_05", "HelloMyCSharp03_05\HelloMyCSharp03_05.csproj", "{DACDF24F-D506-41D9-ADD1-CB79B359BAC9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{B7D52C2A-30C7-4A2A-B5BF-85054A185E29}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B7D52C2A-30C7-4A2A-B5BF-85054A185E29}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B7D52C2A-30C7-4A2A-B5BF-85054A185E29}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DACDF24F-D506-41D9-ADD1-CB79B359BAC9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DACDF24F-D506-41D9-ADD1-CB79B359BAC9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DACDF24F-D506-41D9-ADD1-CB79B359BAC9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DACDF24F-D506-41D9-ADD1-CB79B359BAC9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

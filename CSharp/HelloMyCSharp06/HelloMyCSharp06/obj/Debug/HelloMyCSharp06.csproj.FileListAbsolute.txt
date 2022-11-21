@@ -1,0 +1,11 @@
+E:\2022git\CSharp\HelloMyCSharp06\HelloMyCSharp06\bin\Debug\HelloMyCSharp06.exe.config
+E:\2022git\CSharp\HelloMyCSharp06\HelloMyCSharp06\bin\Debug\HelloMyCSharp06.exe
+E:\2022git\CSharp\HelloMyCSharp06\HelloMyCSharp06\bin\Debug\HelloMyCSharp06.pdb
+E:\2022git\CSharp\HelloMyCSharp06\HelloMyCSharp06\obj\Debug\HelloMyCSharp06.csproj.AssemblyReference.cache
+E:\2022git\CSharp\HelloMyCSharp06\HelloMyCSharp06\obj\Debug\HelloMyCSharp06.csproj.SuggestedBindingRedirects.cache
+E:\2022git\CSharp\HelloMyCSharp06\HelloMyCSharp06\obj\Debug\HelloMyCSharp06.Form1.resources
+E:\2022git\CSharp\HelloMyCSharp06\HelloMyCSharp06\obj\Debug\HelloMyCSharp06.Properties.Resources.resources
+E:\2022git\CSharp\HelloMyCSharp06\HelloMyCSharp06\obj\Debug\HelloMyCSharp06.csproj.GenerateResource.cache
+E:\2022git\CSharp\HelloMyCSharp06\HelloMyCSharp06\obj\Debug\HelloMyCSharp06.csproj.CoreCompileInputs.cache
+E:\2022git\CSharp\HelloMyCSharp06\HelloMyCSharp06\obj\Debug\HelloMyCSharp06.exe
+E:\2022git\CSharp\HelloMyCSharp06\HelloMyCSharp06\obj\Debug\HelloMyCSharp06.pdb

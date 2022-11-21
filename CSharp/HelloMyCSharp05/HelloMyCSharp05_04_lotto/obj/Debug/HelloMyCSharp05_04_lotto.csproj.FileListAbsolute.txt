@@ -1,0 +1,11 @@
+E:\2022git\CSharp\HelloMyCSharp05\HelloMyCSharp05_04_lotto\bin\Debug\HelloMyCSharp05_04_lotto.exe.config
+E:\2022git\CSharp\HelloMyCSharp05\HelloMyCSharp05_04_lotto\bin\Debug\HelloMyCSharp05_04_lotto.exe
+E:\2022git\CSharp\HelloMyCSharp05\HelloMyCSharp05_04_lotto\bin\Debug\HelloMyCSharp05_04_lotto.pdb
+E:\2022git\CSharp\HelloMyCSharp05\HelloMyCSharp05_04_lotto\obj\Debug\HelloMyCSharp05_04_lotto.csproj.AssemblyReference.cache
+E:\2022git\CSharp\HelloMyCSharp05\HelloMyCSharp05_04_lotto\obj\Debug\HelloMyCSharp05_04_lotto.csproj.SuggestedBindingRedirects.cache
+E:\2022git\CSharp\HelloMyCSharp05\HelloMyCSharp05_04_lotto\obj\Debug\HelloMyCSharp05_04_lotto.Form1.resources
+E:\2022git\CSharp\HelloMyCSharp05\HelloMyCSharp05_04_lotto\obj\Debug\HelloMyCSharp05_04_lotto.Properties.Resources.resources
+E:\2022git\CSharp\HelloMyCSharp05\HelloMyCSharp05_04_lotto\obj\Debug\HelloMyCSharp05_04_lotto.csproj.GenerateResource.cache
+E:\2022git\CSharp\HelloMyCSharp05\HelloMyCSharp05_04_lotto\obj\Debug\HelloMyCSharp05_04_lotto.csproj.CoreCompileInputs.cache
+E:\2022git\CSharp\HelloMyCSharp05\HelloMyCSharp05_04_lotto\obj\Debug\HelloMyCSharp05_04_lotto.exe
+E:\2022git\CSharp\HelloMyCSharp05\HelloMyCSharp05_04_lotto\obj\Debug\HelloMyCSharp05_04_lotto.pdb

@@ -1,0 +1,32 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace HelloMyCSharp09_01
+{
+    public partial class Form3 : Form, IObserver
+    {
+        public Form3() //생성자 복붙
+        {
+            InitializeComponent();
+        }
+
+        public Form3(ISubject sub) //생성자 복붙
+        {
+            InitializeComponent();
+            sub.register(this);
+        }
+
+        public void update(string value)
+        {
+            textBox1.Text = value;
+            //throw new NotImplementedException();
+        }
+    }
+}

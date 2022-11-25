@@ -1,0 +1,11 @@
+C:\Users\KB\Desktop\JJJJJ\HelloCstudy11_Tue_WindowsForms\HelloCSharp01_Tue_Request\01_MusicLoginDemo\01_MusicLoginDemo\bin\Debug\01_MusicLoginDemo.exe.config
+C:\Users\KB\Desktop\JJJJJ\HelloCstudy11_Tue_WindowsForms\HelloCSharp01_Tue_Request\01_MusicLoginDemo\01_MusicLoginDemo\bin\Debug\01_MusicLoginDemo.exe
+C:\Users\KB\Desktop\JJJJJ\HelloCstudy11_Tue_WindowsForms\HelloCSharp01_Tue_Request\01_MusicLoginDemo\01_MusicLoginDemo\bin\Debug\01_MusicLoginDemo.pdb
+C:\Users\KB\Desktop\JJJJJ\HelloCstudy11_Tue_WindowsForms\HelloCSharp01_Tue_Request\01_MusicLoginDemo\01_MusicLoginDemo\obj\Debug\01_MusicLoginDemo.csproj.AssemblyReference.cache
+C:\Users\KB\Desktop\JJJJJ\HelloCstudy11_Tue_WindowsForms\HelloCSharp01_Tue_Request\01_MusicLoginDemo\01_MusicLoginDemo\obj\Debug\01_MusicLoginDemo.csproj.SuggestedBindingRedirects.cache
+C:\Users\KB\Desktop\JJJJJ\HelloCstudy11_Tue_WindowsForms\HelloCSharp01_Tue_Request\01_MusicLoginDemo\01_MusicLoginDemo\obj\Debug\_01_MusicLoginDemo.Form1.resources
+C:\Users\KB\Desktop\JJJJJ\HelloCstudy11_Tue_WindowsForms\HelloCSharp01_Tue_Request\01_MusicLoginDemo\01_MusicLoginDemo\obj\Debug\_01_MusicLoginDemo.Properties.Resources.resources
+C:\Users\KB\Desktop\JJJJJ\HelloCstudy11_Tue_WindowsForms\HelloCSharp01_Tue_Request\01_MusicLoginDemo\01_MusicLoginDemo\obj\Debug\01_MusicLoginDemo.csproj.GenerateResource.cache
+C:\Users\KB\Desktop\JJJJJ\HelloCstudy11_Tue_WindowsForms\HelloCSharp01_Tue_Request\01_MusicLoginDemo\01_MusicLoginDemo\obj\Debug\01_MusicLoginDemo.csproj.CoreCompileInputs.cache
+C:\Users\KB\Desktop\JJJJJ\HelloCstudy11_Tue_WindowsForms\HelloCSharp01_Tue_Request\01_MusicLoginDemo\01_MusicLoginDemo\obj\Debug\01_MusicLoginDemo.exe
+C:\Users\KB\Desktop\JJJJJ\HelloCstudy11_Tue_WindowsForms\HelloCSharp01_Tue_Request\01_MusicLoginDemo\01_MusicLoginDemo\obj\Debug\01_MusicLoginDemo.pdb

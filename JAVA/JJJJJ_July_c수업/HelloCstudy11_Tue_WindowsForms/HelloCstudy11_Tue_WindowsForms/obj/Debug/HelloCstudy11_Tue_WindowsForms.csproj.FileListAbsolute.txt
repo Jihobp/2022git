@@ -1,0 +1,11 @@
+C:\Users\KB\Desktop\JJJJJ\HelloCstudy11_Tue_WindowsForms\HelloCstudy11_Tue_WindowsForms\bin\Debug\HelloCstudy11_Tue_WindowsForms.exe.config
+C:\Users\KB\Desktop\JJJJJ\HelloCstudy11_Tue_WindowsForms\HelloCstudy11_Tue_WindowsForms\bin\Debug\HelloCstudy11_Tue_WindowsForms.exe
+C:\Users\KB\Desktop\JJJJJ\HelloCstudy11_Tue_WindowsForms\HelloCstudy11_Tue_WindowsForms\bin\Debug\HelloCstudy11_Tue_WindowsForms.pdb
+C:\Users\KB\Desktop\JJJJJ\HelloCstudy11_Tue_WindowsForms\HelloCstudy11_Tue_WindowsForms\obj\Debug\HelloCstudy11_Tue_WindowsForms.csproj.AssemblyReference.cache
+C:\Users\KB\Desktop\JJJJJ\HelloCstudy11_Tue_WindowsForms\HelloCstudy11_Tue_WindowsForms\obj\Debug\HelloCstudy11_Tue_WindowsForms.csproj.SuggestedBindingRedirects.cache
+C:\Users\KB\Desktop\JJJJJ\HelloCstudy11_Tue_WindowsForms\HelloCstudy11_Tue_WindowsForms\obj\Debug\HelloCstudy11_Tue_WindowsForms.Form1.resources
+C:\Users\KB\Desktop\JJJJJ\HelloCstudy11_Tue_WindowsForms\HelloCstudy11_Tue_WindowsForms\obj\Debug\HelloCstudy11_Tue_WindowsForms.Properties.Resources.resources
+C:\Users\KB\Desktop\JJJJJ\HelloCstudy11_Tue_WindowsForms\HelloCstudy11_Tue_WindowsForms\obj\Debug\HelloCstudy11_Tue_WindowsForms.csproj.GenerateResource.cache
+C:\Users\KB\Desktop\JJJJJ\HelloCstudy11_Tue_WindowsForms\HelloCstudy11_Tue_WindowsForms\obj\Debug\HelloCstudy11_Tue_WindowsForms.csproj.CoreCompileInputs.cache
+C:\Users\KB\Desktop\JJJJJ\HelloCstudy11_Tue_WindowsForms\HelloCstudy11_Tue_WindowsForms\obj\Debug\HelloCstudy11_Tue_WindowsForms.exe
+C:\Users\KB\Desktop\JJJJJ\HelloCstudy11_Tue_WindowsForms\HelloCstudy11_Tue_WindowsForms\obj\Debug\HelloCstudy11_Tue_WindowsForms.pdb

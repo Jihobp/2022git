@@ -1,0 +1,14 @@
+C:\Users\KB\Desktop\JJJJJ\HelloCstudy11_Tue_WindowsForms\HelloCSharp01_Tue_Request\04_AvastUI\04_AvastUI\bin\Debug\04_AvastUI.exe.config
+C:\Users\KB\Desktop\JJJJJ\HelloCstudy11_Tue_WindowsForms\HelloCSharp01_Tue_Request\04_AvastUI\04_AvastUI\bin\Debug\04_AvastUI.exe
+C:\Users\KB\Desktop\JJJJJ\HelloCstudy11_Tue_WindowsForms\HelloCSharp01_Tue_Request\04_AvastUI\04_AvastUI\bin\Debug\04_AvastUI.pdb
+C:\Users\KB\Desktop\JJJJJ\HelloCstudy11_Tue_WindowsForms\HelloCSharp01_Tue_Request\04_AvastUI\04_AvastUI\obj\Debug\04_AvastUI.csproj.AssemblyReference.cache
+C:\Users\KB\Desktop\JJJJJ\HelloCstudy11_Tue_WindowsForms\HelloCSharp01_Tue_Request\04_AvastUI\04_AvastUI\obj\Debug\04_AvastUI.csproj.SuggestedBindingRedirects.cache
+C:\Users\KB\Desktop\JJJJJ\HelloCstudy11_Tue_WindowsForms\HelloCSharp01_Tue_Request\04_AvastUI\04_AvastUI\obj\Debug\_04_AvastUI.Form1.resources
+C:\Users\KB\Desktop\JJJJJ\HelloCstudy11_Tue_WindowsForms\HelloCSharp01_Tue_Request\04_AvastUI\04_AvastUI\obj\Debug\_04_AvastUI.Properties.Resources.resources
+C:\Users\KB\Desktop\JJJJJ\HelloCstudy11_Tue_WindowsForms\HelloCSharp01_Tue_Request\04_AvastUI\04_AvastUI\obj\Debug\04_AvastUI.csproj.GenerateResource.cache
+C:\Users\KB\Desktop\JJJJJ\HelloCstudy11_Tue_WindowsForms\HelloCSharp01_Tue_Request\04_AvastUI\04_AvastUI\obj\Debug\04_AvastUI.csproj.CoreCompileInputs.cache
+C:\Users\KB\Desktop\JJJJJ\HelloCstudy11_Tue_WindowsForms\HelloCSharp01_Tue_Request\04_AvastUI\04_AvastUI\obj\Debug\04_AvastUI.exe
+C:\Users\KB\Desktop\JJJJJ\HelloCstudy11_Tue_WindowsForms\HelloCSharp01_Tue_Request\04_AvastUI\04_AvastUI\obj\Debug\04_AvastUI.pdb
+C:\Users\KB\Desktop\JJJJJ\HelloCstudy11_Tue_WindowsForms\HelloCSharp01_Tue_Request\04_AvastUI\04_AvastUI\bin\Debug\WindowsFormsControlLibrary1.dll
+C:\Users\KB\Desktop\JJJJJ\HelloCstudy11_Tue_WindowsForms\HelloCSharp01_Tue_Request\04_AvastUI\04_AvastUI\bin\Debug\WindowsFormsControlLibrary1.pdb
+C:\Users\KB\Desktop\JJJJJ\HelloCstudy11_Tue_WindowsForms\HelloCSharp01_Tue_Request\04_AvastUI\04_AvastUI\obj\Debug\04_AvastUI.csproj.CopyComplete

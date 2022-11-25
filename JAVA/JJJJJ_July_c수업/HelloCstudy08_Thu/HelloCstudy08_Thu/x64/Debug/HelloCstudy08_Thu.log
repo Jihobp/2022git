@@ -1,0 +1,8 @@
+﻿  Cstudy05_MultiPointer.c
+C:\Users\KB\Desktop\JJJJJ\HelloCstudy08_Thu\HelloCstudy08_Thu\Cstudy05_MultiPointer.c(39,9): warning C4129: '%': 문자 이스케이프 시퀀스를 인식할 수 없습니다.
+C:\Users\KB\Desktop\JJJJJ\HelloCstudy08_Thu\HelloCstudy08_Thu\Cstudy05_MultiPointer.c(40,9): warning C4129: '%': 문자 이스케이프 시퀀스를 인식할 수 없습니다.
+C:\Users\KB\Desktop\JJJJJ\HelloCstudy08_Thu\HelloCstudy08_Thu\Cstudy05_MultiPointer.c(41,9): warning C4129: '%': 문자 이스케이프 시퀀스를 인식할 수 없습니다.
+C:\Users\KB\Desktop\JJJJJ\HelloCstudy08_Thu\HelloCstudy08_Thu\Cstudy05_MultiPointer.c(50,9): warning C4477: 'printf' : 서식 문자열 '%d'에 'int' 형식의 인수가 필요하지만 variadic 인수 1의 형식이 'int *'입니다.
+C:\Users\KB\Desktop\JJJJJ\HelloCstudy08_Thu\HelloCstudy08_Thu\Cstudy05_MultiPointer.c(50,9): warning C4313: 'printf': 서식 문자열의 '%d'이(가) int *' 형식의 인수 1과(와) 충돌합니다.
+C:\Users\KB\Desktop\JJJJJ\HelloCstudy08_Thu\HelloCstudy08_Thu\Cstudy05_MultiPointer.c(16,1): warning C4047: '초기화 중': 'int **'의 간접 참조 수준이 'int (*)[4]'과(와) 다릅니다.
+  HelloCstudy08_Thu.vcxproj -> C:\Users\KB\Desktop\JJJJJ\HelloCstudy08_Thu\x64\Debug\HelloCstudy08_Thu.exe

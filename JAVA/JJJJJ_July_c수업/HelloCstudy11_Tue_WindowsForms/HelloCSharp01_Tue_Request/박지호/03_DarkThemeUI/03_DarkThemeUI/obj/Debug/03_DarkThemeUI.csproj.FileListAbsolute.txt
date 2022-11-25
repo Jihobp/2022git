@@ -1,0 +1,11 @@
+C:\Users\KB\Desktop\JJJJJ\HelloCstudy11_Tue_WindowsForms\HelloCSharp01_Tue_Request\03_DarkThemeUI\03_DarkThemeUI\bin\Debug\03_DarkThemeUI.exe.config
+C:\Users\KB\Desktop\JJJJJ\HelloCstudy11_Tue_WindowsForms\HelloCSharp01_Tue_Request\03_DarkThemeUI\03_DarkThemeUI\bin\Debug\03_DarkThemeUI.exe
+C:\Users\KB\Desktop\JJJJJ\HelloCstudy11_Tue_WindowsForms\HelloCSharp01_Tue_Request\03_DarkThemeUI\03_DarkThemeUI\bin\Debug\03_DarkThemeUI.pdb
+C:\Users\KB\Desktop\JJJJJ\HelloCstudy11_Tue_WindowsForms\HelloCSharp01_Tue_Request\03_DarkThemeUI\03_DarkThemeUI\obj\Debug\03_DarkThemeUI.csproj.AssemblyReference.cache
+C:\Users\KB\Desktop\JJJJJ\HelloCstudy11_Tue_WindowsForms\HelloCSharp01_Tue_Request\03_DarkThemeUI\03_DarkThemeUI\obj\Debug\03_DarkThemeUI.csproj.SuggestedBindingRedirects.cache
+C:\Users\KB\Desktop\JJJJJ\HelloCstudy11_Tue_WindowsForms\HelloCSharp01_Tue_Request\03_DarkThemeUI\03_DarkThemeUI\obj\Debug\_03_DarkThemeUI.Form1.resources
+C:\Users\KB\Desktop\JJJJJ\HelloCstudy11_Tue_WindowsForms\HelloCSharp01_Tue_Request\03_DarkThemeUI\03_DarkThemeUI\obj\Debug\_03_DarkThemeUI.Properties.Resources.resources
+C:\Users\KB\Desktop\JJJJJ\HelloCstudy11_Tue_WindowsForms\HelloCSharp01_Tue_Request\03_DarkThemeUI\03_DarkThemeUI\obj\Debug\03_DarkThemeUI.csproj.GenerateResource.cache
+C:\Users\KB\Desktop\JJJJJ\HelloCstudy11_Tue_WindowsForms\HelloCSharp01_Tue_Request\03_DarkThemeUI\03_DarkThemeUI\obj\Debug\03_DarkThemeUI.csproj.CoreCompileInputs.cache
+C:\Users\KB\Desktop\JJJJJ\HelloCstudy11_Tue_WindowsForms\HelloCSharp01_Tue_Request\03_DarkThemeUI\03_DarkThemeUI\obj\Debug\03_DarkThemeUI.exe
+C:\Users\KB\Desktop\JJJJJ\HelloCstudy11_Tue_WindowsForms\HelloCSharp01_Tue_Request\03_DarkThemeUI\03_DarkThemeUI\obj\Debug\03_DarkThemeUI.pdb

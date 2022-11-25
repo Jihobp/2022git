@@ -1,0 +1,6 @@
+﻿  개미수열_T.c
+C:\Users\KB\Desktop\JJJJJ\HelloCstudy09_Fri\HelloCstudy09_Fri\개미수열_T.c(16,35): warning C4047: '!=': 'int'의 간접 참조 수준이 'void *'과(와) 다릅니다.
+C:\Users\KB\Desktop\JJJJJ\HelloCstudy09_Fri\HelloCstudy09_Fri\개미수열_T.c(40,29): warning C4047: '!=': 'int'의 간접 참조 수준이 'void *'과(와) 다릅니다.
+C:\Users\KB\Desktop\JJJJJ\HelloCstudy09_Fri\HelloCstudy09_Fri\개미수열_T.c(49,18): warning C4047: '=': 'char'의 간접 참조 수준이 'void *'과(와) 다릅니다.
+C:\Users\KB\Desktop\JJJJJ\HelloCstudy09_Fri\HelloCstudy09_Fri\개미수열_T.c(11,1): warning C4047: '초기화 중': 'char'의 간접 참조 수준이 'void *'과(와) 다릅니다.
+  HelloCstudy09_Fri.vcxproj -> C:\Users\KB\Desktop\JJJJJ\HelloCstudy09_Fri\x64\Debug\HelloCstudy09_Fri.exe

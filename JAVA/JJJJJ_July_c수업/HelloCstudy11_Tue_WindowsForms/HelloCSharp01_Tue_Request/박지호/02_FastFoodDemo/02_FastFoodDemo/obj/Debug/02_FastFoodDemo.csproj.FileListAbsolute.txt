@@ -1,0 +1,13 @@
+C:\Users\KB\Desktop\JJJJJ\HelloCstudy11_Tue_WindowsForms\HelloCSharp01_Tue_Request\02_FastFoodDemo\02_FastFoodDemo\bin\Debug\02_FastFoodDemo.exe.config
+C:\Users\KB\Desktop\JJJJJ\HelloCstudy11_Tue_WindowsForms\HelloCSharp01_Tue_Request\02_FastFoodDemo\02_FastFoodDemo\bin\Debug\02_FastFoodDemo.exe
+C:\Users\KB\Desktop\JJJJJ\HelloCstudy11_Tue_WindowsForms\HelloCSharp01_Tue_Request\02_FastFoodDemo\02_FastFoodDemo\bin\Debug\02_FastFoodDemo.pdb
+C:\Users\KB\Desktop\JJJJJ\HelloCstudy11_Tue_WindowsForms\HelloCSharp01_Tue_Request\02_FastFoodDemo\02_FastFoodDemo\obj\Debug\02_FastFoodDemo.csproj.AssemblyReference.cache
+C:\Users\KB\Desktop\JJJJJ\HelloCstudy11_Tue_WindowsForms\HelloCSharp01_Tue_Request\02_FastFoodDemo\02_FastFoodDemo\obj\Debug\02_FastFoodDemo.csproj.SuggestedBindingRedirects.cache
+C:\Users\KB\Desktop\JJJJJ\HelloCstudy11_Tue_WindowsForms\HelloCSharp01_Tue_Request\02_FastFoodDemo\02_FastFoodDemo\obj\Debug\_02_FastFoodDemo.FirstCustomControl.resources
+C:\Users\KB\Desktop\JJJJJ\HelloCstudy11_Tue_WindowsForms\HelloCSharp01_Tue_Request\02_FastFoodDemo\02_FastFoodDemo\obj\Debug\_02_FastFoodDemo.Form1.resources
+C:\Users\KB\Desktop\JJJJJ\HelloCstudy11_Tue_WindowsForms\HelloCSharp01_Tue_Request\02_FastFoodDemo\02_FastFoodDemo\obj\Debug\_02_FastFoodDemo.Properties.Resources.resources
+C:\Users\KB\Desktop\JJJJJ\HelloCstudy11_Tue_WindowsForms\HelloCSharp01_Tue_Request\02_FastFoodDemo\02_FastFoodDemo\obj\Debug\02_FastFoodDemo.csproj.GenerateResource.cache
+C:\Users\KB\Desktop\JJJJJ\HelloCstudy11_Tue_WindowsForms\HelloCSharp01_Tue_Request\02_FastFoodDemo\02_FastFoodDemo\obj\Debug\02_FastFoodDemo.csproj.CoreCompileInputs.cache
+C:\Users\KB\Desktop\JJJJJ\HelloCstudy11_Tue_WindowsForms\HelloCSharp01_Tue_Request\02_FastFoodDemo\02_FastFoodDemo\obj\Debug\02_FastFoodDemo.exe
+C:\Users\KB\Desktop\JJJJJ\HelloCstudy11_Tue_WindowsForms\HelloCSharp01_Tue_Request\02_FastFoodDemo\02_FastFoodDemo\obj\Debug\02_FastFoodDemo.pdb
+C:\Users\KB\Desktop\JJJJJ\HelloCstudy11_Tue_WindowsForms\HelloCSharp01_Tue_Request\02_FastFoodDemo\02_FastFoodDemo\obj\Debug\_02_FastFoodDemo.SecondCustomControl.resources

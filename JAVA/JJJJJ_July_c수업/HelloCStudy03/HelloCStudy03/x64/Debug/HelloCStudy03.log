@@ -1,0 +1,3 @@
+﻿  Cstudy05_pointer.c
+C:\Users\KB\Documents\J Visual Studio J\HelloCStudy03\HelloCStudy03\Cstudy05_pointer.c(31,7): warning C4101: 'rcp' :참조되지 않은 지역 변수입니다.
+  HelloCStudy03.vcxproj -> C:\Users\KB\Documents\J Visual Studio J\HelloCStudy03\x64\Debug\HelloCStudy03.exe

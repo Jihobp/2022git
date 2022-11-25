@@ -1,0 +1,11 @@
+E:\2022git\CSharp\userAPI\userAPI\bin\Debug\userAPI.exe.config
+E:\2022git\CSharp\userAPI\userAPI\bin\Debug\userAPI.exe
+E:\2022git\CSharp\userAPI\userAPI\bin\Debug\userAPI.pdb
+E:\2022git\CSharp\userAPI\userAPI\obj\Debug\userAPI.csproj.AssemblyReference.cache
+E:\2022git\CSharp\userAPI\userAPI\obj\Debug\userAPI.csproj.SuggestedBindingRedirects.cache
+E:\2022git\CSharp\userAPI\userAPI\obj\Debug\userAPI.Form1.resources
+E:\2022git\CSharp\userAPI\userAPI\obj\Debug\userAPI.Properties.Resources.resources
+E:\2022git\CSharp\userAPI\userAPI\obj\Debug\userAPI.csproj.GenerateResource.cache
+E:\2022git\CSharp\userAPI\userAPI\obj\Debug\userAPI.csproj.CoreCompileInputs.cache
+E:\2022git\CSharp\userAPI\userAPI\obj\Debug\userAPI.exe
+E:\2022git\CSharp\userAPI\userAPI\obj\Debug\userAPI.pdb

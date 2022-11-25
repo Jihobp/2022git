@@ -1,0 +1,34 @@
+void greenChar()
+{
+	system("color 0a");
+}
+
+void changeColor(char a, char b)
+{	
+	//color[1024]이렇게 써도 됨.
+	char color[9] = "color ";
+	//[0]='c', [1]='o', [2]='l'
+	//[3]='o', [4]='r', [5]=' '
+	//[6]번째와 [7]번째에 글자를 넣고
+	//끝에 NULL을 넣으면 됨.
+	//끝에 NULL을 넣어주지 않으면 문자열로써 인식이 ㅇ ㅏㄴ된다.
+	color[6] = a; // c.o.l.o.r. .6번째=7에 문자
+    color[7] = b; //a0  0a
+    color[8] = NULL; //='\0';   c.o.l.o.r. . 8번째=9에 null
+    system(color); //= system("color a0")
+}
+
+int main()
+{
+	//system("color 0a");
+	greenChar();
+	printf("첫번째 문자 입력");
+	char a = getchar();
+	rewind(stdin);
+	printf("두번째 문자 입력");
+	char b = getchar();
+	changeColor(a,b); //시스템 호출.
+	return 0;
+}
+
+//main이 너무 길면 가독성이 떨어져서 집중할건 집중하고 나눌껀 나누자 해서 fx가 생긴것.

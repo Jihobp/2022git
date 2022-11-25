@@ -1,0 +1,14 @@
+#include<stdio.h>
+//반환형(리턴값)도 없고
+//매개변수(파라메터)도 없는 형태.
+void greenChar()
+{
+	system("color 0a");
+}
+
+int main()
+{
+	//system("color 0a");
+	greenChar();
+	return 0;
+}

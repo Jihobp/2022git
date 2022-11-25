@@ -1,0 +1,14 @@
+E:\2022git\CSharp\useAPIJson\useAPIJson\bin\Debug\useAPIJson.exe.config
+E:\2022git\CSharp\useAPIJson\useAPIJson\bin\Debug\useAPIJson.exe
+E:\2022git\CSharp\useAPIJson\useAPIJson\bin\Debug\useAPIJson.pdb
+E:\2022git\CSharp\useAPIJson\useAPIJson\bin\Debug\Newtonsoft.Json.dll
+E:\2022git\CSharp\useAPIJson\useAPIJson\bin\Debug\Newtonsoft.Json.xml
+E:\2022git\CSharp\useAPIJson\useAPIJson\obj\Debug\useAPIJson.csproj.AssemblyReference.cache
+E:\2022git\CSharp\useAPIJson\useAPIJson\obj\Debug\useAPIJson.csproj.SuggestedBindingRedirects.cache
+E:\2022git\CSharp\useAPIJson\useAPIJson\obj\Debug\useAPIJson.Properties.Resources.resources
+E:\2022git\CSharp\useAPIJson\useAPIJson\obj\Debug\useAPIJson.csproj.GenerateResource.cache
+E:\2022git\CSharp\useAPIJson\useAPIJson\obj\Debug\useAPIJson.csproj.CoreCompileInputs.cache
+E:\2022git\CSharp\useAPIJson\useAPIJson\obj\Debug\useAPIJson.csproj.CopyComplete
+E:\2022git\CSharp\useAPIJson\useAPIJson\obj\Debug\useAPIJson.exe
+E:\2022git\CSharp\useAPIJson\useAPIJson\obj\Debug\useAPIJson.pdb
+E:\2022git\CSharp\useAPIJson\useAPIJson\obj\Debug\useAPIJson.Form1.resources

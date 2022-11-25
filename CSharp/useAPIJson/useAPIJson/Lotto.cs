@@ -18,6 +18,22 @@ namespace useAPIJson
         public string bnusNo { get; set; }  //보너스번호
         public string drwNo { get; set; }  //회차
         public string drwNoDate { get; set; }  //날짜
+
+        //alt +enter 생성자 생성
+        public Lotto(string drwNo1, string drwNo2, string drwNo3, string drwNo4, string drwNo5, string drwNo6, string bnusNo, string drwNo, string drwNoDate)
+        {
+            this.drwNo1 = drwNo1;
+            this.drwNo2 = drwNo2;
+            this.drwNo3 = drwNo3;
+            this.drwNo4 = drwNo4;
+            this.drwNo5 = drwNo5;
+            this.drwNo6 = drwNo6;
+            this.bnusNo = bnusNo;
+            this.drwNo = drwNo;
+            this.drwNoDate = drwNoDate;
+        }
+
+        //빈공간에다 alt+enter 로 생성자 자동완성
         //https://www.dhlottery.co.kr/common.do?method=getLottoNumber&drwNo=1000
     }
 }

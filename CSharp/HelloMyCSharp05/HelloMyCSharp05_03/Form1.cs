@@ -45,7 +45,7 @@ namespace HelloMyCSharp05_03
 
         //함수 만들어서 버튼에 집어넣기? 
 
-        public Buttons(object sender, EventArgs e)
+        public void Buttons(object sender, EventArgs e)
         {
             InitializeComponent();
             list.Add((sender as Button).Text);

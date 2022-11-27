@@ -10,6 +10,24 @@ namespace HelloMyCSharp08
     {
         static void Main(string[] args)
         {
+            //탁오빠 quiz
+            for(int i=0; i<=10; i++)
+            {
+                if(i==8){
+                    Console.WriteLine("게임종료");
+                    break;
+                }
+                else if(i%2==1)
+                {
+                    Console.WriteLine("홀수");
+                    //break; //1 홀수출력하고 끝남.
+                    //continue; // continue 뒤에 코드가 없으면, 같은 말이다. 
+                }
+                //i가 8이면 게임종료, i가 홀수면 홀수출력.
+            }
+
+
+
             Console.WriteLine("1번");
             //1. 1부터 10까지 순차적으로 출력
             //    - for, while로 해보기

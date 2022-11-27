@@ -32,6 +32,9 @@ namespace HelloCSharp01_02
             string s1 = "Hello";
             char c2 = s1[1]; //알파벳 e를 가져옴
 
+
+
+
             Console.WriteLine(c1);
             Console.WriteLine(s1);
             Console.WriteLine(c2);
@@ -40,6 +43,7 @@ namespace HelloCSharp01_02
             Console.WriteLine("안녕" + "하세요");//안녕하세요
             Console.WriteLine("10" + 20); //1020
             Console.WriteLine('1' + 20); //69 '1'=49
+
 
             //연산자는 자바랑 마찬가지로
             //+ - / * % 이렇게 있다
@@ -56,6 +60,21 @@ namespace HelloCSharp01_02
             //3. $ 표시
             string info3 = $"내 나이 : {age}";
             Console.WriteLine(info3);
+
+
+
+
+
+            //탁오빠 quiz~~
+            //string ss = "안녕하세요";
+            //char cc = ss[2];
+            //Console.WriteLine($"문자열의 세번째 글자는{cc}입니다.");
+
+            Console.WriteLine("입력하세요.");
+            string ss = Console.ReadLine();
+            char cc = ss[2];
+            Console.WriteLine($"문자열의 세번째 글자는{cc}입니다.");
+
         }
     }
 }

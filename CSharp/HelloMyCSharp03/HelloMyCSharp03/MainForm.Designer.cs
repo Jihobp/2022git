@@ -38,9 +38,10 @@
             // 
             // button_mbox
             // 
-            this.button_mbox.Location = new System.Drawing.Point(12, 52);
+            this.button_mbox.Location = new System.Drawing.Point(14, 65);
+            this.button_mbox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button_mbox.Name = "button_mbox";
-            this.button_mbox.Size = new System.Drawing.Size(84, 23);
+            this.button_mbox.Size = new System.Drawing.Size(96, 29);
             this.button_mbox.TabIndex = 0;
             this.button_mbox.Text = "메시지 박스";
             this.button_mbox.UseVisualStyleBackColor = true;
@@ -48,17 +49,19 @@
             // 
             // textbox_input
             // 
-            this.textbox_input.Location = new System.Drawing.Point(83, 9);
+            this.textbox_input.Location = new System.Drawing.Point(95, 11);
+            this.textbox_input.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.textbox_input.Name = "textbox_input";
-            this.textbox_input.Size = new System.Drawing.Size(191, 21);
+            this.textbox_input.Size = new System.Drawing.Size(218, 25);
             this.textbox_input.TabIndex = 1;
             this.textbox_input.TextChanged += new System.EventHandler(this.textbox_input_TextChanged);
             // 
             // button_customized
             // 
-            this.button_customized.Location = new System.Drawing.Point(112, 52);
+            this.button_customized.Location = new System.Drawing.Point(128, 65);
+            this.button_customized.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button_customized.Name = "button_customized";
-            this.button_customized.Size = new System.Drawing.Size(75, 23);
+            this.button_customized.Size = new System.Drawing.Size(86, 29);
             this.button_customized.TabIndex = 2;
             this.button_customized.Text = "맞춤 박스";
             this.button_customized.UseVisualStyleBackColor = true;
@@ -67,18 +70,19 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 15);
+            this.label1.Location = new System.Drawing.Point(14, 19);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(57, 12);
+            this.label1.Size = new System.Drawing.Size(72, 15);
             this.label1.TabIndex = 3;
             this.label1.Text = "글자 입력";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // button_show
             // 
-            this.button_show.Location = new System.Drawing.Point(217, 52);
+            this.button_show.Location = new System.Drawing.Point(248, 65);
+            this.button_show.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button_show.Name = "button_show";
-            this.button_show.Size = new System.Drawing.Size(75, 23);
+            this.button_show.Size = new System.Drawing.Size(86, 29);
             this.button_show.TabIndex = 4;
             this.button_show.Text = "창띄우기";
             this.button_show.UseVisualStyleBackColor = true;
@@ -89,24 +93,27 @@
             this.circularButton1.BackColor = System.Drawing.SystemColors.Info;
             this.circularButton1.FlatAppearance.BorderSize = 0;
             this.circularButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.circularButton1.Location = new System.Drawing.Point(446, 77);
+            this.circularButton1.Location = new System.Drawing.Point(510, 96);
+            this.circularButton1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.circularButton1.Name = "circularButton1";
-            this.circularButton1.Size = new System.Drawing.Size(301, 262);
+            this.circularButton1.Size = new System.Drawing.Size(344, 328);
             this.circularButton1.TabIndex = 5;
             this.circularButton1.Text = "circularButton1";
             this.circularButton1.UseVisualStyleBackColor = false;
+            this.circularButton1.Click += new System.EventHandler(this.circularButton1_Click);
             // 
             // MainForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(914, 562);
             this.Controls.Add(this.circularButton1);
             this.Controls.Add(this.button_show);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button_customized);
             this.Controls.Add(this.textbox_input);
             this.Controls.Add(this.button_mbox);
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "MainForm";
             this.Text = "MainForm";
             this.ResumeLayout(false);

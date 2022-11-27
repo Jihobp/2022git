@@ -10,6 +10,7 @@ namespace HelloMyCSharp01
     {
         static void Main(string[] args)
         {
+            //1. 콘솔 쓰는 방식
             Console.WriteLine("안녕, 내 이름은 박지호고 여자고 20대야.");
             int age = 28;
 
@@ -21,11 +22,12 @@ namespace HelloMyCSharp01
             Console.WriteLine(1+1);
 
             //2. string.format
-            string luv = string.Format("내 나이는 {0}", age);
+            string luv = string.Format("내 나이는 {0}", age); //거의 안씀.
             Console.WriteLine(luv);
             //3. $ 표시
             string luvv = $"내 나이는 {age}";
             Console.WriteLine(luvv);
+
         }
     }
 }

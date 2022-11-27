@@ -16,16 +16,18 @@ namespace HelloMyCSharp01_06
                     Console.WriteLine("짝수");
                 Console.WriteLine("i="+i);
             }
-            //반복문을 끝내는 것 break;
+            //반복문을 끝내는 것 break; 조건문 X
             //특정 조건에서만 다음 step으로 넘기는 것 : continue;
             for(int i=1; i<=10; i++)
             {
                 Console.WriteLine("i=" +i);
                 if (i % 2 != 0)
                     continue; //밑에꺼 실행 안 하고 i++ 해버림.
+                    //continue도 조건문이랑 관계가 없다! 반복문에서만 쓰인다! 
                 Console.WriteLine("짝수");
             }
 
+        
 
             //-------------------------------------------------------------
             Console.WriteLine("1번");
@@ -51,6 +53,7 @@ namespace HelloMyCSharp01_06
             int a = int.Parse(Console.ReadLine());
             Console.WriteLine("b?");
             int b = int.Parse(Console.ReadLine());
+
 
             //5번 문제
             //두 숫자 값 바꾸기

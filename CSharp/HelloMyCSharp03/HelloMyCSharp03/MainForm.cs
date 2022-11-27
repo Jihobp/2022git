@@ -34,7 +34,7 @@ namespace HelloMyCSharp03
 
         private void button_customized_Click(object sender, EventArgs e)
         {
-            SubForm s = new SubForm(textbox_input.Text);
+            SubForm s = new SubForm(textbox_input.Text); //생성자를 사용한다. subform 코드 참고
             s.Show();
         }
 
@@ -43,6 +43,11 @@ namespace HelloMyCSharp03
             //기본 생성자를 이용해서 만든 것. ㅇㅅㅇ
             SubForm s = new SubForm();
             s.Show();
+        }
+
+        private void circularButton1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

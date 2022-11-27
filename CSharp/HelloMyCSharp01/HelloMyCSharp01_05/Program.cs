@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.Specialized;
 using System.Diagnostics.CodeAnalysis;
 using System.Linq;
 using System.Text;
@@ -20,10 +21,11 @@ namespace HelloMyCSharp01_05
                 Console.WriteLine("안녕하세요 " + i + "번님");
             }
             //for(int i=1; i<6; i++)
-            for(int i=1; i<5; i++)
+            for (int i = 1; i < 5; i++)
             {
                 Console.WriteLine("안녕하세요" + i + "번님");
             }
+
 
             int sum = 0;
             for(int i=1; i<=10; i++)
@@ -31,6 +33,7 @@ namespace HelloMyCSharp01_05
                 sum += i; //sum= sum+i;
             }
             Console.WriteLine("1~10까지의 합 : " +sum);
+
 
             //while문으로 풀기
             sum = 0;    //sum을 0으로 초기화 하고
@@ -46,7 +49,7 @@ namespace HelloMyCSharp01_05
             //while
             //무한루프 돌다가 특정 조건 도달시 종료됨
             //조건이 만족되지 않으면 끝나댱.
-            while (true)
+            while (true) //c#은 참이어야 돌아간다.
             {
                 Console.WriteLine("숫자 입력");
                 int num = int.Parse(Console.ReadLine());
@@ -54,9 +57,13 @@ namespace HelloMyCSharp01_05
                 {
                     Console.WriteLine("음수이므로 종료");
                     break; //반복문 종료
+                    //무조건 break 는 반복문 바깥으로 나간다! 즉, for문 while문 바깥으로 나감.
+                    //조건문if는 상관없다!!!
                 }
 
             }
+
+
 
             //1. 
             for (int i = 1; i <= 5; i++)
@@ -138,7 +145,7 @@ namespace HelloMyCSharp01_05
             //왜냐면 mynum이 -1이면 MYTEST로 이동하기 때문
             if(mynum==-1)
             {
-                goto MYTEST;
+                goto MYTEST; //hello World 출력한다.
                 Console.WriteLine("mynum?");
                 mynum = int.Parse(Console.ReadLine());  
             }

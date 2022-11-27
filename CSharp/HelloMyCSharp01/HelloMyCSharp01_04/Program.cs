@@ -25,6 +25,14 @@ namespace HelloMyCSharp01_04
             result = a % 2 == 0 ? "짝" : "홀"; //result="홀"
             Console.WriteLine(result);
 
+
+            //탁오빠 quiz
+            int b = 10;
+            string result2 = b % 2 == 0 ? "짝" : "홀";
+            Console.WriteLine(result2);
+            Console.WriteLine(b % 2 == 0 ? "짝" : "홀");
+
+
             //if 문
             if (a == 0)
             {
@@ -38,7 +46,9 @@ namespace HelloMyCSharp01_04
                 Console.WriteLine("홀수");
             }
 
+
             //switch
+            //case 뒤엔 0을포함한 정수만 올 수 있다.
             switch (a)  //a 값에 따라서 결과가 달라진다.
             {
                 case 0: Console.WriteLine("a는 0이다.");
@@ -46,7 +56,8 @@ namespace HelloMyCSharp01_04
                 case 1: //3개의 경우가 하나의 결과를 출력.
                 case 2:
                 case 3: Console.WriteLine("a는 1~3이다.");
-                    break; //여기서 break 없으면 에러남(c, java에선 에러 없음.) case밑에 단한줄이라도 1!! 코드가 있다면 break 적어줘야한다. 
+                    break; //여기서 break 없으면 에러남(c, java에선 에러 없음.)
+                           //case밑에 단한줄이라도 1!! 코드가 있다면 break 적어줘야한다. 
                   default: Console.WriteLine("a는 " + a + "값이다.");
                     break;
 

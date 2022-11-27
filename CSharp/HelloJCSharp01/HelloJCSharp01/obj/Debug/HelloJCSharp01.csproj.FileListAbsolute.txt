@@ -1,0 +1,11 @@
+E:\2022git\CSharp\HelloJCSharp01\HelloJCSharp01\obj\Debug\HelloJCSharp01.csproj.AssemblyReference.cache
+E:\2022git\CSharp\HelloJCSharp01\HelloJCSharp01\obj\Debug\HelloJCSharp01.csproj.SuggestedBindingRedirects.cache
+E:\2022git\CSharp\HelloJCSharp01\HelloJCSharp01\obj\Debug\HelloJCSharp01.Form1.resources
+E:\2022git\CSharp\HelloJCSharp01\HelloJCSharp01\obj\Debug\HelloJCSharp01.Properties.Resources.resources
+E:\2022git\CSharp\HelloJCSharp01\HelloJCSharp01\obj\Debug\HelloJCSharp01.csproj.GenerateResource.cache
+E:\2022git\CSharp\HelloJCSharp01\HelloJCSharp01\obj\Debug\HelloJCSharp01.csproj.CoreCompileInputs.cache
+E:\2022git\CSharp\HelloJCSharp01\HelloJCSharp01\bin\Debug\HelloJCSharp01.exe.config
+E:\2022git\CSharp\HelloJCSharp01\HelloJCSharp01\bin\Debug\HelloJCSharp01.exe
+E:\2022git\CSharp\HelloJCSharp01\HelloJCSharp01\bin\Debug\HelloJCSharp01.pdb
+E:\2022git\CSharp\HelloJCSharp01\HelloJCSharp01\obj\Debug\HelloJCSharp01.exe
+E:\2022git\CSharp\HelloJCSharp01\HelloJCSharp01\obj\Debug\HelloJCSharp01.pdb

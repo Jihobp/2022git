@@ -1,11 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace HelloMyCSharp09_02
@@ -68,7 +62,7 @@ namespace HelloMyCSharp09_02
         private void button3_Click(object sender, EventArgs e) //무조건 리스트에 넣어줘야함.
         {
             List<Student> students = new List<Student>();
-            students.Add(new Student() { Name = "박지호", Hakbeon="80", Gender="남성" });
+            students.Add(new Student() { Name = "박지호", Hakbeon = "80", Gender = "남성" });
             students.Add(new Student() { Name = "오세룡", Hakbeon = "80", Gender = "여성" });
             students.Add(new Student() { Name = "이범식", Hakbeon = "80", Gender = "여성" });
 

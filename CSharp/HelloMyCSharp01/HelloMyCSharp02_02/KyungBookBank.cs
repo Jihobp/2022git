@@ -20,7 +20,7 @@ namespace HelloMyCSharp02_02
         {
             this.Name = Name;
         }
-        public void Withdrawal(int money)
+        public void Withdrawal(int money) //함수, money를 상속받아서 넣음.
         {
             this.Balance -= money;
         }

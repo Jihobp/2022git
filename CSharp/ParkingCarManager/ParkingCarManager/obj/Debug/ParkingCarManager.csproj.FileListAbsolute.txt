@@ -1,0 +1,11 @@
+E:\2022git\CSharp\ParkingCarManager\ParkingCarManager\bin\Debug\ParkingCarManager.exe.config
+E:\2022git\CSharp\ParkingCarManager\ParkingCarManager\bin\Debug\ParkingCarManager.exe
+E:\2022git\CSharp\ParkingCarManager\ParkingCarManager\bin\Debug\ParkingCarManager.pdb
+E:\2022git\CSharp\ParkingCarManager\ParkingCarManager\obj\Debug\ParkingCarManager.csproj.AssemblyReference.cache
+E:\2022git\CSharp\ParkingCarManager\ParkingCarManager\obj\Debug\ParkingCarManager.csproj.SuggestedBindingRedirects.cache
+E:\2022git\CSharp\ParkingCarManager\ParkingCarManager\obj\Debug\ParkingCarManager.Form1.resources
+E:\2022git\CSharp\ParkingCarManager\ParkingCarManager\obj\Debug\ParkingCarManager.Properties.Resources.resources
+E:\2022git\CSharp\ParkingCarManager\ParkingCarManager\obj\Debug\ParkingCarManager.csproj.GenerateResource.cache
+E:\2022git\CSharp\ParkingCarManager\ParkingCarManager\obj\Debug\ParkingCarManager.csproj.CoreCompileInputs.cache
+E:\2022git\CSharp\ParkingCarManager\ParkingCarManager\obj\Debug\ParkingCarManager.exe
+E:\2022git\CSharp\ParkingCarManager\ParkingCarManager\obj\Debug\ParkingCarManager.pdb

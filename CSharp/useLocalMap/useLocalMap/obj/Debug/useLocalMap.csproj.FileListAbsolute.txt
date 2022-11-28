@@ -1,0 +1,14 @@
+E:\2022git\CSharp\useLocalMap\useLocalMap\bin\Debug\useLocalMap.exe.config
+E:\2022git\CSharp\useLocalMap\useLocalMap\bin\Debug\useLocalMap.exe
+E:\2022git\CSharp\useLocalMap\useLocalMap\bin\Debug\useLocalMap.pdb
+E:\2022git\CSharp\useLocalMap\useLocalMap\obj\Debug\useLocalMap.csproj.AssemblyReference.cache
+E:\2022git\CSharp\useLocalMap\useLocalMap\obj\Debug\useLocalMap.csproj.SuggestedBindingRedirects.cache
+E:\2022git\CSharp\useLocalMap\useLocalMap\obj\Debug\useLocalMap.Form1.resources
+E:\2022git\CSharp\useLocalMap\useLocalMap\obj\Debug\useLocalMap.Properties.Resources.resources
+E:\2022git\CSharp\useLocalMap\useLocalMap\obj\Debug\useLocalMap.csproj.GenerateResource.cache
+E:\2022git\CSharp\useLocalMap\useLocalMap\obj\Debug\useLocalMap.csproj.CoreCompileInputs.cache
+E:\2022git\CSharp\useLocalMap\useLocalMap\obj\Debug\useLocalMap.exe
+E:\2022git\CSharp\useLocalMap\useLocalMap\obj\Debug\useLocalMap.pdb
+E:\2022git\CSharp\useLocalMap\useLocalMap\bin\Debug\Newtonsoft.Json.dll
+E:\2022git\CSharp\useLocalMap\useLocalMap\bin\Debug\Newtonsoft.Json.xml
+E:\2022git\CSharp\useLocalMap\useLocalMap\obj\Debug\useLocalMap.csproj.CopyComplete

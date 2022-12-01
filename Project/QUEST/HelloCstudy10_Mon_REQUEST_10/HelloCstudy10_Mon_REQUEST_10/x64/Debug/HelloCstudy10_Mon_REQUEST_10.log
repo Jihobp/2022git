@@ -1,0 +1,14 @@
+﻿  5_6_7.c
+E:\QUEST\HelloCstudy10_Mon_REQUEST_10\HelloCstudy10_Mon_REQUEST_10\5_6_7.c(37,2): error C2143: 구문 오류: ';'이(가) '{' 앞에 없습니다.
+E:\QUEST\HelloCstudy10_Mon_REQUEST_10\HelloCstudy10_Mon_REQUEST_10\5_6_7.c(38,25): error C2065: 'b': 선언되지 않은 식별자입니다.
+E:\QUEST\HelloCstudy10_Mon_REQUEST_10\HelloCstudy10_Mon_REQUEST_10\5_6_7.c(41,14): error C2065: 'b': 선언되지 않은 식별자입니다.
+E:\QUEST\HelloCstudy10_Mon_REQUEST_10\HelloCstudy10_Mon_REQUEST_10\5_6_7.c(48,2): error C2143: 구문 오류: ';'이(가) '{' 앞에 없습니다.
+E:\QUEST\HelloCstudy10_Mon_REQUEST_10\HelloCstudy10_Mon_REQUEST_10\5_6_7.c(51,10): warning C4477: 'printf' : 서식 문자열 '%d'에 'int' 형식의 인수가 필요하지만 variadic 인수 1의 형식이 'int *'입니다.
+E:\QUEST\HelloCstudy10_Mon_REQUEST_10\HelloCstudy10_Mon_REQUEST_10\5_6_7.c(51,10): warning C4313: 'printf': 서식 문자열의 '%d'이(가) int *' 형식의 인수 1과(와) 충돌합니다.
+E:\QUEST\HelloCstudy10_Mon_REQUEST_10\HelloCstudy10_Mon_REQUEST_10\5_6_7.c(51,10): warning C4477: 'printf' : 서식 문자열 '%d'에 'int' 형식의 인수가 필요하지만 variadic 인수 2의 형식이 'int *'입니다.
+E:\QUEST\HelloCstudy10_Mon_REQUEST_10\HelloCstudy10_Mon_REQUEST_10\5_6_7.c(51,10): warning C4313: 'printf': 서식 문자열의 '%d'이(가) int *' 형식의 인수 2과(와) 충돌합니다.
+E:\QUEST\HelloCstudy10_Mon_REQUEST_10\HelloCstudy10_Mon_REQUEST_10\5_6_7.c(68,1): error C2143: 구문 오류: ';'이(가) '{' 앞에 없습니다.
+E:\QUEST\HelloCstudy10_Mon_REQUEST_10\HelloCstudy10_Mon_REQUEST_10\5_6_7.c(70,15): warning C4013: 'calcul'이(가) 정의되지 않았습니다. extern은 int형을 반환하는 것으로 간주합니다.
+E:\QUEST\HelloCstudy10_Mon_REQUEST_10\HelloCstudy10_Mon_REQUEST_10\5_6_7.c(70,23): error C2065: 'a': 선언되지 않은 식별자입니다.
+E:\QUEST\HelloCstudy10_Mon_REQUEST_10\HelloCstudy10_Mon_REQUEST_10\5_6_7.c(70,26): error C2065: 'b': 선언되지 않은 식별자입니다.
+E:\QUEST\HelloCstudy10_Mon_REQUEST_10\HelloCstudy10_Mon_REQUEST_10\5_6_7.c(20): fatal error C1075: '{': 일치하는 토큰을 찾을 수 없습니다.

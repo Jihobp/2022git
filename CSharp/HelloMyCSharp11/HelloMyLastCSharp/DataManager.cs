@@ -26,7 +26,7 @@ namespace HelloMyLastCSharp
         //처음에 한번만 호출함
         //1. 해당 클래스로 인스턴스를 처음 만들었을 때
         //2. 해당 클래스를 언급할 때 (ex) DataManager.Books
-        static DataManager()
+        static DataManager() //정적생성자는 단 한번만 호출함 !!! ㅇㅅㅇ /~~~~~~~~~~~~~!!!!!!!!!!!
         {
             Load();
         }
@@ -91,7 +91,7 @@ namespace HelloMyLastCSharp
                 booksOutput += $"   <{PUBLISHER}>{item.Publisher}</{PUBLISHER}>\n";
                 booksOutput += $"   <{PAGE}>{item.Page}</{PAGE}>\n";
                 booksOutput += $"   <{BORROWEDAT}>{item.BorrowedAt}</{BORROWEDAT}>\n";
-                booksOutput += $"   <{ISBORROWED}>" + (item.isBorrowed ? 1 : 0) + $"</{BORROWEDAT}>\n";
+                booksOutput += $"   <{ISBORROWED}>" + (item.isBorrowed ? 1 : 0) + $"</{ISBORROWED}>\n";
                 booksOutput += $"   <{USERID}>{item.UserId}</{USERID}>\n";
                 booksOutput += $"   <{USERNAME}>{item.UserName}</{USERNAME}>\n";
                 booksOutput += " </book>\n";

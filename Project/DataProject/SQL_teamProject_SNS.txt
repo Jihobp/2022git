@@ -1,0 +1,252 @@
+
+drop table following_info;
+drop table like_info;
+drop table comment_info;
+drop table tag_info;
+drop table post_info;
+drop table user_info;
+drop table hobby_info;
+drop table gender_info;
+
+create table gender_info  
+(gender_number int primary key,
+gender_type varchar2(10) unique not null);
+
+create table hobby_info 
+(hobby_number int primary key,
+hobby_type varchar2(100) unique not null);
+
+create table user_info 
+(user_number int primary key, 
+user_create_time varchar2(20) not null, 
+user_id varchar2(36) unique not null, 
+user_password varchar2(20) not null, 
+user_nick_name varchar2(36) unique not null, 
+user_name varchar2(20) not null, 
+user_gender_number int not null, 
+user_birthday varchar2(8) not null, 
+user_phone_number varchar2(20) unique not null, 
+user_eMail varchar2(30) unique not null, 
+user_hobby_number int, 
+user_profile_file_name varchar2(100), 
+user_profile_file_address varchar2(100), 
+user_count_post int, 
+user_count_comment int, 
+user_count_like int, 
+user_count_following int, 
+user_count_follower int, 
+foreign key(user_gender_number) references gender_info(gender_number), 
+foreign key(user_hobby_number) references hobby_info(hobby_number));
+
+create table post_info 
+(post_number int primary key, 
+post_create_time varchar2(20) not null, 
+post_user_number int not null, 
+post_name varchar2(100) not null, 
+post_contents varchar2(3000) not null, 
+post_location varchar2(100), 
+post_count_comment int, 
+post_count_like int, 
+post_tag_contents varchar2(300), 
+foreign key(post_user_number) references user_info(user_number));
+
+create table tag_info 
+(tag_number int primary key, 
+tag_type varchar2(30) unique not null);
+
+create table comment_info 
+(comment_number int primary key, 
+comment_create_time varchar2(20) not null, 
+comment_user_number int not null, 
+comment_post_number int not null, 
+comment_contents varchar2(300) not null, 
+foreign key(comment_user_number) references user_info(user_number), 
+foreign key(comment_post_number) references post_info(post_number));
+
+create table like_info 
+(like_number int primary key, 
+like_create_time varchar2(20) not null, 
+like_user_number int not null, 
+like_post_number int not null, 
+like_relation varchar2(100) unique not null, 
+foreign key(like_user_number) references user_info(user_number), 
+foreign key(like_post_number) references post_info(post_number));
+
+create table following_info 
+(following_number int primary key, 
+following_create_time varchar2(20) not null, 
+following_user_number int not null, 
+following_user2_number int not null, 
+following_relation varchar2(100) unique not null, 
+foreign key(following_user_number) references user_info(user_number), 
+foreign key(following_user2_number) references user_info(user_number));
+
+
+
+drop sequence gender_up;
+drop sequence hobby_up;
+drop sequence user_up;
+drop sequence post_up;
+drop sequence tag_up;
+drop sequence comment_up;
+drop sequence like_up;
+drop sequence following_up;
+
+create sequence gender_up;
+create sequence hobby_up;
+create sequence user_up;
+create sequence post_up;
+create sequence tag_up;
+create sequence comment_up;
+create sequence like_up;
+create sequence following_up;
+
+
+
+insert into gender_info values (gender_up.nextval, '남자');
+insert into gender_info values (gender_up.nextval, '여자');
+insert into gender_info values (gender_up.nextval, '로봇');
+update gender_info set gender_type='비공개' where gender_number=3;
+insert into gender_info values (gender_up.nextval, '고양이');
+delete from gender_info where gender_number=4;
+
+insert into hobby_info values (hobby_up.nextval, '게임');
+insert into hobby_info values (hobby_up.nextval, '방탈출');
+insert into hobby_info values (hobby_up.nextval, '등산');
+update hobby_info set hobby_type='헬스' where hobby_number=3;
+insert into hobby_info values (hobby_up.nextval, '호흡');
+delete from hobby_info where hobby_number=4;
+
+insert into user_info values (user_up.nextval, to_char(sysdate,'yyyy.mm.dd hh24:mi'), 
+'mong', 'mong_pass', 'mong_nick', 'monkey', '1', '20000101', '010-0000-0001', 'mong.naver.com', '1', 
+null, null, null, null, null, null, null);
+insert into user_info values (user_up.nextval, to_char(sysdate,'yyyy.mm.dd hh24:mi'), 
+'cowww', 'cowww_pass', 'cowww_nick', 'cow', '2', '20000102', '010-0000-0002', 'cow.naver.com', '2', 
+null, null, null, null, null, null, null);
+insert into user_info values (user_up.nextval, to_char(sysdate,'yyyy.mm.dd hh24:mi'), 
+'ddong', 'dong_pass', 'dong_nick', 'dog', '1', '20000103', '010-0000-0003', 'dog.naver.com', '2', 
+null, null, null, null, null, null, null);
+update user_info set user_id='dong' where user_number=3;
+insert into user_info values (user_up.nextval, to_char(sysdate,'yyyy.mm.dd hh24:mi'), 
+'ddd', 'ddd_pass', 'ddd_nick', 'ddd', '1', '20000104', '010-0000-0004', 'ddd.naver.com', '1', 
+null, null, null, null, null, null, null);
+delete from user_info where user_number=4;
+
+insert into post_info values (post_up.nextval, to_char(sysdate,'yyyy.mm.dd hh24:mi'), 
+'1', 'post_mong', 'mongmongmong', 
+null, null, null, null);
+insert into post_info values (post_up.nextval, to_char(sysdate,'yyyy.mm.dd hh24:mi'), 
+'2', 'post_cowww', 'cowwwwwwwwwww', 
+null, null, null, null);
+insert into post_info values (post_up.nextval, to_char(sysdate,'yyyy.mm.dd hh24:mi'), 
+'2', 'post_cowwwwwww', '123', 
+null, null, null, null);
+update post_info set post_contents='wallwallwall' where post_number=3;
+insert into post_info values (post_up.nextval, to_char(sysdate,'yyyy.mm.dd hh24:mi'), 
+'3', 'post_dddd', 'dddd', 
+null, null, null, null);
+delete from post_info where post_number=4;
+
+insert into tag_info values (tag_up.nextval, 'apple');
+insert into tag_info values (tag_up.nextval, 'banana');
+insert into tag_info values (tag_up.nextval, 'can');
+update tag_info set tag_type='cat' where tag_number=3;
+insert into tag_info values (tag_up.nextval, 'pigeon');
+delete from tag_info where tag_number=4;
+
+insert into comment_info values (comment_up.nextval, to_char(sysdate,'yyyy.mm.dd hh24:mi'), 
+'1', '2', 'kkkkkk');
+insert into comment_info values (comment_up.nextval, to_char(sysdate,'yyyy.mm.dd hh24:mi'), 
+'3', '1', 'really?');
+insert into comment_info values (comment_up.nextval, to_char(sysdate,'yyyy.mm.dd hh24:mi'), 
+'3', '2', 'oh my cat!');
+update comment_info set comment_contents='oh my god!' where comment_number=3;
+insert into comment_info values (comment_up.nextval, to_char(sysdate,'yyyy.mm.dd hh24:mi'), 
+'3', '2', 'oh my dog!');
+delete from comment_info where comment_number=4;
+
+insert into like_info values 
+(like_up.nextval, to_char(sysdate,'yyyy.mm.dd hh24:mi'), 
+'1', '3', '1-3');
+insert into like_info values 
+(like_up.nextval, to_char(sysdate,'yyyy.mm.dd hh24:mi'), 
+'2', '1', '2-1');
+insert into like_info values 
+(like_up.nextval, to_char(sysdate,'yyyy.mm.dd hh24:mi'), 
+'3', '2', '3-2');
+update like_info set like_post_number=1, like_relation='3-1' where like_number=3;
+insert into like_info values 
+(like_up.nextval, to_char(sysdate,'yyyy.mm.dd hh24:mi'), 
+'3', '2', '3-2');
+delete from like_info where like_number=4;
+
+insert into following_info values (following_up.nextval, to_char(sysdate,'yyyy.mm.dd hh24:mi'), 
+'1', '2', '1-2');
+insert into following_info values (following_up.nextval, to_char(sysdate,'yyyy.mm.dd hh24:mi'), 
+'2', '3', '2-3');
+insert into following_info values (following_up.nextval, to_char(sysdate,'yyyy.mm.dd hh24:mi'), 
+'3', '2', '3-2');
+update following_info set following_user2_number=1, following_relation='3-1' where following_number=3;
+insert into following_info values (following_up.nextval, to_char(sysdate,'yyyy.mm.dd hh24:mi'), 
+'3', '2', '3-2');
+delete from following_info where following_number=4;
+
+
+
+select user_number, user_create_time, user_id, user_password, user_nick_name, user_name, gender_type, user_birthday, user_phone_number, user_eMail, hobby_type 
+from user_info 
+join gender_info on user_gender_number=gender_number 
+join hobby_info on user_hobby_number=hobby_number;
+
+select gender_type, count(gender_type) count_gender from (select user_nick_name, gender_type, hobby_type
+from user_info 
+join gender_info on user_gender_number=gender_number 
+join hobby_info on user_hobby_number=hobby_number) group by gender_type having gender_type='여자';
+
+drop view view_user;
+create view view_user as select user_nick_name, gender_type, hobby_type
+from user_info 
+join gender_info on user_gender_number=gender_number 
+join hobby_info on user_hobby_number=hobby_number;
+select*from view_user;
+
+select gender_type, count(gender_type) count_gender from view_user group by gender_type;
+select gender_type, count(gender_type) count_gender from view_user group by gender_type having gender_type='여자';
+
+
+
+--프로시저로 쉽게 취미 입력
+drop procedure insert_hobby_info;
+create or replace procedure insert_hobby_info(hobby_number in int, hobby_type in varchar2) 
+is begin insert into hobby_info values(hobby_number, hobby_type);
+end insert_hobby_info;
+/
+exec insert_hobby_info (hobby_up.nextval, '전쟁');
+select*from hobby_info;
+
+--함수로 게시글번호 입력시 좋아요를 가장 많이 받은 게시글과의 좋아요 차이 출력
+update post_info set post_count_like=2 where post_number=1;
+update post_info set post_count_like=5 where post_number=2;
+
+drop function insufficient_like;
+create or replace function insufficient_like(post_number int) 
+return int 
+is 
+nownum int := post_number;
+num1 int;
+num2 int;
+begin 
+select max(post_count_like) 
+into num2 
+from post_info 
+end;
+begin 
+select post_count_like 
+into num1 
+from post_info 
+where post_number=nownum;
+end;
+return num2-num1;
+end;
+/
+select insufficient_like(1) from dual;

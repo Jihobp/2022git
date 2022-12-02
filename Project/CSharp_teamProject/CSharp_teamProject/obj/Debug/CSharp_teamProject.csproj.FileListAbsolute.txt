@@ -1,0 +1,14 @@
+E:\2022git\Project\CSharp_teamProject\CSharp_teamProject\obj\Debug\CSharp_teamProject.csproj.AssemblyReference.cache
+E:\2022git\Project\CSharp_teamProject\CSharp_teamProject\obj\Debug\CSharp_teamProject.csproj.SuggestedBindingRedirects.cache
+E:\2022git\Project\CSharp_teamProject\CSharp_teamProject\obj\Debug\CSharp_teamProject.MainForm.resources
+E:\2022git\Project\CSharp_teamProject\CSharp_teamProject\obj\Debug\CSharp_teamProject.Properties.Resources.resources
+E:\2022git\Project\CSharp_teamProject\CSharp_teamProject\obj\Debug\CSharp_teamProject.csproj.GenerateResource.cache
+E:\2022git\Project\CSharp_teamProject\CSharp_teamProject\obj\Debug\CSharp_teamProject.csproj.CoreCompileInputs.cache
+E:\2022git\Project\CSharp_teamProject\CSharp_teamProject\obj\Debug\CSharp_teamProject.exe
+E:\2022git\Project\CSharp_teamProject\CSharp_teamProject\obj\Debug\CSharp_teamProject.pdb
+E:\2022git\Project\CSharp_teamProject\CSharp_teamProject\bin\Debug\CSharp_teamProject.exe.config
+E:\2022git\Project\CSharp_teamProject\CSharp_teamProject\bin\Debug\CSharp_teamProject.exe
+E:\2022git\Project\CSharp_teamProject\CSharp_teamProject\bin\Debug\CSharp_teamProject.pdb
+E:\2022git\Project\CSharp_teamProject\CSharp_teamProject\bin\Debug\Newtonsoft.Json.dll
+E:\2022git\Project\CSharp_teamProject\CSharp_teamProject\bin\Debug\Newtonsoft.Json.xml
+E:\2022git\Project\CSharp_teamProject\CSharp_teamProject\obj\Debug\CSharp_teamProject.csproj.CopyComplete

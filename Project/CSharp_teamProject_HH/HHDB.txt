@@ -1,0 +1,166 @@
+
+create database HHDB
+use HHDB
+
+--사용자
+create table USER_Table(
+user_num int IDENTITY not null primary key, 
+user_id varchar(50) unique not null, 
+user_passWord varchar(50) not null, 
+user_name varchar(50) not null,
+user_phoneNum varchar(50) not null,
+user_email varchar(50), 
+user_createTime datetime
+)
+GO
+
+--호텔
+create table HOTEL_Table(
+hotel_num int IDENTITY not null primary key, 
+hotel_name varchar(500) not null, 
+hotel_tell varchar(50) not null, 
+hotel_post varchar(30),
+hotel_addr varchar(500) not null,
+hotel_roomNum int, 
+hotel_lat float,
+hotel_lng float
+)
+GO
+
+--예약
+create table BOOK_Table(
+book_num int IDENTITY not null primary key, 
+book_id varchar(50) not null, 
+book_name varchar(50) not null, 
+book_hotelName varchar(200) not null,
+book_hotelRoomNum int,
+book_createTime datetime
+)
+GO
+
+--HotelList.csv DB에 입력
+BULK INSERT HOTEL_Table 
+FROM '주소\HotelList.csv'
+WITH
+(
+   FIRSTROW = 2,
+   FIELDTERMINATOR = ',',
+   ROWTERMINATOR = '\n',
+   TABLOCK,
+   BATCHSIZE=100000
+)
+
+★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★
+
+--사용자
+create table user_table(
+user_num int IDENTITY not null primary key, 
+user_id varchar(50) unique not null, 
+user_passWord varchar(50) not null, 
+user_name varchar(50), 
+user_phoneNum varchar(50), 
+user_email varchar(50), 
+user_createTime datetime
+)
+GO
+
+--관리자
+create table admin_table(
+admin_num int IDENTITY not null primary key, 
+admin_id varchar(50) unique not null, 
+admin_passWord varchar(50) not null, 
+admin_name varchar(50), 
+admin_phoneNum varchar(50), 
+admin_email varchar(50), 
+admin_createTime datetime
+)
+GO
+
+--숙소
+create table hotel_table(
+hotel_num int IDENTITY not null primary key, 
+hotel_name varchar(50) unique not null, 
+hotel_phoneNum varchar(50), 
+hotel_address varchar(50), 
+hotel_zipCode varchar(50),
+hotel_coordinateX varchar(50), 
+hotel_coordinateY varchar(50), 
+hotel_roomCount int, 
+hotel_createTime datetime
+)
+GO
+
+--버스
+create table bus_table(
+bus_num int IDENTITY not null primary key, 
+bus_name varchar(50) unique not null, 
+bus_startPoint varchar(50), 
+bus_endPoint varchar(50), 
+bus_startTime varchar(50), 
+bus_endTime varchar(50), 
+bus_createTime datetime 
+)
+GO
+
+★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★
+
+public class User
+{
+	public int user_num { get; set; }
+	public string user_id { get; set; }
+	public string user_passWord { get; set; }
+	public string user_name { get; set; }
+	public string user_phoneNum { get; set; }
+	public string user_email { get; set; }
+	public DateTime user_createTime { get; set; }
+}
+
+public class Admin
+{
+	public int admin_num { get; set; }
+	public string admin_id { get; set; }
+	public string admin_passWord { get; set; }
+	public string admin_name { get; set; }
+	public string admin_phoneNum { get; set; }
+	public string admin_email { get; set; }
+	public DateTime admin_createTime { get; set; }
+}
+
+public class Hotel
+{
+	public int hotel_num { get; set; }
+	public string hotel_name { get; set; }
+	public string hotel_phoneNum { get; set; }
+	public string hotel_address { get; set; }
+	public string hotel_zipCode { get; set; }
+	public string hotel_coordinateX { get; set; }
+	public string hotel_coordinateY { get; set; }
+	public string hotel_roomCount { get; set; }
+	public DateTime hotel_createTime { get; set; }
+}
+
+public class Bus
+{
+	public int bus_num { get; set; }
+	public string bus_name { get; set; }
+	public string bus_startPoint { get; set; }
+	public string bus_endPoint { get; set; }
+	public string bus_startTime { get; set; }
+	public string bus_endTime { get; set; }
+	public DateTime bus_createTime { get; set; }
+}
+
+★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★
+
+crud 예시
+
+use hhdb
+
+insert into user_table(user_id, user_passWord, user_name, user_phoneNum, user_email) values ('123', '김22', '이33', '박44', '최55')
+
+update user_table set user_passWord='asd222', user_name='김이', user_phoneNum='aaa', user_email='sss' where user_id=1
+
+select * from user_table
+select * from user_table where user_id like '%1%'
+
+delete user_table where user_id='123' and user_passWord='김22'

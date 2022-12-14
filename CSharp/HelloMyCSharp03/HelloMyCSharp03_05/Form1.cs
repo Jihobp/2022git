@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace HelloMyCSharp03_05
@@ -46,7 +39,7 @@ namespace HelloMyCSharp03_05
             //FirstControl 로 만든 유저컨트롤을 맨 앞으로 보냄.
             secondControl1.BringToFront(); //맨 앞으로 보냄.
         }
-        
+
         private void myClickEvent(object sender, EventArgs e)
         {
             //object : 모든 객체의 조상
@@ -57,7 +50,7 @@ namespace HelloMyCSharp03_05
             Button btn = (sender as Button);
             panel_side.Height = btn.Height;
             panel_side.Top = btn.Top;
-        
+
         }
     }
 }

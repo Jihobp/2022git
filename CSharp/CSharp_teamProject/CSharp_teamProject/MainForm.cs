@@ -29,6 +29,14 @@ namespace CSharp_teamProject
                 //Series["축이름"]을 넣을 수도 있다.
                 Datachart.Series["Series1"].Points.AddXY(i, i + 10);
             }
+
+
+            //사이드 버튼(움직일때마다 따라가는거)
+            panel_side.Height = Mainbutton1.Height; //첫번째 버튼의 높이로 바꿈
+            panel_side.Top = Mainbutton1.Top; //첫번째 버튼의 y값으로 바꿈.
+                                              //FirstControl 로 만든 유저컨트롤을 맨 앞으로 보냄.
+
+
         }
 
         private void Mainbutton_x_Click(object sender, EventArgs e)
@@ -67,5 +75,21 @@ namespace CSharp_teamProject
         {
 
         }
+
+        private void Mainbutton1_Click(object sender, EventArgs e)
+        {
+            panel_side.Height = Mainbutton1.Height; //첫번째 버튼의 높이로 바꿈
+            panel_side.Top = Mainbutton1.Top; //첫번째 버튼의 y값으로 바꿈.
+            //map 로 만든 유저컨트롤을 맨 앞으로 보냄.
+            //map.BringToFront(); //맨 앞으로 보냄.
+        }
+
+        private void Mainbutton2_Click(object sender, EventArgs e)
+        {
+            panel_side.Height = Mainbutton1.Height; //첫번째 버튼의 높이로 바꿈
+            panel_side.Top = Mainbutton1.Top; //첫번째 버튼의 y값으로 바꿈.
+        }
+
+
     }
 }

@@ -45,6 +45,7 @@
             this.MainpictureBox1 = new System.Windows.Forms.PictureBox();
             this.Mainbutton_x = new System.Windows.Forms.Button();
             this.Mainpanel2 = new System.Windows.Forms.Panel();
+            this.Mainbutton_alarm = new System.Windows.Forms.Button();
             this.Main_Map_button = new System.Windows.Forms.Button();
             this.Main_Map_textBox = new System.Windows.Forms.TextBox();
             this.Main_Map_webBrowser = new System.Windows.Forms.WebBrowser();
@@ -52,6 +53,9 @@
             this.Commercial_pictureBox = new System.Windows.Forms.PictureBox();
             this.analysis_pictureBox = new System.Windows.Forms.PictureBox();
             this.Datachart = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.Mainbutton_setting = new System.Windows.Forms.Button();
+            this.Mainbutton_share = new System.Windows.Forms.Button();
+            this.panel_side = new System.Windows.Forms.Panel();
             this.Mainpanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.MainpictureBox1)).BeginInit();
             this.Mainpanel2.SuspendLayout();
@@ -63,6 +67,7 @@
             // Mainpanel1
             // 
             this.Mainpanel1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.Mainpanel1.Controls.Add(this.panel_side);
             this.Mainpanel1.Controls.Add(this.Mainlabel1);
             this.Mainpanel1.Controls.Add(this.Mainbutton6);
             this.Mainpanel1.Controls.Add(this.Mainbutton5);
@@ -163,6 +168,7 @@
             this.Mainbutton2.TabIndex = 4;
             this.Mainbutton2.Text = "Mainbutton1";
             this.Mainbutton2.UseVisualStyleBackColor = false;
+            this.Mainbutton2.Click += new System.EventHandler(this.Mainbutton2_Click);
             // 
             // MainColorPanel
             // 
@@ -197,6 +203,7 @@
             this.Mainbutton1.TabIndex = 0;
             this.Mainbutton1.Text = "Mainbutton1";
             this.Mainbutton1.UseVisualStyleBackColor = false;
+            this.Mainbutton1.Click += new System.EventHandler(this.Mainbutton1_Click);
             // 
             // MainpictureBox1
             // 
@@ -223,11 +230,25 @@
             // Mainpanel2
             // 
             this.Mainpanel2.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.Mainpanel2.Controls.Add(this.Mainbutton_share);
+            this.Mainpanel2.Controls.Add(this.Mainbutton_setting);
+            this.Mainpanel2.Controls.Add(this.Mainbutton_alarm);
             this.Mainpanel2.Controls.Add(this.Mainbutton_x);
             this.Mainpanel2.Location = new System.Drawing.Point(178, 0);
             this.Mainpanel2.Name = "Mainpanel2";
             this.Mainpanel2.Size = new System.Drawing.Size(1004, 44);
             this.Mainpanel2.TabIndex = 2;
+            // 
+            // Mainbutton_alarm
+            // 
+            this.Mainbutton_alarm.FlatAppearance.BorderSize = 0;
+            this.Mainbutton_alarm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Mainbutton_alarm.Image = ((System.Drawing.Image)(resources.GetObject("Mainbutton_alarm.Image")));
+            this.Mainbutton_alarm.Location = new System.Drawing.Point(922, 0);
+            this.Mainbutton_alarm.Name = "Mainbutton_alarm";
+            this.Mainbutton_alarm.Size = new System.Drawing.Size(38, 34);
+            this.Mainbutton_alarm.TabIndex = 2;
+            this.Mainbutton_alarm.UseVisualStyleBackColor = true;
             // 
             // Main_Map_button
             // 
@@ -308,6 +329,37 @@
             this.Datachart.TabIndex = 19;
             this.Datachart.Text = "chart1";
             // 
+            // Mainbutton_setting
+            // 
+            this.Mainbutton_setting.FlatAppearance.BorderSize = 0;
+            this.Mainbutton_setting.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Mainbutton_setting.Image = ((System.Drawing.Image)(resources.GetObject("Mainbutton_setting.Image")));
+            this.Mainbutton_setting.Location = new System.Drawing.Point(878, 0);
+            this.Mainbutton_setting.Name = "Mainbutton_setting";
+            this.Mainbutton_setting.Size = new System.Drawing.Size(38, 34);
+            this.Mainbutton_setting.TabIndex = 3;
+            this.Mainbutton_setting.UseVisualStyleBackColor = true;
+            // 
+            // Mainbutton_share
+            // 
+            this.Mainbutton_share.FlatAppearance.BorderSize = 0;
+            this.Mainbutton_share.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Mainbutton_share.Image = ((System.Drawing.Image)(resources.GetObject("Mainbutton_share.Image")));
+            this.Mainbutton_share.Location = new System.Drawing.Point(834, 0);
+            this.Mainbutton_share.Name = "Mainbutton_share";
+            this.Mainbutton_share.Size = new System.Drawing.Size(38, 34);
+            this.Mainbutton_share.TabIndex = 4;
+            this.Mainbutton_share.UseVisualStyleBackColor = true;
+            // 
+            // panel_side
+            // 
+            this.panel_side.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.panel_side.Location = new System.Drawing.Point(0, 198);
+            this.panel_side.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.panel_side.Name = "panel_side";
+            this.panel_side.Size = new System.Drawing.Size(5, 60);
+            this.panel_side.TabIndex = 20;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
@@ -358,6 +410,10 @@
         private System.Windows.Forms.PictureBox Commercial_pictureBox;
         private System.Windows.Forms.PictureBox analysis_pictureBox;
         private System.Windows.Forms.DataVisualization.Charting.Chart Datachart;
+        private System.Windows.Forms.Button Mainbutton_alarm;
+        private System.Windows.Forms.Button Mainbutton_share;
+        private System.Windows.Forms.Button Mainbutton_setting;
+        private System.Windows.Forms.Panel panel_side;
     }
 }
 

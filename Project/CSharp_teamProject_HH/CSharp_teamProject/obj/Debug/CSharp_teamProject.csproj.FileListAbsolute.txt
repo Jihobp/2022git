@@ -1,0 +1,172 @@
+E:\2022git\CSharp\CSharp_teamProject\CSharp_teamProject\bin\Debug\CSharp_teamProject.exe.config
+E:\2022git\CSharp\CSharp_teamProject\CSharp_teamProject\bin\Debug\CSharp_teamProject.exe
+E:\2022git\CSharp\CSharp_teamProject\CSharp_teamProject\bin\Debug\CSharp_teamProject.pdb
+E:\2022git\CSharp\CSharp_teamProject\CSharp_teamProject\obj\Debug\CSharp_teamProject.csproj.AssemblyReference.cache
+E:\2022git\CSharp\CSharp_teamProject\CSharp_teamProject\obj\Debug\CSharp_teamProject.csproj.SuggestedBindingRedirects.cache
+E:\2022git\CSharp\CSharp_teamProject\CSharp_teamProject\obj\Debug\CSharp_teamProject.MainForm.resources
+E:\2022git\CSharp\CSharp_teamProject\CSharp_teamProject\obj\Debug\CSharp_teamProject.Properties.Resources.resources
+E:\2022git\CSharp\CSharp_teamProject\CSharp_teamProject\obj\Debug\CSharp_teamProject.csproj.GenerateResource.cache
+E:\2022git\CSharp\CSharp_teamProject\CSharp_teamProject\obj\Debug\CSharp_teamProject.csproj.CoreCompileInputs.cache
+E:\2022git\CSharp\CSharp_teamProject\CSharp_teamProject\obj\Debug\CSharp_teamProject.exe
+E:\2022git\CSharp\CSharp_teamProject\CSharp_teamProject\obj\Debug\CSharp_teamProject.pdb
+E:\2022git\CSharp\CSharp_teamProject\CSharp_teamProject\bin\Debug\Newtonsoft.Json.dll
+E:\2022git\CSharp\CSharp_teamProject\CSharp_teamProject\bin\Debug\Newtonsoft.Json.xml
+E:\2022git\CSharp\CSharp_teamProject\CSharp_teamProject\obj\Debug\CSharp_teamProject.csproj.CopyComplete
+E:\2022git\CSharp\CSharp_teamProject\CSharp_teamProject\obj\Debug\CSharp_teamProject.Login.resources
+C:\Users\KB\Documents\탁이\CSharp_teamProject_HH\박지호_CSharp_teamProject\CSharp_teamProject\bin\Debug\CSharp_teamProject.exe.config
+C:\Users\KB\Documents\탁이\CSharp_teamProject_HH\박지호_CSharp_teamProject\CSharp_teamProject\bin\Debug\CSharp_teamProject.exe
+C:\Users\KB\Documents\탁이\CSharp_teamProject_HH\박지호_CSharp_teamProject\CSharp_teamProject\bin\Debug\CSharp_teamProject.pdb
+C:\Users\KB\Documents\탁이\CSharp_teamProject_HH\박지호_CSharp_teamProject\CSharp_teamProject\bin\Debug\Newtonsoft.Json.dll
+C:\Users\KB\Documents\탁이\CSharp_teamProject_HH\박지호_CSharp_teamProject\CSharp_teamProject\bin\Debug\Newtonsoft.Json.xml
+C:\Users\KB\Documents\탁이\CSharp_teamProject_HH\박지호_CSharp_teamProject\CSharp_teamProject\obj\Debug\CSharp_teamProject.csproj.AssemblyReference.cache
+C:\Users\KB\Documents\탁이\CSharp_teamProject_HH\박지호_CSharp_teamProject\CSharp_teamProject\obj\Debug\CSharp_teamProject.csproj.SuggestedBindingRedirects.cache
+C:\Users\KB\Documents\탁이\CSharp_teamProject_HH\박지호_CSharp_teamProject\CSharp_teamProject\obj\Debug\CSharp_teamProject.MainForm.resources
+C:\Users\KB\Documents\탁이\CSharp_teamProject_HH\박지호_CSharp_teamProject\CSharp_teamProject\obj\Debug\CSharp_teamProject.Properties.Resources.resources
+C:\Users\KB\Documents\탁이\CSharp_teamProject_HH\박지호_CSharp_teamProject\CSharp_teamProject\obj\Debug\CSharp_teamProject.csproj.GenerateResource.cache
+C:\Users\KB\Documents\탁이\CSharp_teamProject_HH\박지호_CSharp_teamProject\CSharp_teamProject\obj\Debug\CSharp_teamProject.csproj.CoreCompileInputs.cache
+C:\Users\KB\Documents\탁이\CSharp_teamProject_HH\박지호_CSharp_teamProject\CSharp_teamProject\obj\Debug\CSharp_teamProject.csproj.CopyComplete
+C:\Users\KB\Documents\탁이\CSharp_teamProject_HH\박지호_CSharp_teamProject\CSharp_teamProject\obj\Debug\CSharp_teamProject.exe
+C:\Users\KB\Documents\탁이\CSharp_teamProject_HH\박지호_CSharp_teamProject\CSharp_teamProject\obj\Debug\CSharp_teamProject.pdb
+C:\Users\KB\Documents\탁이\CSharp_teamProject_HH\박지호_CSharp_teamProject\CSharp_teamProject\obj\Debug\CSharp_teamProject.Login.sign_up.resources
+C:\Users\KB\Documents\탁이\CSharp_teamProject_HH\박지호_CSharp_teamProject\CSharp_teamProject\obj\Debug\CSharp_teamProject.Login_up.resources
+C:\Users\KB\Documents\탁이\CSharp_teamProject_HH\박지호_CSharp_teamProject\CSharp_teamProject\obj\Debug\CSharp_teamProject.Map.Hotel.resources
+C:\Users\KB\Documents\탁이\CSharp_teamProject_HH\박지호_CSharp_teamProject\CSharp_teamProject\obj\Debug\CSharp_teamProject.Weather.Weather2.resources
+C:\Users\KB\Documents\탁이\CSharp_teamProject_HH\박지호_CSharp_teamProject\CSharp_teamProject\obj\Debug\CSharp_teamProject.Admin.Admin_Form.resources
+C:\Users\KB\Documents\탁이\CSharp_teamProject_1205\CSharp_teamProject\bin\Debug\CSharp_teamProject.exe.config
+C:\Users\KB\Documents\탁이\CSharp_teamProject_1205\CSharp_teamProject\bin\Debug\CSharp_teamProject.exe
+C:\Users\KB\Documents\탁이\CSharp_teamProject_1205\CSharp_teamProject\bin\Debug\CSharp_teamProject.pdb
+C:\Users\KB\Documents\탁이\CSharp_teamProject_1205\CSharp_teamProject\bin\Debug\Newtonsoft.Json.dll
+C:\Users\KB\Documents\탁이\CSharp_teamProject_1205\CSharp_teamProject\bin\Debug\Newtonsoft.Json.xml
+C:\Users\KB\Documents\탁이\CSharp_teamProject_1205\CSharp_teamProject\obj\Debug\CSharp_teamProject.csproj.AssemblyReference.cache
+C:\Users\KB\Documents\탁이\CSharp_teamProject_1205\CSharp_teamProject\obj\Debug\CSharp_teamProject.csproj.SuggestedBindingRedirects.cache
+C:\Users\KB\Documents\탁이\CSharp_teamProject_1205\CSharp_teamProject\obj\Debug\CSharp_teamProject.Login_up.resources
+C:\Users\KB\Documents\탁이\CSharp_teamProject_1205\CSharp_teamProject\obj\Debug\CSharp_teamProject.MainForm.resources
+C:\Users\KB\Documents\탁이\CSharp_teamProject_1205\CSharp_teamProject\obj\Debug\CSharp_teamProject.Properties.Resources.resources
+C:\Users\KB\Documents\탁이\CSharp_teamProject_1205\CSharp_teamProject\obj\Debug\CSharp_teamProject.csproj.GenerateResource.cache
+C:\Users\KB\Documents\탁이\CSharp_teamProject_1205\CSharp_teamProject\obj\Debug\CSharp_teamProject.csproj.CoreCompileInputs.cache
+C:\Users\KB\Documents\탁이\CSharp_teamProject_1205\CSharp_teamProject\obj\Debug\CSharp_teamProject.csproj.CopyComplete
+C:\Users\KB\Documents\탁이\CSharp_teamProject_1205\CSharp_teamProject\obj\Debug\CSharp_teamProject.exe
+C:\Users\KB\Documents\탁이\CSharp_teamProject_1205\CSharp_teamProject\obj\Debug\CSharp_teamProject.pdb
+C:\Users\KB\Documents\탁이\CSharp_teamProject_1205\CSharp_teamProject\obj\Debug\CSharp_teamProject.sign_up.resources
+C:\Users\KB\Documents\탁이\CSharp_teamProject_1205\CSharp_teamProject\obj\Debug\CSharp_teamProject.Admin_Form.resources
+C:\Users\KB\Documents\탁이\CSharp_teamProject_1205\CSharp_teamProject\obj\Debug\CSharp_teamProject.Hotel_Form.resources
+C:\Users\KB\Documents\탁이\CSharp_teamProject_1205\CSharp_teamProject\obj\Debug\CSharp_teamProject.Weather.resources
+C:\Users\KB\Documents\탁이\CSharp_teamProject_1206\CSharp_teamProject\bin\Debug\CSharp_teamProject.exe.config
+C:\Users\KB\Documents\탁이\CSharp_teamProject_1206\CSharp_teamProject\bin\Debug\CSharp_teamProject.exe
+C:\Users\KB\Documents\탁이\CSharp_teamProject_1206\CSharp_teamProject\bin\Debug\CSharp_teamProject.pdb
+C:\Users\KB\Documents\탁이\CSharp_teamProject_1206\CSharp_teamProject\bin\Debug\Newtonsoft.Json.dll
+C:\Users\KB\Documents\탁이\CSharp_teamProject_1206\CSharp_teamProject\bin\Debug\Newtonsoft.Json.xml
+C:\Users\KB\Documents\탁이\CSharp_teamProject_1206\CSharp_teamProject\obj\Debug\CSharp_teamProject.csproj.AssemblyReference.cache
+C:\Users\KB\Documents\탁이\CSharp_teamProject_1206\CSharp_teamProject\obj\Debug\CSharp_teamProject.csproj.SuggestedBindingRedirects.cache
+C:\Users\KB\Documents\탁이\CSharp_teamProject_1206\CSharp_teamProject\obj\Debug\CSharp_teamProject.Admin_Form.resources
+C:\Users\KB\Documents\탁이\CSharp_teamProject_1206\CSharp_teamProject\obj\Debug\CSharp_teamProject.Login_up.resources
+C:\Users\KB\Documents\탁이\CSharp_teamProject_1206\CSharp_teamProject\obj\Debug\CSharp_teamProject.sign_up.resources
+C:\Users\KB\Documents\탁이\CSharp_teamProject_1206\CSharp_teamProject\obj\Debug\CSharp_teamProject.MainForm.resources
+C:\Users\KB\Documents\탁이\CSharp_teamProject_1206\CSharp_teamProject\obj\Debug\CSharp_teamProject.Hotel_Form.resources
+C:\Users\KB\Documents\탁이\CSharp_teamProject_1206\CSharp_teamProject\obj\Debug\CSharp_teamProject.Properties.Resources.resources
+C:\Users\KB\Documents\탁이\CSharp_teamProject_1206\CSharp_teamProject\obj\Debug\CSharp_teamProject.Weather.resources
+C:\Users\KB\Documents\탁이\CSharp_teamProject_1206\CSharp_teamProject\obj\Debug\CSharp_teamProject.csproj.GenerateResource.cache
+C:\Users\KB\Documents\탁이\CSharp_teamProject_1206\CSharp_teamProject\obj\Debug\CSharp_teamProject.csproj.CoreCompileInputs.cache
+C:\Users\KB\Documents\탁이\CSharp_teamProject_1206\CSharp_teamProject\obj\Debug\CSharp_teamProject.csproj.CopyComplete
+C:\Users\KB\Documents\탁이\CSharp_teamProject_1206\CSharp_teamProject\obj\Debug\CSharp_teamProject.exe
+C:\Users\KB\Documents\탁이\CSharp_teamProject_1206\CSharp_teamProject\obj\Debug\CSharp_teamProject.pdb
+C:\Users\KB\Desktop\CSharp_teamProject_1206 (2)\CSharp_teamProject\obj\Debug\CSharp_teamProject.csproj.AssemblyReference.cache
+C:\Users\KB\Desktop\CSharp_teamProject_1206 (2)\CSharp_teamProject\obj\Debug\CSharp_teamProject.csproj.SuggestedBindingRedirects.cache
+C:\Users\KB\Desktop\CSharp_teamProject_1206 (2)\CSharp_teamProject\obj\Debug\CSharp_teamProject.Admin_Form.resources
+C:\Users\KB\Desktop\CSharp_teamProject_1206 (2)\CSharp_teamProject\obj\Debug\CSharp_teamProject.Login_up.resources
+C:\Users\KB\Desktop\CSharp_teamProject_1206 (2)\CSharp_teamProject\obj\Debug\CSharp_teamProject.sign_up.resources
+C:\Users\KB\Desktop\CSharp_teamProject_1206 (2)\CSharp_teamProject\obj\Debug\CSharp_teamProject.MainForm.resources
+C:\Users\KB\Desktop\CSharp_teamProject_1206 (2)\CSharp_teamProject\obj\Debug\CSharp_teamProject.Hotel_Form.resources
+C:\Users\KB\Desktop\CSharp_teamProject_1206 (2)\CSharp_teamProject\obj\Debug\CSharp_teamProject.Properties.Resources.resources
+C:\Users\KB\Desktop\CSharp_teamProject_1206 (2)\CSharp_teamProject\obj\Debug\CSharp_teamProject.Weather.resources
+C:\Users\KB\Desktop\CSharp_teamProject_1206 (2)\CSharp_teamProject\obj\Debug\CSharp_teamProject.csproj.GenerateResource.cache
+C:\Users\KB\Desktop\CSharp_teamProject_1206 (2)\CSharp_teamProject\obj\Debug\CSharp_teamProject.csproj.CoreCompileInputs.cache
+C:\Users\KB\Desktop\CSharp_teamProject_1206 (2)\CSharp_teamProject\obj\Debug\CSharp_teamProject.exe
+C:\Users\KB\Desktop\CSharp_teamProject_1206 (2)\CSharp_teamProject\obj\Debug\CSharp_teamProject.pdb
+C:\Users\KB\Desktop\CSharp_teamProject_1206 (2)\CSharp_teamProject\bin\Debug\CSharp_teamProject.exe.config
+C:\Users\KB\Desktop\CSharp_teamProject_1206 (2)\CSharp_teamProject\bin\Debug\CSharp_teamProject.exe
+C:\Users\KB\Desktop\CSharp_teamProject_1206 (2)\CSharp_teamProject\bin\Debug\CSharp_teamProject.pdb
+C:\Users\KB\Desktop\CSharp_teamProject_1206 (2)\CSharp_teamProject\bin\Debug\Newtonsoft.Json.dll
+C:\Users\KB\Desktop\CSharp_teamProject_1206 (2)\CSharp_teamProject\bin\Debug\Newtonsoft.Json.xml
+C:\Users\KB\Desktop\CSharp_teamProject_1206 (2)\CSharp_teamProject\obj\Debug\CSharp_teamProject.csproj.CopyComplete
+C:\Users\KB\Desktop\CSharp_teamProject_1206 (2)\CSharp_teamProject\obj\Debug\CSharp_teamProject.MyPage.resources
+C:\Users\KB\Desktop\CSharp_teamProject_1208\CSharp_teamProject\bin\Debug\CSharp_teamProject.exe.config
+C:\Users\KB\Desktop\CSharp_teamProject_1208\CSharp_teamProject\bin\Debug\CSharp_teamProject.exe
+C:\Users\KB\Desktop\CSharp_teamProject_1208\CSharp_teamProject\bin\Debug\CSharp_teamProject.pdb
+C:\Users\KB\Desktop\CSharp_teamProject_1208\CSharp_teamProject\bin\Debug\Newtonsoft.Json.dll
+C:\Users\KB\Desktop\CSharp_teamProject_1208\CSharp_teamProject\bin\Debug\Newtonsoft.Json.xml
+C:\Users\KB\Desktop\CSharp_teamProject_1208\CSharp_teamProject\obj\Debug\CSharp_teamProject.csproj.AssemblyReference.cache
+C:\Users\KB\Desktop\CSharp_teamProject_1208\CSharp_teamProject\obj\Debug\CSharp_teamProject.csproj.SuggestedBindingRedirects.cache
+C:\Users\KB\Desktop\CSharp_teamProject_1208\CSharp_teamProject\obj\Debug\CSharp_teamProject.Admin_Form.resources
+C:\Users\KB\Desktop\CSharp_teamProject_1208\CSharp_teamProject\obj\Debug\CSharp_teamProject.Login_up.resources
+C:\Users\KB\Desktop\CSharp_teamProject_1208\CSharp_teamProject\obj\Debug\CSharp_teamProject.sign_up.resources
+C:\Users\KB\Desktop\CSharp_teamProject_1208\CSharp_teamProject\obj\Debug\CSharp_teamProject.MainForm.resources
+C:\Users\KB\Desktop\CSharp_teamProject_1208\CSharp_teamProject\obj\Debug\CSharp_teamProject.Hotel_Form.resources
+C:\Users\KB\Desktop\CSharp_teamProject_1208\CSharp_teamProject\obj\Debug\CSharp_teamProject.MyPage.resources
+C:\Users\KB\Desktop\CSharp_teamProject_1208\CSharp_teamProject\obj\Debug\CSharp_teamProject.Properties.Resources.resources
+C:\Users\KB\Desktop\CSharp_teamProject_1208\CSharp_teamProject\obj\Debug\CSharp_teamProject.Weather.resources
+C:\Users\KB\Desktop\CSharp_teamProject_1208\CSharp_teamProject\obj\Debug\CSharp_teamProject.csproj.GenerateResource.cache
+C:\Users\KB\Desktop\CSharp_teamProject_1208\CSharp_teamProject\obj\Debug\CSharp_teamProject.csproj.CoreCompileInputs.cache
+C:\Users\KB\Desktop\CSharp_teamProject_1208\CSharp_teamProject\obj\Debug\CSharp_teamProject.csproj.CopyComplete
+C:\Users\KB\Desktop\CSharp_teamProject_1208\CSharp_teamProject\obj\Debug\CSharp_teamProject.exe
+C:\Users\KB\Desktop\CSharp_teamProject_1208\CSharp_teamProject\obj\Debug\CSharp_teamProject.pdb
+C:\Users\KB\Documents\탁이\CSharp_teamProject_HH\CSharp_teamProject_1208\CSharp_teamProject_1208\CSharp_teamProject\bin\Debug\CSharp_teamProject.exe.config
+C:\Users\KB\Documents\탁이\CSharp_teamProject_HH\CSharp_teamProject_1208\CSharp_teamProject_1208\CSharp_teamProject\bin\Debug\CSharp_teamProject.exe
+C:\Users\KB\Documents\탁이\CSharp_teamProject_HH\CSharp_teamProject_1208\CSharp_teamProject_1208\CSharp_teamProject\bin\Debug\CSharp_teamProject.pdb
+C:\Users\KB\Documents\탁이\CSharp_teamProject_HH\CSharp_teamProject_1208\CSharp_teamProject_1208\CSharp_teamProject\bin\Debug\Newtonsoft.Json.dll
+C:\Users\KB\Documents\탁이\CSharp_teamProject_HH\CSharp_teamProject_1208\CSharp_teamProject_1208\CSharp_teamProject\bin\Debug\Newtonsoft.Json.xml
+C:\Users\KB\Documents\탁이\CSharp_teamProject_HH\CSharp_teamProject_1208\CSharp_teamProject_1208\CSharp_teamProject\obj\Debug\CSharp_teamProject.csproj.AssemblyReference.cache
+C:\Users\KB\Documents\탁이\CSharp_teamProject_HH\CSharp_teamProject_1208\CSharp_teamProject_1208\CSharp_teamProject\obj\Debug\CSharp_teamProject.csproj.SuggestedBindingRedirects.cache
+C:\Users\KB\Documents\탁이\CSharp_teamProject_HH\CSharp_teamProject_1208\CSharp_teamProject_1208\CSharp_teamProject\obj\Debug\CSharp_teamProject.Admin_Form.resources
+C:\Users\KB\Documents\탁이\CSharp_teamProject_HH\CSharp_teamProject_1208\CSharp_teamProject_1208\CSharp_teamProject\obj\Debug\CSharp_teamProject.Login_up.resources
+C:\Users\KB\Documents\탁이\CSharp_teamProject_HH\CSharp_teamProject_1208\CSharp_teamProject_1208\CSharp_teamProject\obj\Debug\CSharp_teamProject.sign_up.resources
+C:\Users\KB\Documents\탁이\CSharp_teamProject_HH\CSharp_teamProject_1208\CSharp_teamProject_1208\CSharp_teamProject\obj\Debug\CSharp_teamProject.MainForm.resources
+C:\Users\KB\Documents\탁이\CSharp_teamProject_HH\CSharp_teamProject_1208\CSharp_teamProject_1208\CSharp_teamProject\obj\Debug\CSharp_teamProject.Hotel_Form.resources
+C:\Users\KB\Documents\탁이\CSharp_teamProject_HH\CSharp_teamProject_1208\CSharp_teamProject_1208\CSharp_teamProject\obj\Debug\CSharp_teamProject.MyPage.resources
+C:\Users\KB\Documents\탁이\CSharp_teamProject_HH\CSharp_teamProject_1208\CSharp_teamProject_1208\CSharp_teamProject\obj\Debug\CSharp_teamProject.Properties.Resources.resources
+C:\Users\KB\Documents\탁이\CSharp_teamProject_HH\CSharp_teamProject_1208\CSharp_teamProject_1208\CSharp_teamProject\obj\Debug\CSharp_teamProject.Weather.resources
+C:\Users\KB\Documents\탁이\CSharp_teamProject_HH\CSharp_teamProject_1208\CSharp_teamProject_1208\CSharp_teamProject\obj\Debug\CSharp_teamProject.csproj.GenerateResource.cache
+C:\Users\KB\Documents\탁이\CSharp_teamProject_HH\CSharp_teamProject_1208\CSharp_teamProject_1208\CSharp_teamProject\obj\Debug\CSharp_teamProject.csproj.CoreCompileInputs.cache
+C:\Users\KB\Documents\탁이\CSharp_teamProject_HH\CSharp_teamProject_1208\CSharp_teamProject_1208\CSharp_teamProject\obj\Debug\CSharp_teamProject.csproj.CopyComplete
+C:\Users\KB\Documents\탁이\CSharp_teamProject_HH\CSharp_teamProject_1208\CSharp_teamProject_1208\CSharp_teamProject\obj\Debug\CSharp_teamProject.exe
+C:\Users\KB\Documents\탁이\CSharp_teamProject_HH\CSharp_teamProject_1208\CSharp_teamProject_1208\CSharp_teamProject\obj\Debug\CSharp_teamProject.pdb
+E:\2022git\CSharp\CSharp_teamProject_1208\CSharp_teamProject\bin\Debug\CSharp_teamProject.exe.config
+E:\2022git\CSharp\CSharp_teamProject_1208\CSharp_teamProject\bin\Debug\CSharp_teamProject.exe
+E:\2022git\CSharp\CSharp_teamProject_1208\CSharp_teamProject\bin\Debug\CSharp_teamProject.pdb
+E:\2022git\CSharp\CSharp_teamProject_1208\CSharp_teamProject\bin\Debug\Newtonsoft.Json.dll
+E:\2022git\CSharp\CSharp_teamProject_1208\CSharp_teamProject\bin\Debug\Newtonsoft.Json.xml
+E:\2022git\CSharp\CSharp_teamProject_1208\CSharp_teamProject\obj\Debug\CSharp_teamProject.csproj.AssemblyReference.cache
+E:\2022git\CSharp\CSharp_teamProject_1208\CSharp_teamProject\obj\Debug\CSharp_teamProject.csproj.SuggestedBindingRedirects.cache
+E:\2022git\CSharp\CSharp_teamProject_1208\CSharp_teamProject\obj\Debug\CSharp_teamProject.Admin_Form.resources
+E:\2022git\CSharp\CSharp_teamProject_1208\CSharp_teamProject\obj\Debug\CSharp_teamProject.Login_up.resources
+E:\2022git\CSharp\CSharp_teamProject_1208\CSharp_teamProject\obj\Debug\CSharp_teamProject.sign_up.resources
+E:\2022git\CSharp\CSharp_teamProject_1208\CSharp_teamProject\obj\Debug\CSharp_teamProject.MainForm.resources
+E:\2022git\CSharp\CSharp_teamProject_1208\CSharp_teamProject\obj\Debug\CSharp_teamProject.Hotel_Form.resources
+E:\2022git\CSharp\CSharp_teamProject_1208\CSharp_teamProject\obj\Debug\CSharp_teamProject.MyPage.resources
+E:\2022git\CSharp\CSharp_teamProject_1208\CSharp_teamProject\obj\Debug\CSharp_teamProject.Properties.Resources.resources
+E:\2022git\CSharp\CSharp_teamProject_1208\CSharp_teamProject\obj\Debug\CSharp_teamProject.Weather.resources
+E:\2022git\CSharp\CSharp_teamProject_1208\CSharp_teamProject\obj\Debug\CSharp_teamProject.csproj.GenerateResource.cache
+E:\2022git\CSharp\CSharp_teamProject_1208\CSharp_teamProject\obj\Debug\CSharp_teamProject.csproj.CoreCompileInputs.cache
+E:\2022git\CSharp\CSharp_teamProject_1208\CSharp_teamProject\obj\Debug\CSharp_teamProject.csproj.CopyComplete
+E:\2022git\CSharp\CSharp_teamProject_1208\CSharp_teamProject\obj\Debug\CSharp_teamProject.exe
+E:\2022git\CSharp\CSharp_teamProject_1208\CSharp_teamProject\obj\Debug\CSharp_teamProject.pdb
+C:\Users\KB\Documents\탁이\CSharp_teamProject_HH\CSharp_teamProject_1209\CSharp_teamProject\bin\Debug\CSharp_teamProject.exe.config
+C:\Users\KB\Documents\탁이\CSharp_teamProject_HH\CSharp_teamProject_1209\CSharp_teamProject\bin\Debug\CSharp_teamProject.exe
+C:\Users\KB\Documents\탁이\CSharp_teamProject_HH\CSharp_teamProject_1209\CSharp_teamProject\bin\Debug\CSharp_teamProject.pdb
+C:\Users\KB\Documents\탁이\CSharp_teamProject_HH\CSharp_teamProject_1209\CSharp_teamProject\bin\Debug\Newtonsoft.Json.dll
+C:\Users\KB\Documents\탁이\CSharp_teamProject_HH\CSharp_teamProject_1209\CSharp_teamProject\bin\Debug\Newtonsoft.Json.xml
+C:\Users\KB\Documents\탁이\CSharp_teamProject_HH\CSharp_teamProject_1209\CSharp_teamProject\obj\Debug\CSharp_teamProject.csproj.AssemblyReference.cache
+C:\Users\KB\Documents\탁이\CSharp_teamProject_HH\CSharp_teamProject_1209\CSharp_teamProject\obj\Debug\CSharp_teamProject.csproj.SuggestedBindingRedirects.cache
+C:\Users\KB\Documents\탁이\CSharp_teamProject_HH\CSharp_teamProject_1209\CSharp_teamProject\obj\Debug\CSharp_teamProject.Admin_Form.resources
+C:\Users\KB\Documents\탁이\CSharp_teamProject_HH\CSharp_teamProject_1209\CSharp_teamProject\obj\Debug\CSharp_teamProject.Login_up.resources
+C:\Users\KB\Documents\탁이\CSharp_teamProject_HH\CSharp_teamProject_1209\CSharp_teamProject\obj\Debug\CSharp_teamProject.sign_up.resources
+C:\Users\KB\Documents\탁이\CSharp_teamProject_HH\CSharp_teamProject_1209\CSharp_teamProject\obj\Debug\CSharp_teamProject.MainForm.resources
+C:\Users\KB\Documents\탁이\CSharp_teamProject_HH\CSharp_teamProject_1209\CSharp_teamProject\obj\Debug\CSharp_teamProject.Hotel_Form.resources
+C:\Users\KB\Documents\탁이\CSharp_teamProject_HH\CSharp_teamProject_1209\CSharp_teamProject\obj\Debug\CSharp_teamProject.MyPage.resources
+C:\Users\KB\Documents\탁이\CSharp_teamProject_HH\CSharp_teamProject_1209\CSharp_teamProject\obj\Debug\CSharp_teamProject.Properties.Resources.resources
+C:\Users\KB\Documents\탁이\CSharp_teamProject_HH\CSharp_teamProject_1209\CSharp_teamProject\obj\Debug\CSharp_teamProject.Weather.resources
+C:\Users\KB\Documents\탁이\CSharp_teamProject_HH\CSharp_teamProject_1209\CSharp_teamProject\obj\Debug\CSharp_teamProject.csproj.GenerateResource.cache
+C:\Users\KB\Documents\탁이\CSharp_teamProject_HH\CSharp_teamProject_1209\CSharp_teamProject\obj\Debug\CSharp_teamProject.csproj.CoreCompileInputs.cache
+C:\Users\KB\Documents\탁이\CSharp_teamProject_HH\CSharp_teamProject_1209\CSharp_teamProject\obj\Debug\CSharp_teamProject.csproj.CopyComplete
+C:\Users\KB\Documents\탁이\CSharp_teamProject_HH\CSharp_teamProject_1209\CSharp_teamProject\obj\Debug\CSharp_teamProject.exe
+C:\Users\KB\Documents\탁이\CSharp_teamProject_HH\CSharp_teamProject_1209\CSharp_teamProject\obj\Debug\CSharp_teamProject.pdb

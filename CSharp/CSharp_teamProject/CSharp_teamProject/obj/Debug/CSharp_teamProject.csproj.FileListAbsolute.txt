@@ -12,3 +12,4 @@ E:\2022git\CSharp\CSharp_teamProject\CSharp_teamProject\obj\Debug\CSharp_teamPro
 E:\2022git\CSharp\CSharp_teamProject\CSharp_teamProject\bin\Debug\Newtonsoft.Json.dll
 E:\2022git\CSharp\CSharp_teamProject\CSharp_teamProject\bin\Debug\Newtonsoft.Json.xml
 E:\2022git\CSharp\CSharp_teamProject\CSharp_teamProject\obj\Debug\CSharp_teamProject.csproj.CopyComplete
+E:\2022git\CSharp\CSharp_teamProject\CSharp_teamProject\obj\Debug\CSharp_teamProject.Login.resources
